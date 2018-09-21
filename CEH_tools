@@ -1,0 +1,23 @@
+Netcraft ( https://www.netcraft.com )
+sublist3r
+whois
+inspy (LinkedIn information enumeration)
+shodan ( https://www.shodan.io ) 
+censys ( https://censys.io )
+burpsuit
+zaproxy
+httrack
+wget (download sites for offline usage)
+spiderfoot
+https://archive.org (pages old version)
+metagoofil (website's documents meta data extarctor)
+update scanner (firefox addon)
+#TODO: find email tarcker tool
+EDGAR database ( https://sec.gov/egdar.shtml )
+Hoovers ( http://www.hoovers.com )
+network-tools ( https://network-tools.com )
+dig
+maltego
+recon-ng
+nmap
+hping3
