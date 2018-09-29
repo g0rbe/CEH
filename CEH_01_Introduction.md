@@ -8,7 +8,7 @@
 
 **Payload** : Payload is the part of an expoit code that performs the intended malicious action, such as destroying, creating backdoors, and hijacking computer
 
-**Zero-Day Attack ** : An attack that exploits computer application vulnerablilities before the softvare developer releases a patch fot the vulnerability
+**Zero-Day Attack** : An attack that exploits computer application vulnerablilities before the softvare developer releases a patch fot the vulnerability
 
 **Daisy Chaining** : It involves gaining access to one network and/or computer and then using the same infromation to gain access to multiple networks and computers that contain desirable information
 
