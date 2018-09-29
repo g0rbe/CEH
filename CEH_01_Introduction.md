@@ -1,37 +1,20 @@
 ## Essiential Terminology
 
-Hack Value:
-        a notion  among hackers that something is worth doing
-        or is interesting
+**Hack Value** : a notion  among hackers that something is worth doing or is interesting
 
-Vulnerability:
-        Existence of a weakness, design, or implementation error that can
-        lead to an unexpected event compromising the security of the system
+**Vulnerability** : Existence of a weakness, design, or implementation error that can lead to an unexpected event compromising the security of the system
 
-Exploit:
-        A breach of IT system security through vulnerabilities
+**Exploit** : A breach of IT system security through vulnerabilities
 
-Payload:
-        Payload is the part of an expoit code that performs the intended
-        malicious action, such as destroying, creating backdoors, and
-        hijacking computer
+**Payload** : Payload is the part of an expoit code that performs the intended malicious action, such as destroying, creating backdoors, and hijacking computer
 
-Zero-Day Attack:
-	An attack that exploits computer application vulnerablilities before
-	the softvare developer releases a patch fot the vulnerability
+**Zero-Day Attack ** : An attack that exploits computer application vulnerablilities before the softvare developer releases a patch fot the vulnerability
 
-Daisy Chaining:
-	It involves gaining access to one network and/or computer and then
-	using the same infromation to gain access to multiple networks and
-	computers that contain desirable information
+**Daisy Chaining** : It involves gaining access to one network and/or computer and then using the same infromation to gain access to multiple networks and computers that contain desirable information
 
-Doxing:
-	Publishing personally identifiable information about an individual
-	collected from publicly available databases and social media
+**Doxing** : Publishing personally identifiable information about an individual collected from publicly available databases and social media
 
-Bot:
-	A "bot" is a software application that can be controlled remotely
-	to execute or automate predefined tasks
+**Bot** : A "bot" is a software application that can be controlled remotely to execute or automate predefined tasks
 
 ## Information Security:
 
