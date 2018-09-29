@@ -83,66 +83,68 @@ in a computer system or security policy and controls to achive their motives
 
 ### Motives behind attacks:
 
-*Disrupting business continuity
+- Disrupting business continuity
 
-*Information theft and manipulating data
+- Information theft and manipulating data
 
-*Creating fear and chaos by dirupting critical infrasturctures 
+- Creating fear and chaos by dirupting critical infrasturctures 
 
-*Financial loss to the target
+- Financial loss to the target
 
-*Propagating religious or political beliefs
+- Propagating religious or political beliefs
 
-*Achieving state's military objectives
+- Achieving state's military objectives
 
-*Demanding reputation of the target 
+- Demanding reputation of the target 
 
-*Taking revenge
+- Taking revenge
 
-*Demanding ransom
+- Demanding ransom
 
 ### Top InfoSec Threats
 
-*Cloud Computing Threat
+- Cloud Computing Threat
 
-*Advanced Persistent Threats (APT): stealing information from the victim machine without the user being aware of it
+- Advanced Persistent Threats (APT): stealing information from the victim machine without the user being aware of it
 
-*Viruses and Worms
+- Viruses and Worms
 
-*Ransomware
+- Ransomware
 
-*Mobile Threats
+- Mobile Threats
 
 #### Top InfoSec vectors:
 
-*Botnet
+- Botnet
 
-*Insider Attack
+- Insider Attack
 
-*Phishing
+- Phishing
 
-*Web Application Threat
+- Web Application Threat
 
-*IoT Threats
+- IoT Threats
 
 ### InfoSec Threats categories:
 
 
-*Network Threats (spoofing, sniffing, ...)
+- Network Threats (spoofing, sniffing, ...)
 
-*Host Threats (malware, dos, ...)
+- Host Threats (malware, dos, ...)
 
-*Application Threats (auth attacks, SQL injection, ...)
+- Application Threats (auth attacks, SQL injection, ...)
 
 ### Type of Attacks on a System:
 
 
-*Operating System Attacks (OS vulnerabilities)
+- Operating System Attacks (OS vulnerabilities)
 
-*Misconfiguration Attacks
+- Misconfiguration Attacks
 
-*Application-Level Attacks (expoit the application)
+- Application-Level Attacks (expoit the application)
 
-*Shrink-Wrap Code Attacks (exploit the common vulnerable libraries)
+- Shrink-Wrap Code Attacks (exploit the common vulnerable libraries)
+
+
 
 **ICT** : Information and Communication Technologies
