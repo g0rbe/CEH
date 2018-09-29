@@ -1,4 +1,4 @@
-#Essiential Terminology
+## Essiential Terminology
 
 Hack Value:
         a notion  among hackers that something is worth doing
@@ -26,12 +26,12 @@ Bot:
 	A "bot" is a software application that can be controlled remotely
 	to execute or automate predefined tasks
 
-Information Security:
+## Information Security:
 	is a state of well-being of information and infrastucture in which 
 	the possibility of theft, tampering , and disruption of
 	information and services is kept low or tolerable
 
-Elements of InfoSec:
+## Elements of InfoSec:
 Confidentiality :
 	Assurance that the information is accesible only to those
 	authorized to have access
@@ -59,7 +59,7 @@ The Security, Functionality, and Usability triangle
 		   for ease of use (GUI)
 
 
-#Information Security Attacks and Attack Vectors
+## Information Security Attacks and Attack Vectors
 
 Attacks = Motive (Goal) + Method + Vulnerability
 
