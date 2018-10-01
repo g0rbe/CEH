@@ -1,9 +1,6 @@
-# CEH
-Notes for CEH exam
+# Study material for CEHv10
 
-Writen in nano editor
-
-# Study material
+# CEHv9 Notes
 
 https://docs.google.com/document/d/1YvAOM1o6qkgFEdzJpn01rLRBGV8JPfK4cHvfgRiAgEM/edit
 
