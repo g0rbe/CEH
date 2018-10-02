@@ -202,3 +202,37 @@ Domain Controller: NTDS:DIT
 - John The Ripper
 - Pyrit
 - Hashcat
+
+## Escalating Privileges
+
+The main goal is to get a high-level access to the system.
+
+### Horizontal Privileges Escalation
+
+The attacker attempts to gain access to user that has same set of privileges. 
+
+### Vertical Privileges Escalation
+
+The attacker attepmts to escalate privileges to a higher level.
+Vertical privileges occurs when attacker is trying to gain access to the Administrator account.
+Higher privileges allow attacker to access sensitive information, modify files and execute programs.
+
+#### Privilege Escalation using DLL Hijacking
+
+Applications need Dynamic Link Libraries (DLL) to run.
+In Windows, most of the application search for DLL in directories, instead of using the full qualified path.
+The Attacker replace the DLL to a malicious one.
+
+DLL Hijacking tool: Metasploit
+
+**Known DLL**s are specified in the registry key:
+
+``` sh
+HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\
+```
+
+**Searh paths** used by Microsoft:
+
+- Directory of application or current directory
+- System directory (i.e. C:\\Windows\\System32\)
+- Windows directory
