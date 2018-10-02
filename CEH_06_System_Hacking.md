@@ -231,8 +231,42 @@ DLL Hijacking tool: Metasploit
 HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\
 ```
 
-**Searh paths** used by Microsoft:
+**Search paths** used by Microsoft:
 
 - Directory of application or current directory
 - System directory (i.e. C:\\Windows\\System32\)
 - Windows directory
+
+## Executing Applications
+
+The Attacker's next step is to execute malicious applications.
+This execution is for gaining access to system resources, crack passwords, set up backdoors and many more.
+This process is called as "System Owning".
+
+Goals:
+
+- Install malware to collect information
+- Setup Backdoor to maintain access
+- crack passwords and scripts
+- Install Keylogger
+- etc...
+
+### RemoteExec
+
+RemoteExec is software designed for installation of application, execution of code and scripts remotely.
+RemoteExec can upload file across the network.
+
+Features:
+
+- Deploy packages
+- Remotely execution of programs
+- Scheduling execution
+- Remote configuration (settings, files, ...)
+- Remote controlling (turn off, lock, ...)
+
+### PDQ Deploy
+
+PDQ Deploy is a software for system administrators to install and send updates silently to the remote systems.
+It can silently deploy almost every application (.exe, .msi, ...).
+It can install, uninstall, copy, execute and send files.
+
