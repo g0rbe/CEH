@@ -203,6 +203,22 @@ Domain Controller: NTDS:DIT
 - Pyrit
 - Hashcat
 
+### Password Cracking Countermeasures
+
+- Change default password
+- Do not store/save passwords in applications
+- Do not use guessable passwords
+- Set strong password
+- Password encryption
+- Keep credentials secure and secret
+- Enable SYSKEY
+- Password salting
+- Advance security audits
+- Periodically update passwords
+- Monitor attacks
+- Different password for each service
+- Configure policies for incorrect password attempts
+
 ## Escalating Privileges
 
 The main goal is to get a high-level access to the system.
@@ -270,3 +286,135 @@ PDQ Deploy is a software for system administrators to install and send updates s
 It can silently deploy almost every application (.exe, .msi, ...).
 It can install, uninstall, copy, execute and send files.
 
+### Keyloggers
+
+Keystroke logging, keylogging and keyboard capturing is a process of monitoring and/or recording the actions by any user.
+Logging the actions to steal information from the target machine.
+
+Goals:
+
+- Capture the pushed buttons
+- Take screenshots
+- Capture mouse
+- Many more...
+
+#### Types of Keyloggers:
+
+#### Software Keyloggers
+
+Software-based keyloggers are remotely installed, or send it to the target to execute the application.
+
+Types:
+
+- Application keyloggers
+- Kernel keyloggers
+- Hypervisor-based keyloggers
+- Form Grabbing based keyloggers
+
+#### Hardware Keyloggers
+
+It is a physical hardware which are installed on hardware by physically accessing the device.
+
+Types:
+
+- PC/BIOS Embedded keyloggers
+- Keylogger keyboard
+- External keylogger (video, bluetooth, wi-fi, accoustic, ...)
+
+#### Anti-Keyloggers
+
+Anti-Keylogger is an application which ensures protection against keylogging by providing SSl protection, keylogging protection, clipboard logging protection and screen logging protection.
+
+Anti-Kelogger softwares:
+
+- Zemana
+- Spyshelter Anti-keylogger
+- Anti-Keylogger
+
+ 
+#### Key-logging Countermeasures
+
+- Keystroke interference software
+- Don't click on doubtful URLs
+- Anti-Keylogger software
+- On-Screen keyboard for secrets
+- Physical monitoring
+- Host-based IDS
+- File scanning prior to installation
+
+### Spyware
+
+Spywares are the software designed for gathering user interaction information with a system such as login credentials, emails and many more without informing the user of the system.
+The gathered information is sent to a remote destination.
+Spyware hides its files and processes to avoid detection.
+
+Types:
+
+- Adware
+- System monitors
+- Tracking cookies
+- Trojans
+
+Features:
+
+- Tracking users (i.e. keylogging)
+- Monitor user's activity
+- Blocking services
+- Remote delivery of logs
+- Email tracking
+- Record removable media communication (i.e. USB)
+- Voice recording
+- Video recording
+- Tracking location (GPS)
+- Mobile tracking
+
+### Rootkits
+
+Rootkit is a software designed to provide privileged access to a remote user over a system, creates a backdoor.
+Deployed after attacker gain high-level access to a system.
+Rootkits often mask their existence to avoid detection.
+
+#### Types:
+
+- Application level rootkit: perform manipulation of standard application file with an injection of codes.
+
+- Kernel-level rootkit: inject malicious code to the kernel
+
+- Hardware/Firmware level rootkit: built into a chipset
+
+- Hypervisor level rootkit: exploits hardware features like AMD-V or Intel VT
+
+- Boot Loader level rootkits (Bootkits): replace the legitimate boot loader with the malicious one, which  enables the bootkit to activated before an OS run. It can attack Master Boot Record (MBR), Volume Boot Record (VBR) or boot sector.
+It can be used to attack full disk encryption systems, hack encryption keys and passwords.
+
+Tool:
+
+- Avatar
+- Necurs
+- Azazel
+- ZeroAccess
+
+#### Detecting and Defending Rootkits
+
+- Integrity-Based Detection
+- Digital signatures
+- Difference-based detection
+- Behaviour-based detection
+- Cross-view based detection
+- Run-time execution path profiling
+- Anti-rootkit software
+- Deploying a network-based firewall
+- Host-based firewall
+- Install application/OS from trusted sources
+- Integrity verification
+- Kernel memory dump analysis
+
+Unix tools: 
+
+- Zeppo
+- chrootkit
+
+Windows tools:
+
+- Microsoft Sysinternals Rootkit Revealer
+- Sophos Anti-Rootkit
