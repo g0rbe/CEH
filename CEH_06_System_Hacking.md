@@ -418,3 +418,45 @@ Windows tools:
 
 - Microsoft Sysinternals Rootkit Revealer
 - Sophos Anti-Rootkit
+
+### New Technology File System (NTFS) Data Stream
+
+NTFS is a Windows file system by Microsoft.
+NTFS is the deafult file system for Windows 10,- 7,- Vista,- XP,- 2000,- NT.
+
+#### Alternate Data Stream (ADS)
+
+ADS is a file attribute in in NTFS file system, contains metadata for locating a particular file.
+ADS is capable of hiding file data into an existing file without altering or modifying any noticable changes.
+It can be security threat because it can hide malicious files.
+
+NTFS Streams Countermeasures:
+
+- Movung file to a FAT partition (FAT doesn't support ADS, but this will corrupt the file)
+- Third-party tools (ADS Spy, ADS Tools, LADS, ...)
+
+### Steganography
+
+Steganography is a technique for hiding sensitive information in an ordinary message to ensure the cofidentiality.
+Steganography uses encryption to maintain the confidentiality and integrity.
+It hides the encrypted data to avoid detection.
+An attacker may use this to technique to transfer data without being detected.
+
+#### Classification of Steganography
+
+**Technical Steganography** icludes concealing information using methods like using invisible link, microdots.
+
+**Linguistic Steganography** uses text as covering media to hide information like using ciphers and code to hide information.
+
+#### Types of Steganography
+
+- Whitespace Steganography
+- Image/Pixel Steganography
+- Document Steganography
+- Video Steganography
+- Audio Steganography
+- File/Folder Steganography
+- Spam/Email Steganography
+- Web Steganography
+- Frequency Steganography
+- Least Significant Bit Steganography
