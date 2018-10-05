@@ -460,3 +460,102 @@ An attacker may use this to technique to transfer data without being detected.
 - Web Steganography
 - Frequency Steganography
 - Least Significant Bit Steganography
+
+#### Whitespace Steganography
+
+hise information in a text file using extra blank space inserted in between words covering file.
+Using LZW and Huffman compression method to decrease the size of the message.
+
+#### Image Steganography
+
+Hidden information can be kept in image formats, such as PNG, JPG, others.
+Image steganography pelaces redundant bits of the image in the message.
+It cannot be detected by human eye.
+
+Techniques:
+
+- Least significant bit insertion
+- Masking and filtering
+- Algorithm and transfomation
+
+Tools:
+
+- OpenStego
+- QuickStego
+- Stegohide (Linux)
+
+#### Steganalysis
+
+Analysis of suspected information using steganography techniques to discover nad retrieve the hidden information.
+
+Methods:
+
+- Stego-only: have only stego object
+- Known stego: have stego object, algorithm and cover
+- Known message: have stego object and hidden message
+- Known cover: have stego object and cover
+- Choosen message: generate stego form known message to identify the algorithm
+- Choosen stego: have stego object and algorithm
+
+
+# Covering tracks
+
+Aftre gaining access, escalating privileges, executing applications, the next step is to wipe the evidence.
+In this phase, attacker removes all the event logs, error messages and other evidence to prevent its attack from being discovered easily.
+
+Common techniques:
+
+- Disable auditing
+- Clearing logs
+- Manipulating logs
+
+### Disable auditing
+
+Preventing another security mechanism to indicate an alert any sort of intrusion, and leaving to track leaving to track on the machine.
+The best practice for leaving no track and prevent detection is by disabling the auditing as you logged in on the system.
+It will not only prevent to log events, but also resist in the detection.
+Auditing in a system is enabled to detect and track events.
+
+List auditing categories in windows:
+
+``` sh
+C:\Windows\system32>auditpol /list /category /v
+```
+
+Check all category audit policies:
+
+``` sh
+C:\Windows\system32>auditpol /get /category:*
+```
+
+### Clearing logs
+
+By clearing logs, all events logged during the compromise will be ereased.
+
+Folder of log files:
+
+Windows 2000/Server2003/Windows XP:
+
+``` sh
+%SystemRoot%\System32\Config
+```
+
+Server 2008/Vista and up:
+
+``` sh
+%SystemRoot%\system32\winevt\logs
+```
+
+Linux, OpenBSD:
+
+``` sh
+/var/log/
+```
+
+### Other methods
+
+- Clear cookies
+- Clear cache
+- Clear temporary files
+- CCleaner
+- Clear Most Recent Used (MRU)
