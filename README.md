@@ -17,3 +17,8 @@ https://yeahhub.com/cehv9-practice-exam-questions/chapter0-assessment.php
 https://www.skillset.com/
 
 https://ceh.cagy.org/
+
+# TODO
+
+- Complete chapter 1,2
+- Reformat chapter 2,3,4
