@@ -101,8 +101,23 @@ Internet traffic routing through the US, or data stored on a US server are wiret
 - Sniffing detection tool
 - Strong encryption protocol
 
-Detection:
+#### Detection:
 
 - Ping method
 - ARP method
 - Promiscuous port detection
+
+# MAC Attacks
+
+**Media Access Control** (MAC) is the physical address of a device.
+MAC ddress is a 48-bit unique identfication number that is assiged to a network device for communication at data-link layer (layer 2).
+First 24 bits are the Object Unique Identifier (QUI), the last 24 bits are the Network Interface Controller (NIC).
+
+#### MAC Address Table / CAM Table
+
+MAC address table or Content-Addressable Memory table is used in ethernet switches to record MAC address, and it's associated information which is used to  forward packets.
+
+
+The switch observe the incoming frames and records the source MAC of the frames in it's MAC address table. It also records the specific port for the source MAC address.
+Based on this, switch can make intelligent frame forwarding.
+Switch removes MAC from the table after switch not seen it for a while.
