@@ -121,3 +121,107 @@ MAC address table or Content-Addressable Memory table is used in ethernet switch
 The switch observe the incoming frames and records the source MAC of the frames in it's MAC address table. It also records the specific port for the source MAC address.
 Based on this, switch can make intelligent frame forwarding.
 Switch removes MAC from the table after switch not seen it for a while.
+
+#### MAC Flooding
+
+Attacker sends random MAC addresses mapped with random IP to overflow the storage cappacity of CAM table.
+CAM table has a fixed length, so when filled, switch act as a hub, broadcast every packet on every port, help attacker to sniff packets.
+
+Linux tool:
+
+- macof
+
+#### Switch Port Stealing
+
+This technique base on MAC flooding, the attacker send bogus ARP packets with the source MAC address of the target and destination address of its own.
+The switch update the CAM table because of it.
+
+If the attacker send a bogus ARP packet immediatelly after the target packet, the attacker will get the respond instead of the target.
+
+#### Defending against MAC Attacks
+
+Port Security is used to bind MAC addres of known devices to the physical ports and violation action is also defined.
+
+
+# DHCP Attacks
+
+## Dynamic Host Configuration Protocol (DHCP)
+
+DHCP is the process of allocating the IP address dynamically so these addresses are assigned automatically and they can be reused when hosts dont need them.
+**Round Trip Time** is the measurement of time from discovery of DHCP server until obtaining the leased IP address.
+
+**IPv4 DHCP process**:
+
+By using UDP broadcast, DHCP client sends an initial **DHCP-Discovery** packet.
+The DHCP server reply with a **DHCP-Offer** packet, offering the configuration parameters.
+The DHCP client send back a **DHCP-Request** packet destined for DHCP server for requesting the DHCP parameters.
+Finally, the DHCP server send the **DHCP-Acknowledgement** packet containing configuration parameters.
+
+CLIENT				SERVER 
+--------------------------------------
+DHCP-Discovery  ->	
+		<-	DHCP-Offer
+DHCP-Request	->
+		<-	DHCP-Acknowledgement
+
+
+**DHCPv4 Ports**:
+
+- UDP port 67 for Server
+- UDP port 68 for Client
+
+**IPv6 DHCP process**:
+
+CLIENT				SERVER
+--------------------------------------
+Solicit		->
+		<-	Advertise
+Request		->
+		<-	Reply
+
+**DHCPv6 Ports**:
+
+- UDP port 546 for Client
+- UDP port 547 for Server
+
+**DHCP Relay** is needed when the DHCP server is not on the same subnet, because routers do not forward any broadcast IP packet to interfaces.
+**DHCP Relay** Agent allows DHCP messages to be exchanged betwee the DHCP client and the DHCP server residing on different subnet.
+**DHCP Option 82** allows Agents to insert cicuit specific information into a request that is being forwarded to a DHCP server.
+
+#### DHCP Starvation Attack
+
+DHCP Starvation Attack is a Denial-of-Service attack on a DHCP server.
+Attacker send bogus requests to DHCP server with spoofed MAC address to lease all IP address in DHCP address pool.
+Once all IP address is allocated, upcoming users will be unable to obtain IP address or renew the lease.
+
+Tools:
+
+- Dhcpstarv
+- Yersinia
+
+#### Rogue DHCP Server
+
+Attacker deploy the rogue DHCP server in the network along with the DHCP starvation attack.
+When legitimate DHCP server is in Denial-of-Service attacks, DHCP clients are unable to gain IP address from the legitimate DHCP server.
+Upcoming DHCP Discovery (IPv4) and Solicit (IPv6) are replied by the bogus SHCP server with configuration parameter which directs the traffic towards it.
+
+### Defending against DHCP Starvation and Rodue Server Attack
+
+#### DHCP Snooping
+
+DHCP snooping feature identify the only trusted ports from DHCP traffic.
+Any access port who tries to reply the DHCP request will be ignored.
+
+#### Port Security
+
+- Limit the learning number of a maximum number of MAC addresses on a port
+- Configure violation action, aging time, ...
+
+# ARP Poisoning
+
+#### Address Resolution Protocol (ARP)
+
+The Address Resolution Protocol (ARP) is a communication protocol used for discovering the link layer address, such as a MAC address, associated with a given internet layer address, typically an IPv4 address. 
+By broadcasting the ARP request with IP address, the switch can learn the associated MAC address information from the reply of the specific host.
+If there is no map, or map is unknown, the source will send a broadcast to all node.
+
