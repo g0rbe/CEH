@@ -219,9 +219,31 @@ Any access port who tries to reply the DHCP request will be ignored.
 
 # ARP Poisoning
 
-#### Address Resolution Protocol (ARP)
+## Address Resolution Protocol (ARP)
 
 The Address Resolution Protocol (ARP) is a communication protocol used for discovering the link layer address, such as a MAC address, associated with a given internet layer address, typically an IPv4 address. 
 By broadcasting the ARP request with IP address, the switch can learn the associated MAC address information from the reply of the specific host.
 If there is no map, or map is unknown, the source will send a broadcast to all node.
 
+#### ARP Spoofing Attack
+
+Attacker send forged ARP packets over Local Area Network (LAN).
+In this case, switch will update the attacker's MAC address with the IP address of a legitimate user or server, then start forwarding the packets to the attacker.
+Attacker can steal information by extracting it from packets.
+
+ARP Poisoning used for:
+
+- Session hijacking
+- Denial-of-Service attacks
+- Man-in-the-Middle attacks
+- Packet sniffing
+- Data interceptions
+- VoIP tapping
+- Connection reseting
+- Stealing passwords
+
+### Defending ARP Poisoning
+
+#### Dynamic ARP Inspection (DAI)
+
+DAI is used with DHCP snooping, IP-to-MAC bindings can be tracked from DHCP transactions to protect against ARP poisoning.
