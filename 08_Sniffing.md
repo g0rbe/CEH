@@ -247,3 +247,102 @@ ARP Poisoning used for:
 #### Dynamic ARP Inspection (DAI)
 
 DAI is used with DHCP snooping, IP-to-MAC bindings can be tracked from DHCP transactions to protect against ARP poisoning.
+
+## Spoofing Attacks
+
+### MAC Spoofing/Duplicating
+
+Manipulating the MAC address to impersonate the legitimate user or launch attack such as DoS.
+Attacker sniffs the MAC address of users which are active on switch ports and duplicate the MAC address.
+This can intercept the traffic and traffic destined to the legitimate user may direct to the attacker.
+
+#### Defend against MAC Spoofing
+
+- DHCP Snooping
+- Dynamic ARP Inpection
+- Source Guard: monitor and prevent the host to impersonate another host
+
+## DNS Poisoning
+
+### Domain Name System (DNS)
+
+DNS is used in networking to translate human-readable domain names to IP address.
+When DNS Server reveives the request, it doesnt have the entry, it generates the query to another DNS Server for the translation and so on.
+DNS server having the translation will send back the IP address.
+
+### DNS Poisoning Techniques
+
+When DNS server receives a false entry, it updates its database.
+To increase perfomance, DNS servers maintain a cache in which this entry is updated to provide quick resolution of queries.
+This false entry causing poison in DNS translation until the cache expires.
+
+#### Intranet DNS Spoofing
+
+Normally performed over Local Area Network (LAN) with switched network.
+With the help of ARP poisoning, attacker sniff packet, extarct the ID of DNS requests and reply with fake IP translation directing traffic to the malicious site.
+
+#### Internet DNS Poisoning
+
+Attacker replace the DNS configuration on the target machine.
+
+#### Proxy Server DNS Poisoning
+
+Attacker replace the DNS configuration of the web browser.
+
+#### DNS Cache Poisoning
+
+Attacker exploiting flaws in DNS software, adds or alter the entries.
+
+#### Defending Techniques against DNS Poioning
+
+- Segregate authoritive and recursive resolver
+- Query and response verification using DNS Guard
+- Restrict external DNS lookup
+- Prevent DNS Open Resolver configuration
+- Transaction ID randomization
+- DNS application inspection configuration
+- DNS resolver
+- IP Source Guard
+- IDS deployment
+- Disable recursion
+- DNS non-existent domain rate limiting
+- Uni-Cast path forwarding
+- UDP source port randomization
+- DNSSEC
+
+### Sniffing Tools
+
+#### Wireshark
+
+Filters in Wireshark:
+
+- `==`		Equal
+- `eq`		Equal
+- `!=`		Not equal
+- `ne`		Not equal
+- `contains`	Contains specified value
+
+## Defending Against Sniffing
+
+- HTTPS instead of HTTP
+- SFTP instead if FTP
+- Switch instead if Hub
+- Port security
+- DHCP Snooping
+- Dynamic ARP Inspection
+- Source guard
+- Sniffing detection tools
+- Strong encryption protocol
+
+### Sniffing Detection Technique
+
+#### Ping Method
+
+A ping is sent to the suspect IP address with spoofed MAC.
+If the NIC is not in promiscuous mode, it will not it will not respond.
+
+#### ARP Method
+
+First, sending non broadcast ARP packet to the suspect, MAC address will be cached if the NIC is in promiscuous mode.
+
+Second, send a broadcast with spoofed MAC, if NIC is in promiscuous mode, it will be able to reply the packet only as it has already learned the actual MAC from sniffed non-broadcast ARP packet.
