@@ -92,3 +92,46 @@ Attacker develop a fake security app.
 ### Insider Attack
 
 Social Engineering is not all about a third person gathering information, it may be an insider with privileges.
+
+## Impersonation on Social Network Sites
+
+### Social Engineering Through Impersonation on Social Network Sites
+
+Attacker gathers personal information of a target from different sources mostly from social network sites such as full name, date of birth, email address, residental address, etc.
+After gathering the information, the attacker create an account that is exactly the same. Then introduced to friends, group joined by the target to get updates or convince the target's friends to reveal information.
+
+#### Risks of Social Network in a Corporate Networks
+
+Social network sites is not secured enough as a corporate network secures the authentication.
+The major risk of social network is its vulnerability in the authentication.
+The employee while communicating on social network may not take care of sensitive information.
+
+## Identity Theft
+
+- Stealing the identification information of someone
+- Popularly used for frauds
+- Prove the fake identity to take advantage of it
+
+### Process
+
+- Gathering information: full name, address, contacts, accounts, birth information, bill from social networks, dumpster diving, etc...
+- Fake identity proof: get fake IDs (driving licence, ID card, etc...)
+- Fraud: spend money, unathorized access, use ID for frauds, etc...
+
+# Countermeasures
+
+- Security of sensitive informations
+- Physical security
+- Rotational duties
+- Monitoring
+- Controlled access
+- Least privileges
+- Strong policies
+- Training
+- Bio-metric authentication
+- Audit
+- Awareness
+
+**Tool**:
+
+- social engineering toolkit (linux)
