@@ -1,37 +1,42 @@
-TCP (Transmission Control Protocol)
-UDP (User Datagram Protocol)
+[TCP](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) (Transmission Control Protocol)
+[UDP](https://en.wikipedia.org/wiki/User_Datagram_Protocol) (User Datagram Protocol)
 
-#FLAGS:
-SYN - Initates a connection between two hosts to facilitate communication
-ACK - Acknowledge the receipt of a packet
-URG - Indicates that the data contained in the packet is urgent and should
-      process it immediately
-PSH - Insturcts the sending system to send all buffered data immediately
-FIN - Tells te remote system about tthe end of the communiction. In essence,
-      this gracefully closes the connection
-RST - Reset a connection
+# Flags
 
-Three-way handshake:
-	-Establish a TCP conncetion
+- **SYN** : Initates a connection between two hosts to facilitate communication
+- **ACK** : Acknowledge the receipt of a packet
+- **URG** : Indicates that the data contained in the packet is urgent and should process it immediately
+- **PSH** : Insturcts the sending system to send all buffered data immediately
+- **FIN** : Tells te remote system about tthe end of the communiction. In essence, this gracefully closes the 
+connection
+- **RST** :  Reset a connection
 
-	SYN ->
-	    <- SYN+ACK
-	ACK ->
+# Three-way handshake
 
-OSI Model:
-	Application layer (HTTP, SNMP, ...)
-	Presentation layer (MIME, ...)
-	Session layer (SOCKS, NetBIOS, ...)
-	Transport layer (TCP, UDP, ...)
-	Network layer (IP, ICMP, ...)
-	Data link layer (MAC, ARP, ...)
-	Physical layer (ethernet, wifi, ...)
+- Establish a TCP conncetion
 
-TCP/IP Model:
-	Application layer (HTTP, SNMP, ...)
-	Transport layer (TCP, UDP, ...)
-	Internet layer (IP, ICMP, ...)
-	Link layer (ARP, MAC, ...)
+| Computer1 | Direction | Computer2 |
+|:---------:|:---------:|:---------:|           
+|    SYN    |    ->     |           |
+|	    |    <-     |  SYN+ACK  |
+|    ACK    |    ->     |           |
+
+# OSI Model
+
+7. Application layer (HTTP, SNMP, ...)
+6. Presentation layer (MIME, ...)
+5. Session layer (SOCKS, NetBIOS, ...)
+4. Transport layer (TCP, UDP, ...)
+3. Network layer (IP, ICMP, ...)
+2. Data link layer (MAC, ARP, ...)
+1. Physical layer (ethernet, wifi, ...)
+
+# TCP/IP Model:
+
+4. Application layer (HTTP, SNMP, ...)
+3. Transport layer (TCP, UDP, ...)
+2. Internet layer (IP, ICMP, ...)
+1. Link layer (ARP, MAC, ...)
 
 ARP packet
 ICMP packet
@@ -41,48 +46,78 @@ DHCP (Dynamic Host Configuration Protocol)
 DNS (Domian Name System)
 UPnP (Universal Plug and Play)
 
-#Scanning Techniques
+# Scanning Techniques
 
-TCP Connect() / Full Open Scan:
-	-Three-way handshake
-	-Completed connection
-	-Logged and detected
-	-Dont need ROOT
-	-Open port:
-		SYN ->
-		    <- SYN+ACK
-		ACK ->
-		RST ->
-	-Closed port:
-		SYN ->
-		    <- RST
-	-Nmap: -sT
+## TCP Connect() / Full Open Scan:
 
-Stealth Scan / Half-Open Scan:
-	-Half Three-way Handshake
-	-Open Port:
-		SYN ->
-		    <- SYN+ACK
-		RST ->
-	-Closed port:
-		SYN ->
-		    <- RST
-	-Nmpa: -sS
+- Three-way handshake
+- Completed connection
+- Logged and detected
+- Dont need ROOT
+- Open port:
 
-Inverse TCP Flag Scanning
-	-send TCP probe with TCP flags (i.e. FIN, URG, PSH, without flag)
-	-Xmas and Null scan
+| Attacker  | Direction | Target    |
+|:---------:|:---------:|:---------:|
+|    SYN    |    ->     |           |
+|           |    <-     |  SYN+ACK  |
+|    ACK    |    ->     |           |
+|    RST    |    ->     |           |
 
-Xmas Scan:
-	-PSH+URG+FIN flag or ALL flag
-	-create abnormal situation
-	-Open port:
-		FIN+URG+PSH ->
-			    <- No response
-	-Closed port:
-		FIN+URG+PSH ->
-			    <- RST
-	-Nmap: -sX
+
+- Closed port:
+
+| Attacker  | Direction | Target    |
+|:---------:|:---------:|:---------:|
+|    SYN    |    ->     |           |
+|           |    <-     |    RST    |
+
+- Nmap: **-sT**
+
+## Stealth Scan / Half-Open Scan:
+
+- Half Three-way Handshake
+- Open Port:
+
+| Attacker  | Direction | Target    |
+|:---------:|:---------:|:---------:|
+|    SYN    |    ->     |           |
+|           |    <-     |  SYN+ACK  |
+|    RST    |    ->     |           |
+
+- Closed port:
+
+| Attacker  | Direction | Target    |
+|:---------:|:---------:|:---------:|
+|    SYN    |    ->     |           |
+|           |    <-     |    RST    |
+
+- Nmpa: **-sS**
+
+## Inverse TCP Flag Scanning
+
+- send TCP probe with TCP flags (i.e. FIN, URG, PSH, without flag)
+- Xmas and Null scan
+
+### Xmas Scan:
+
+- PSH+URG+FIN flag or ALL flag
+- create abnormal situation
+- Open port:
+
+|  Attacker   | Direction | Target      |
+|:-----------:|:---------:|:-----------:|
+| FIN+URG+PSH |    ->     |             |
+|             |    <-     | No response |
+
+- Closed port:
+
+|  Attacker   | Direction | Target      |
+|:-----------:|:---------:|:-----------:|
+| FIN+URG+PSH |    ->     |             |
+|             |    <-     |    RST      |
+
+
+- Nmap: **-sX**
 
 FIN Scan:
 	-FIN scan work with RFC-793 based TCP/IP (before Win XP)
