@@ -1,4 +1,7 @@
+
+
 [TCP](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) (Transmission Control Protocol)
+
 [UDP](https://en.wikipedia.org/wiki/User_Datagram_Protocol) (User Datagram Protocol)
 
 # Flags
@@ -23,28 +26,51 @@ connection
 
 # OSI Model
 
-7. Application layer (HTTP, SNMP, ...)
-6. Presentation layer (MIME, ...)
-5. Session layer (SOCKS, NetBIOS, ...)
-4. Transport layer (TCP, UDP, ...)
-3. Network layer (IP, ICMP, ...)
-2. Data link layer (MAC, ARP, ...)
-1. Physical layer (ethernet, wifi, ...)
+Layer 7: **Application layer** (HTTP, SNMP, ...)
+
+Layer 6: **Presentation layer** (MIME, ...)
+
+Layer 5: ** Session layer** (SOCKS, NetBIOS, ...)
+
+Layer 4: **Transport layer** (TCP, UDP, ...)
+
+Layer 3: **Network layer** (IP, ICMP, ...)
+
+Layer 2: **Data link layer** (MAC, ARP, ...)
+
+Layer 1: **Physical layer** (ethernet, wifi, ...)
+
+
 
 # TCP/IP Model:
 
-4. Application layer (HTTP, SNMP, ...)
-3. Transport layer (TCP, UDP, ...)
-2. Internet layer (IP, ICMP, ...)
-1. Link layer (ARP, MAC, ...)
+Layer 4: **Application layer** (HTTP, SNMP, ...)
 
-ARP packet
-ICMP packet
-Ping Sweep
-SSDP (Simple Service Discovery Protocol)
-DHCP (Dynamic Host Configuration Protocol)
-DNS (Domian Name System)
-UPnP (Universal Plug and Play)
+Layer 3: **Transport layer** (TCP, UDP, ...)
+
+Layer 2: **Internet layer** (IP, ICMP, ...)
+
+Layer 1: **Link layer** (ARP, MAC, ...)
+
+## Definitions
+
+These definitions is must-know !
+
+**Read the links extensively!**
+
+- [ARP](https://www.tummy.com/articles/networking-basics-how-arp-works/)
+
+- [ICMP](https://www.webopedia.com/TERM/I/ICMP.html)
+
+- Ping Sweep: mass ICMP echo (ping) message
+
+- [SSDP](https://wiki.wireshark.org/SSDP)
+
+- DHCP (Dynamic Host Configuration Protocol)
+
+- DNS (Domian Name System)
+
+- UPnP (Universal Plug and Play)
 
 # Scanning Techniques
 
