@@ -1,6 +1,6 @@
-## Essiential Terminology
+# Essiential Terminology
 
-**Hack Value** : a notion  among hackers that something is worth doing or is interesting
+**Hack Value** : A notion  among hackers that something is worth doing or is interesting
 
 **Vulnerability** : Existence of a weakness, design, or implementation error that can lead to an unexpected event compromising the security of the system
 
@@ -16,42 +16,39 @@
 
 **Bot** : A "bot" is a software application that can be controlled remotely to execute or automate predefined tasks
 
-## Information Security:
+# Information Security:
 
-The information security is a state of well-being of information and infrastucture in which the possibility of theft, tampering , and disruption of information and services is kept low or tolerable
+The information security is a state of well-being of information and infrastucture in which the possibility of theft, tampering , and disruption of 
+information and services is kept low or tolerable.
 
 ## Elements of InfoSec:
 
-**Confidentiality** :
-	Assurance that the information is accesible only to those
-	authorized to have access
+#### Confidentiality
 
-**Integrity** :
-	The trustworthiness of data or resource in terms of preventing 
-	improper and unauthorized changes
+Assurance that the information is accesible only to those authorized to have access
 
-**Availability** :
-	Assurance that the systems responsible for delivering, storing, and 
-	processing information are accesible when required by the authorized 
-	users
+#### Integrity
 
-**Authenticity** :
-	Authenticity refers to the characteristic of a communication,
-	document or any data that ensures the quality of being 
-	genuine 
+The trustworthiness of data or resource in terms of preventing improper and unauthorized changes
 
-**Non-Repudiation** :
-	Guarantee that the sender of a message cannot later deny having sent
-	the message and that the recipient cannot deny having received
-	the message
+#### Availability
+Assurance that the systems responsible for delivering, storing, and processing information are accesible when required by the authorized users
 
-### The Security, Functionality, and Usability triangle
+#### Authenticity
 
-- Security: Restrictions imposed on accessing the components of the system (restrictions)
+Authenticity refers to the characteristic of a communication, document or any data that ensures the quality of being genuine 
 
-- Functionality: The set of features provided by the system (features)
+#### Non-Repudiation
 
-- Usability: The GUI components used to design the system for ease of use (GUI)
+Guarantee that the sender of a message cannot later deny having sent the message and that the recipient cannot deny having received the message
+
+## The Security, Functionality, and Usability triangle
+
+- **Security** : Restrictions imposed on accessing the components of the system (restrictions)
+
+- **Functionality** : The set of features provided by the system (features)
+
+- **Usability** : The GUI components used to design the system for ease of use (GUI)
 
 
 ## Information Security Attacks and Attack Vectors
