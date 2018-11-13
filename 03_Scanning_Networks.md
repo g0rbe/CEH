@@ -4,14 +4,13 @@
 
 [UDP](https://en.wikipedia.org/wiki/User_Datagram_Protocol) (User Datagram Protocol)
 
-# Flags
+# TCP Flags
 
 - **SYN** : Initates a connection between two hosts to facilitate communication
 - **ACK** : Acknowledge the receipt of a packet
 - **URG** : Indicates that the data contained in the packet is urgent and should process it immediately
 - **PSH** : Insturcts the sending system to send all buffered data immediately
-- **FIN** : Tells te remote system about tthe end of the communiction. In essence, this gracefully closes the 
-connection
+- **FIN** : Tells te remote system about tthe end of the communiction. In essence, this gracefully closes the connection
 - **RST** :  Reset a connection
 
 # Three-way handshake
@@ -30,7 +29,7 @@ Layer 7: **Application layer** (HTTP, SNMP, ...)
 
 Layer 6: **Presentation layer** (MIME, ...)
 
-Layer 5: ** Session layer** (SOCKS, NetBIOS, ...)
+Layer 5: **Session layer** (SOCKS, NetBIOS, ...)
 
 Layer 4: **Transport layer** (TCP, UDP, ...)
 
@@ -39,8 +38,6 @@ Layer 3: **Network layer** (IP, ICMP, ...)
 Layer 2: **Data link layer** (MAC, ARP, ...)
 
 Layer 1: **Physical layer** (ethernet, wifi, ...)
-
-
 
 # TCP/IP Model:
 
@@ -52,7 +49,7 @@ Layer 2: **Internet layer** (IP, ICMP, ...)
 
 Layer 1: **Link layer** (ARP, MAC, ...)
 
-## Definitions
+# Definitions
 
 These definitions is must-know !
 
@@ -66,11 +63,11 @@ These definitions is must-know !
 
 - [SSDP](https://wiki.wireshark.org/SSDP)
 
-- DHCP (Dynamic Host Configuration Protocol)
+- [DHCP](https://www.lifewire.com/what-is-dhcp-2625848)
 
-- DNS (Domian Name System)
+- [DNS](https://dyn.com/blog/dns-why-its-important-how-it-works/)
 
-- UPnP (Universal Plug and Play)
+- [UPnP](https://en.wikipedia.org/wiki/Universal_Plug_and_Play)
 
 # Scanning Techniques
 
@@ -80,6 +77,7 @@ These definitions is must-know !
 - Completed connection
 - Logged and detected
 - Dont need ROOT
+- nmap: **-sT**
 - Open port:
 
 | Attacker  | Direction | Target    |
@@ -97,11 +95,11 @@ These definitions is must-know !
 |    SYN    |    ->     |           |
 |           |    <-     |    RST    |
 
-- Nmap: **-sT**
 
 ## Stealth Scan / Half-Open Scan:
 
 - Half Three-way Handshake
+- Nmap: **-sS**
 - Open Port:
 
 | Attacker  | Direction | Target    |
@@ -117,17 +115,17 @@ These definitions is must-know !
 |    SYN    |    ->     |           |
 |           |    <-     |    RST    |
 
-- Nmpa: **-sS**
 
 ## Inverse TCP Flag Scanning
 
-- send TCP probe with TCP flags (i.e. FIN, URG, PSH, without flag)
+- Send TCP probe with TCP flags (i.e. FIN, URG, PSH, without flag)
 - Xmas and Null scan
 
 ### Xmas Scan:
 
 - PSH+URG+FIN flag or ALL flag
-- create abnormal situation
+- Create abnormal situation
+- Nmap: **-sX**
 - Open port:
 
 |  Attacker   | Direction | Target      |
@@ -143,120 +141,132 @@ These definitions is must-know !
 |             |    <-     |    RST      |
 
 
-- Nmap: **-sX**
+### FIN Scan:
 
-FIN Scan:
-	-FIN scan work with RFC-793 based TCP/IP (before Win XP)
-	-Only FIN flag
-	-Probably pass firewalls
-	-Open port:
-		FIN ->
-		    <- No response
-	-Closed port:
-		FIN ->
-		    <- RST
-	-Nmap: -sF
+- FIN scan work with RFC-793 based TCP/IP (before Win XP)
+- Only FIN flag
+- Probably pass firewalls
+- Nmap: **-sF**
+- Open port:
 
-NULL Scan:
-	-No flag
-	-Easy to detect
-	-Open port:
-		NULL ->
-		     <- No response
-	-Closed port:
-		NULL ->
-		     <- RST
-	-Nmap: -sN
+|  Attacker   | Direction | Target      |
+|:-----------:|:---------:|:-----------:|
+|     FIN     |    ->     |             |
+|             |    <-     | No response |
 
-ACK Flag probe scanning:
-	-Only ACK flag
-	-The response is always an RST
-	-Examine the RST header (i.e. TTL, WINDOW), the decide if port open or
-	 not
-	-Help identify filtering system: RST mean no firewall, No response 
-	 mean there is a firewall
-	-Nmap: -sA
+- Closed port:
 
-IDLE / IPID Header scan:
-	-Remaining low profile
-	-Scanning done by a zombie
-	-Based on Full Open scan
-	-The unsolicited SYN+ACK packet is ignored or responded with RST
-	-Every IP packet has Fragment Identification Number (IPID)
-	-OS increment IPID for each packet
-	-Nmap: -sI <zombie host[:probeport]>
-	-Method:
-		-Send a SYN+ACK to zombie to get IPID
-		-Zombie respond with RST
-			SYN+ACK (IPID probe) ->
-					     <- RST (IPID: 1234)
-		-Send SYN packet to the target spoofing the IP of the zombie
-		#PORT OPEN:
-		-Target respond to the zombie with SYN+ACK
-		-Zombie respond RST (IPID incremented by 1)
-			SYN (spoofed IP) -> target
-			target -> SYN+ACK -> zombie
-			zombie -> RST -> target		 
-		#PORT CLOSED:
-		-Attacker send SYN packet with spoofed IP to the target
-		-Target reply with RST
-		-Zombie send nothing, so zombie's IPID not increased
-			SYN (spoofed IP) -> target
-			target -> RST -> zombie
-		-Send SYN+ACK to the zombie again to get IPID
-		-Zombie reply with RST (IPID increased)
-		-Compare IPID
-		-Port is open if IPID increased by 2 (+1 send to target,
-		 +1 send to me)
-		-Port is closed if IPID increased by 1 (+1,the last RST to me)
+|  Attacker   | Direction | Target      |
+|:-----------:|:---------:|:-----------:|
+|     FIN     |    ->     |             |
+|             |    <-     |    RST      |
 
-UDP Scan:
-	-Connectionless protocol
-	-Open port:
-		UDP Port Probe ->
-			       <- No response
-	-Closed port:
-		UDP Port Probe ->
-			       <- ICMP Port Unreachable
-	
+### NULL Scan:
 
-IDS / IPS evasion:
-	-packet fragmentation:
-		-nmap: '-f'
-		-The IDS have to reassemble the packets to detect an attack
-	-sending packet with delay
+- No flag
+- Easy to detect
+- Nmap: **-sN**
+- Open port:
 
-OS Fingerprinting:
-	-Active OS fingerprinting:
-		-nmap: '-O'
-		-send TCP and UDP packets and observe the response from
-		 the host
-	-Passive OS fingerprinting:
-		-detail assessment of the traffic (TTL, TCP Window Size)
-		-common values:
-					TTL	TCP Window Size
-			Linux		64	5840
-			Windows XP	64	65535
-			Windows 2008	64	8192
-			FreeBSD		64	5840	
-		
-Banner Grabbing: 
-	-determine the service
-	-typically uses Telnet
+|  Attacker   | Direction | Target      |
+|:-----------:|:---------:|:-----------:|
+|     NULL    |    ->     |             |
+|             |    <-     | No response |
 
-Proxy:
-	-system between the attacker and the target
-	-hiding source IP address
-	-impersonating
-	-hide identity
+- Closed port:
 
-Proxy chaning:
-	-using multiple proxy server
-	-most used proxy chains: TOR
+|  Attacker   | Direction | Target      |
+|:-----------:|:---------:|:-----------:|
+|     NULL    |    ->     |             |
+|             |    <-     |    RST      |
 
-Spoofing IP address
-	-modify packet header
-	-detect:
-		-Direct TTL probe (on same subnet)
-		-IP Identification Number
+
+### ACK Flag probe scanning:
+
+- Only ACK flag
+- The response is always an RST
+- Examine the RST header (i.e. TTL, WINDOW), the decide if port open or not
+- Help identify filtering system: RST mean no firewall, No response mean there is a firewall
+- Nmap: **-sA**
+
+### IDLE / IPID Header scan:
+
+- Remaining low profile
+- Scanning done by a zombie
+- Based on Full Open scan
+- The unsolicited SYN+ACK packet is ignored or responded with RST
+- Every IP packet has Fragment Identification Number (IPID)
+- OS increment IPID for each packet
+- Nmap: **-sI <zombie host[:probeport]>**
+- **Explanation** on Nmap's [website](https://nmap.org/book/idlescan.html)
+
+## UDP Scan:
+
+- Connectionless protocol
+- Open port:
+
+|      Attacker       | Direction | Target      |
+|:-------------------:|:---------:|:-----------:|
+|    UPD Port probe   |    ->     |             |
+|                     |    <-     | No response |
+
+- Closed port:
+
+|      Attacker       | Direction |        Target         |
+|:-------------------:|:---------:|:---------------------:|
+|    UPD Port probe   |    ->     |                       |
+|                     |    <-     | ICMP Port Unreachable |
+
+## IDS / IPS evasion:
+
+- Packet fragmentation:
+- Nmap: **-f**
+- The IDS have to reassemble the packets to detect an attack
+- Sending packet with delay
+
+## OS Fingerprinting:
+
+#### Active OS fingerprinting:
+
+- Nmap: **-O**
+- Send TCP and UDP packets and observe the response from the host
+
+#### Passive OS fingerprinting:
+
+- Detail assessment of the traffic (TTL, TCP Window Size)
+- Common values:
+
+|     OS       |  TTL  |  TCP Window Size  |
+|+------------+|+-----+|+-----------------+|
+|   Linux      |   64  |        5840       |
+|  Windows XP  |   64  |        65535      |
+| Windows 2008 |   64  |        8192       |
+|   FreeBSD    |   64  |        5840       |
+
+- More values [here](https://subinsb.com/default-device-ttl-values/)
+
+
+## Banner Grabbing: 
+
+- Determine the service
+- Typically uses Telnet
+
+# Proxy:
+
+- System between the attacker and the target
+- Hiding source IP address
+- Impersonating
+- Hide identity
+
+# Proxy chaning:
+
+- Using multiple proxy server
+- Most used proxy chains: TOR
+
+# Spoofing IP address
+
+- Modify packet header
+- Detect:
+..- Direct TTL probe (on same subnet)
+..- IP Identification Number
 
