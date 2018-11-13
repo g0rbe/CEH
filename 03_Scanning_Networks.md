@@ -238,10 +238,10 @@ These definitions is must-know !
 
 |     OS       |  TTL  |  TCP Window Size  |
 |:------------:|:-----:|:-----------------:|
-|   Linux      |   64  |        5840       |
-|  Windows XP  |   64  |        65535      |
-| Windows 2008 |   64  |        8192       |
-|   FreeBSD    |   64  |        5840       |
+|   Linux      |  64   |        5840       |
+|  Windows XP  |  128  |        65535      |
+| Windows 2008 |  128  |        8192       |
+|   FreeBSD    |  64   |        5840       |
 
 - More values [here](https://subinsb.com/default-device-ttl-values/)
 
@@ -266,7 +266,8 @@ These definitions is must-know !
 # Spoofing IP address
 
 - Modify packet header
-- Detect:
-..- Direct TTL probe (on same subnet)
-..- IP Identification Number
+#### Detect Spoofing
+
+- Direct TTL probe (on same subnet)
+- IP Identification Number
 
