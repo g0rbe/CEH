@@ -237,7 +237,7 @@ These definitions is must-know !
 - Common values:
 
 |     OS       |  TTL  |  TCP Window Size  |
-|+------------+|+-----+|+-----------------+|
+|:------------:|:-----:|:-----------------:|
 |   Linux      |   64  |        5840       |
 |  Windows XP  |   64  |        65535      |
 | Windows 2008 |   64  |        8192       |
