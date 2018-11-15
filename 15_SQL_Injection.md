@@ -75,5 +75,30 @@ Use different channel to launch the attack.
 ## Information Gathering And Vulnerability Detection
 
 - Collect the information about the web application, server, OS, database, ...
+- Identify vulnearbilities 
+- Evaluate input fields
+
+## Launch Attack
+
+- Select the appropriate type of SQL Injection, based on the gathered information
+
+## Advanced SQL Injection
+
+- Enumarte the database (Postgre, MySQL, Oracle, ...)
+- Identify privilege level of users
+- Passwords and hashes grabbing
+- Transfer database to a remote machine
+
+# Evasion Techniques 
+
+## Evading IDS
+
+- Inserting inline comment in betweeen keywords
+- Character encoding
+- String Concatenation
+- Obfuscated codes
+- Manipulating white spaces
+- Hex encoding
+- Sophisticated matches
 
 
