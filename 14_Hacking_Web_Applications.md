@@ -164,14 +164,25 @@ Data connection requires a connection string.
 - Connection String Parameters Pollution (CSPP)
 - Connection Pool DoS
 
-
-
 # Countermeasures
 
 ## Percent Encoding
 
-[Percent Encoding](https://en.wikipedia.org/wiki/Percent-encoding) or URL Encoding is a technique for secure 
-handling of URL. The default characterset in HTML5 is UTF-8.
+[Percent Encoding](https://en.wikipedia.org/wiki/Percent-encoding) or URL Encoding is a technique for
+secure handling of URL by replaces unsafe and non-ascii characters with % followed by two hexadecimal
+digits.
+
+Example:
+
+%20 or + both are used for SPACE
+
+In URL:, there are some reserved character such as '/' that is used to separate paths in 
+URL. To use this not as separator, then it must be encoded.
+
+%2F used for '/'
+
+Full list of percent encoded characters 
+[here](https://www.degraeve.com/reference/urlencoding.php)
 
 ## HTML Encoding
 
