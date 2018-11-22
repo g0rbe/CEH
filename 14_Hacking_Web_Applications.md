@@ -55,7 +55,7 @@ In web 2.0, the users can interact and collaborate, it contain rich user experie
 - SQL injection
 - Cross-site Script
 - Cross-site Request Forgery
-- Security sisconfiguration
+- Security misconfiguration
 - Broken session management
 - DMZ attacks
 - Session hijacking
@@ -113,6 +113,7 @@ Attacker can access the database using LDAP filter to search information.
 - Identify vulnerabilities, entry points, servers
 - HTTP request analyze
 - HTTP fingerprinting
+- Hidden content discovery
 
 ## Attack Authentication
 
@@ -163,6 +164,8 @@ Data connection requires a connection string.
 - Connection String Parameters Pollution (CSPP)
 - Connection Pool DoS
 
+
+
 # Countermeasures
 
 ## Percent Encoding
@@ -173,3 +176,33 @@ handling of URL. The default characterset in HTML5 is UTF-8.
 ## HTML Encoding
 
 HTML Encoding specify how special character will shown.
+
+#### SQL Injection Contermeasures
+
+- Input validation
+- Customized error messages
+- Monitoring database traffic
+- Limit length of user input
+
+#### XSS Attack Countermeasures
+
+- Testiong tools
+- Filtering meta
+- Filtering output
+
+#### DOS Attack Countermeasures
+
+- Reverse proxy
+- Remove unnecessary functions
+- Secure remote administration
+- Firewall
+- IDS
+
+#### Other Countermeasures
+
+- Dynamic testing
+- Source Code analysis
+- Strong cryptography
+- Use SSL
+- Hotfixes / patches
+- Cookie timeout
