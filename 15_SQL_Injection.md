@@ -101,4 +101,14 @@ Use different channel to launch the attack.
 - Hex encoding
 - Sophisticated matches
 
+# Countermeasures
 
+- Penetration testing (manual, with tool)
+- Source code analysis
+- Wep Application Firewall (WAF)
+- Remove deugging messages
+- Database account with minimal privileges
+- Input validation
+- Filter data
+- Customize error messages
+- IDS
