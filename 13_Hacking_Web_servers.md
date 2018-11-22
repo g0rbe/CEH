@@ -148,6 +148,8 @@ Password Attacks classification:
 - Code Access Security Policy
 - Disable tracing
 - Disable debug complies
+- Software update
+- Disable default account
 
 #### Patch Management
 
