@@ -83,3 +83,62 @@ matches, the successful authentication response frame is sent to the client
 - This challenge test can be captured by a hacker as a clear text, so the hacker can get the 
 shared key
 
+## IEEE 802.1X
+
+IEEE 802.1X is an IEEE Standard for port-based Network Access Control (PNAC). It provides an authentication mechanism to devices 
+wishing to attach to a LAN or WLAN.
+
+Extensible Authentication Protocol (EAP) is an authentication framework frequently used in wireless networks and point-to-point 
+connections. For example, in IEEE 802.11 (WiFi) the WPA and WPA2 standards have adopted IEEE 802.1X with one hundred EAP Types as 
+the official authentication mechanisms.
+
+#### Parties
+
+- **Supplicant** : a client device (such as a laptop) that wishes to attach to the LAN/WLAN
+- **Authenticator** : a network device, such as an Ethernet switch or wireless access point
+- **Authentication server** : typically a host running software supporting the RADIUS and EAP protocols
+
+#### Authentication Progress
+
+1. The client may send an EAP-start message.
+2. The access point sends an EAP-request identity message.
+3. The client's EAP-response packet with the client's identity is "proxied" to the authentication server by the authenticator.
+4. The authentication server challenges the client to prove themselves and may send its credentials to prove itself to the client 
+(if using mutual authentication).
+5. The client checks the server's credentials (if using mutual authentication) and then sends its credentials to the server to 
+prove itself.
+6. The authentication server accepts or rejects the client's request for connection.
+7. If the end user was accepted, the authenticator changes the virtual port with the end user to an authorized state allowing full 
+network access to that end user.
+8. At log-off, the client virtual port is changed back to the unauthorized state.
+
+## Wardriving
+
+Wardriving is the act of searching for Wi-Fi wireless networks by a person usually in a moving vehicle, using a laptop or 
+smartphone.
+
+**Variants** : warwalking, warcycling, warflying (drone)
+
+**Warchalking** is the drawing of [symbols](https://78.media.tumblr.com/tumblr_llnht1usC11qk3ul6o1_500.jpg) in public places to 
+advertise Wi-Fi networks.
+
+## Types of Wireless Antennas
+
+#### Directional Antenna
+
+Direction antennas are designed to function in a specific direction to improve efficiency
+
+Some types of directional antenna: [Parabolic antenna](https://en.wikipedia.org/wiki/Parabolic_antenna) , [Yagi-Uda 
+antenna](https://en.wikipedia.org/wiki/Yagi_antenna) , [Horn antenna](https://en.wikipedia.org/wiki/Horn_antenna)
+
+#### Omnidirectional antennas
+
+Omnidirectional antenna radiates equal radio power in all directions.
+When graphed in three dimensions this radiation pattern is often described as doughnut-shaped.
+
+Use cases: radio broadcating, cell phones, GPS
+
+Some type: [Whip antenna](https://en.wikipedia.org/wiki/Whip_antenna) , [Rubber Ducky 
+antenna](https://en.wikipedia.org/wiki/Rubber_Ducky_antenna) , [Monopole antenna](https://en.wikipedia.org/wiki/Monopole_antenna)
+
+
