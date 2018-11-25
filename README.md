@@ -20,5 +20,12 @@ https://ceh.cagy.org/
 
 # TODO
 
-- Complete chapter 1,2
-- Reformat chapter 2,3,4
+- Complete chapter 1,2,11,12
+- Reformat chapter 2,4
+
+# Sources
+
+The base and the structure provided by [IPSpecialst's CEH v10 
+book](https://ipspecialist.net/courses/ec-council-certified-ethical-hacker-ceh-v10-exam-312-50/) (It's worth to buy and read it)
+
+The details is got from [DuckDuckGo](https://duckduckgo.com/)
