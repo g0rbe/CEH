@@ -141,4 +141,25 @@ Use cases: radio broadcating, cell phones, GPS
 Some type: [Whip antenna](https://en.wikipedia.org/wiki/Whip_antenna) , [Rubber Ducky 
 antenna](https://en.wikipedia.org/wiki/Rubber_Ducky_antenna) , [Monopole antenna](https://en.wikipedia.org/wiki/Monopole_antenna)
 
+## Wireless Encryption
+
+### Wired Equivalent Privacy (WEP)
+
+- Designed to provide the same level of security as that of a wired LAN
+- Authentications: Open System authentication, Shared Key (need to provide a key)
+- WEP Key is a sequence of hexadecimal values
+- WEP Key length: 10 digit (40 or 64 bit), 26 digit (104 or 128), 58 digit (256 bit)
+- WEP is used in Physical layer and Data Link layer of OSI model
+- [WEP work](https://www.quora.com/How-does-WEP-work)
+
+#### Breaking WEP Encryption
+
+1. Monitor the Access Point channel
+2. Test injection capability to the AP
+3. Use tool for fake authentication
+4. Sniff the packets
+5. Inject encrypted packets
+6. Extract the encryption key form IV with a cracking tool
+
+
 
