@@ -150,6 +150,7 @@ antenna](https://en.wikipedia.org/wiki/Rubber_Ducky_antenna) , [Monopole antenna
 - WEP Key is a sequence of hexadecimal values
 - WEP Key length: 10 digit (40 or 64 bit), 26 digit (104 or 128), 58 digit (256 bit)
 - WEP is used in Physical layer and Data Link layer of OSI model
+- Initalization Vector (IV) is 24-bit long
 - [WEP work](https://www.quora.com/How-does-WEP-work)
 
 #### Breaking WEP Encryption
@@ -161,5 +162,28 @@ antenna](https://en.wikipedia.org/wiki/Rubber_Ducky_antenna) , [Monopole antenna
 5. Inject encrypted packets
 6. Extract the encryption key form IV with a cracking tool
 
+### Wi-Fi Protected Access (WPA)
 
+- Used for WLAN network based on 802.11i
+- Temporal Key Integrity Protocol (TKIP) implements a key mixing function that combines the secret key with the initalization 
+vector before passing it to the RC4 cipher. WEP, in comparison, merely concatenated the initialization vector to the root key, and 
+passed this value to the RC4 routine.
+- TKIP increased the key length to 128-bit
+- Implements a sequence counter to protect against replay attacks
+- Implements a 64-bit Message Integrity Check, a checksum to protect against tampering
+- Initalization Vector is 48-bit long
 
+### WPA2
+
+- Counter Mode Cipher Block Chaining Message Authentication Code Protocol (CCMP) is an enchanced data cryptographic encapsulation 
+mechanism designed for data confidentiality
+- Implements AES based encryption mode
+- WiFi Protected Setup (WPS) allows users to quickly connect to a WPA protected WLAN
+- WPA-Personal uses password (Pre-Shared Key(PSK)) for authentication
+- WPA-Enterprise includes EAP or RADIUS for centralized authentication
+
+#### Breaking WPA Encryption
+
+1. Brute forcing the PSK with a dictionary attack
+2. Capture the Authetication Handshake packets to crack the WPA-PSK offline
+3. Deauthenticate client to force to reconnect to brute force the Pairwise Master Key (PMK)
