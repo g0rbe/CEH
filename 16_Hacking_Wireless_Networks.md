@@ -187,3 +187,25 @@ mechanism designed for data confidentiality
 1. Brute forcing the PSK with a dictionary attack
 2. Capture the Authetication Handshake packets to crack the WPA-PSK offline
 3. Deauthenticate client to force to reconnect to brute force the Pairwise Master Key (PMK)
+
+## Wireless Threats
+
+- **Access Contorl Attacks** : evading access controll parameters (MAC spoofing, Rouge Access 
+point)
+- **Integrity Attacks** : Data frame injection, replay attacks, etc...
+- **Confidentiality Attacks** : traffic analysis, session hijacking, MITM, etc...
+- **Availability Attacks** : prevent user from accessing the wireless network (flooding, ARP 
+poisoning, De-Authentication attacks)
+- **Authentication Attacks** : steal identity information or impersonating clients (password 
+cracking, identity theft, password guessing)
+- **Rogue Access Point** : a fake access point in a place with the legitimate one, with the same 
+SSID to monitor victims activity by sniffing packets
+- **Client Mis-Association Attacks** : a rouge access point outside the place with the 
+legitimate one, when WiFi turned on, it will probe for networks that previously connected to
+- **Misconfigured Access Point Attacks** : get legitimate access by taking advantage of access 
+point's misconfiguration (default or week password, without password)
+- **Unauthorized Association** : a trojan turns the victims computer into an access point to get 
+connection with the target network
+- **Ad Hoc Connection Attack** : attacker compromise the client ad hoc mode
+- **Jamming Signal Attacks** : jamming or blocking the wireless communication, causing a denial 
+of service
