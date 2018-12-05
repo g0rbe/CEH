@@ -89,7 +89,8 @@ IEEE 802.1X is an IEEE Standard for port-based Network Access Control (PNAC). It
 wishing to attach to a LAN or WLAN.
 
 Extensible Authentication Protocol (EAP) is an authentication framework frequently used in wireless networks and point-to-point 
-connections. For example, in IEEE 802.11 (WiFi) the WPA and WPA2 standards have adopted IEEE 802.1X with one hundred EAP Types as 
+connections. For example, in IEEE 802.11 (Wi-Fi) the WPA and WPA2 standards have adopted IEEE 
+802.1X with one hundred EAP Types as 
 the official authentication mechanisms.
 
 #### Parties
@@ -178,7 +179,7 @@ passed this value to the RC4 routine.
 - Counter Mode Cipher Block Chaining Message Authentication Code Protocol (CCMP) is an enchanced data cryptographic encapsulation 
 mechanism designed for data confidentiality
 - Implements AES based encryption mode
-- WiFi Protected Setup (WPS) allows users to quickly connect to a WPA protected WLAN
+- Wi-Fi Protected Setup (WPS) allows users to quickly connect to a WPA protected WLAN
 - WPA-Personal uses password (Pre-Shared Key(PSK)) for authentication
 - WPA-Enterprise includes EAP or RADIUS for centralized authentication
 
@@ -190,7 +191,7 @@ mechanism designed for data confidentiality
 
 ## Wireless Threats
 
-- **Access Contorl Attacks** : evading access controll parameters (MAC spoofing, Rouge Access 
+- **Access Contorl Attacks** : evading access controll parameters (MAC spoofing, Rogue Access 
 point)
 - **Integrity Attacks** : Data frame injection, replay attacks, etc...
 - **Confidentiality Attacks** : traffic analysis, session hijacking, MITM, etc...
@@ -200,8 +201,8 @@ poisoning, De-Authentication attacks)
 cracking, identity theft, password guessing)
 - **Rogue Access Point** : a fake access point in a place with the legitimate one, with the same 
 SSID to monitor victims activity by sniffing packets
-- **Client Mis-Association Attacks** : a rouge access point outside the place with the 
-legitimate one, when WiFi turned on, it will probe for networks that previously connected to
+- **Client Mis-Association Attacks** : a rogue access point outside the place with the 
+legitimate one, when Wi-Fi turned on, it will probe for networks that previously connected to
 - **Misconfigured Access Point Attacks** : get legitimate access by taking advantage of access 
 point's misconfiguration (default or week password, without password)
 - **Unauthorized Association** : a trojan turns the victims computer into an access point to get 
@@ -209,3 +210,30 @@ connection with the target network
 - **Ad Hoc Connection Attack** : attacker compromise the client ad hoc mode
 - **Jamming Signal Attacks** : jamming or blocking the wireless communication, causing a denial 
 of service
+
+## Hacking Methodology
+
+#### Wi-Fi Discovery
+
+- Passive footprinting (sniffing packets)
+- Active footprinting (probing the AP to get information)
+
+#### GPS Mapping
+
+- Create list of discovered Wi-Fi networks including GPS location
+
+#### Wireless Traffic Analysis
+
+- Capture the packets to reveal any information (SSID, authentication method, ...)
+
+#### Launch Attacks
+
+- ARP poisoning
+- MAC spoofing
+- De-Authentication
+- Rogue access point
+- MITM
+
+# Bluetooth
+
+- Attacking bluetooth based communication
