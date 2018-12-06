@@ -234,6 +234,60 @@ of service
 - Rogue access point
 - MITM
 
+## Wireless Security Tools
+
+#### Wireless Intrusion Prevention System (WIPS)
+
+- Monitors the wireless network
+- Protect against unauthorized access points
+- Perform automatic intrusion prevention
+- Monitors the radio spectrum to prevents rogue access point and alert the network administrator
+- Fingerprint approach to filter devices with spoofed MAC address
+- WIPS has three component: server, sensor and console
+- Can detect AP misconfiguration
+- Detect honeypots
+- Mitigate DoS
+
+#### Wi-Fi Security Auditing Tool
+
+- Wireless network auditing
+- Troubleshooting
+- Intrusion detection / prevention
+- Threat mitigation
+- Rogue detection
+- Zero-day threat protection
+
+## Wi-Fi Countermeasures
+
+- Change default parameters
+- Disable remote login to wireless devices
+- Wireless IPS deployment
+- Use strong password
+- Use the latest standards (WPA2 AES)
+- MAC filtering
+- Update software often
+- Enable firewall
+- Use network management software
+
 # Bluetooth
 
-- Attacking bluetooth based communication
+- Bluetooth is a wireless technology for exchanging data over short distance
+- Range: typically less then 10m
+- Operates on the 2.4 GHz
+- Discovery feature can control the visibility of the device
+
+#### Bluetooth Attacks
+
+- **BlueSmacking** : flooding echo packages to cause a denial of service
+- **BlueBugging** : exploiting bugs in Bluetooth devices to gain remote access
+- **BlueJacking** : send unsolicited data to Bluetooth devices
+- **BluePrinting** : extract information about the device
+- **BlueSnarfing** : steal data from target device
+
+#### Countermeasures
+
+- Check paired devices
+- Turn off visibility / turn off Bluetooth if not used
+- Use strong PIN
+- Use encryption
+- Don't accept unknow requests
