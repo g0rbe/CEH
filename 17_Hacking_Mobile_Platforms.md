@@ -54,3 +54,15 @@ environment
 - Jailbreaking / rooting
 - Physical attack
 
+# Android
+
+#### Device Administration API
+
+- Provides device administration features at the system level
+- This API allows to create security-aware apps that are useful in the enterprise settings, where require rich control over employee 
+devices
+
+#### Rooting
+
+- A process of allowing user to attain privileged control
+- Needed for modify settings, get full control over the kernel or install custom ROMs
