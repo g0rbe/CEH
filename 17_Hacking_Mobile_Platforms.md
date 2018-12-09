@@ -54,6 +54,13 @@ environment
 - Jailbreaking / rooting
 - Physical attack
 
+#### OS Sandboxing Issue
+
+- Sandbox is a security mechanism for separating running programs, usually in an effort to mitigate system failures or software 
+vulnerabilities from spreading
+- Sandbox limits the app's access to files, preferences, network resources, ...
+- Advanced malware designed to bypass it, by fragment code or put sleep timer in the script to bypass the inspection process
+
 # Android
 
 #### Device Administration API
