@@ -10,3 +10,12 @@ can communicate and interact over the Internet, and they can be remotely monitor
 2. Gateway
 3. Device
 4. Sensors
+
+## IoT Technologies
+
+- IoT uses IPv6 due to the limited number of IPv4 addresses
+
+#### Shart-Range Wireless Communication
+
+- Bluetooth Low Energy (BLE)
+- 
