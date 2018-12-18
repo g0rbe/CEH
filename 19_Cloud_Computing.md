@@ -96,3 +96,117 @@ solutions to businesses and/or individuals.
 negotiates relationships between providers and consumers
 - **Clous Carrier** : An intermediary that provides connectivity and transport of cloud services 
 from providers to consumers
+
+## Cloud Compiuting Threads
+
+- Data loss / breach
+- Abusing cloud services
+- Insecure interfaces / APIs
+- Inadequate infrastructure design
+- Virtualization level attacks
+- Service termination and failure
+- Malicious insider
+- Hardware failure
+- Weak authentication
+- Privilege escalation
+- Loss of logs
+
+## Cloud Computing Attacks
+
+- Social engineering attacks (password guessing, ...)
+- XSS attacks
+- DNS attacks (DNS poisoning, domain hijacking, ...)
+- SQL injection
+- Network sniffing (obtain credentials, cooikes, ...)
+- Session hijacking (cookie stealing, ...)
+- Cryptanalysis (weak encryption, ...)
+- DoS / DDoS 
+
+#### Side Channel Attacks or Cross-Guest Virtual Machine Breaches
+
+- Deploy a malicious virtual machine on the same host
+- Take advantage of sharing resources (processor cache, keys, ...)
+- Installation can be done by a malicious insider or an impersonated legtitimate user
+
+## Cloud Security
+
+#### Application Layer
+
+- Application firewall (filter and observe tarffic)
+- Systems Developement Life Cycle (SDLC)
+- Binary Code Anlysis 
+- Script anlysis
+- Transactional security 
+
+#### Network Layer
+
+- Next Generation IPS / IDS (NGIPS / NGIDS)
+- Firewalls
+- DNSSec
+- Anti-DDoS
+
+#### Information
+
+- Provide confidentiality and integrity 
+- Data Loss Prevention (DLP)
+- Content Management Framework (CMF)
+
+#### Trusted Computing
+
+- Root of Trust (RoT) is estabilished by validating each component of hardware and software to ensure that only trusted hardware 
+and software can be used
+
+#### Computer and Storage
+
+- Host-based IPS / IDS  (HIDS/HIPS)
+- Integrity check
+- File system monitoring
+- Log file analysis
+- Connection analysis
+- Storage encryption
+
+#### Physical Security
+
+- Physical protection is priority
+- Protect against theft, unauthorized physical access, environmental impact (rain, earthquake, power failure, ...)
+
+## Responsibilities in Cloud Security
+
+#### Cloud Service Provider
+
+- Web Application Firewall (WAF)
+- Real Traffic Grabber (RTG)
+- Firewall
+- Data Loss Prevention (DLP)
+- Intrusion Prevention System (IPS)
+- Secure Web Gateway (SWG)
+- Application Security (App Sec)
+- Virtual Private Network (VPN)
+- Load Balancer
+- CoS / QoS
+- Trusted Platform Module
+- Netflow
+
+#### Cloud Service Consumer
+
+- Public Key Infrastructure (PKI)
+- Security Developement Life Cycle (SDLC)
+- Firewall
+- Encryption
+- Intrusion Prevention System (IPS)
+- Application Security
+- Virtual Private Network (VPN)
+
+## Cloud Computing Countermeasures and Security Considerations
+
+- Software Configuration Management (SCM)
+- Disaster Recovery Plan
+- Load Balancing
+- Data Integrity
+- Patching and updates
+- SSL
+- Cryptography implementation
+- Reliability
+- Quality of Service (QoS)
+- Monitoring
+- Service Level Agreement (SLA)
