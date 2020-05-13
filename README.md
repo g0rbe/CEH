@@ -1,3 +1,11 @@
+# UPDATE
+
+Because of the high traffic, i decided to **reformat** the chapters and upload everything to my blog at [danielgorbe.com/tag/ceh/](https://danielgorbe.com/tag/ceh/) to be more readable.
+
+**But I need YOUR help!**
+
+If you have anything to append to the chapters, please do a [pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request), open an issue or [contact me](https://danielgorbe.com/contact/). Every help is warmly welcome!
+
 # Study material for CEHv10
 
 # CEHv9 Notes
