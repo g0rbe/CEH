@@ -1,59 +1,10 @@
-
-
-[TCP](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) (Transmission Control Protocol)
-
-[UDP](https://en.wikipedia.org/wiki/User_Datagram_Protocol) (User Datagram Protocol)
-
-# TCP Flags
-
-- **SYN** : Initates a connection between two hosts to facilitate communication
-- **ACK** : Acknowledge the receipt of a packet
-- **URG** : Indicates that the data contained in the packet is urgent and should process it immediately
-- **PSH** : Insturcts the sending system to send all buffered data immediately
-- **FIN** : Tells te remote system about tthe end of the communiction. In essence, this gracefully closes the connection
-- **RST** :  Reset a connection
-
-# Three-way handshake
-
-- Establish a TCP conncetion
-
-| Computer1 | Direction | Computer2 |
-|:---------:|:---------:|:---------:|           
-|    SYN    |    ->     |           |
-|	    |    <-     |  SYN+ACK  |
-|    ACK    |    ->     |           |
-
-# OSI Model
-
-Layer 7: **Application layer** (HTTP, SNMP, ...)
-
-Layer 6: **Presentation layer** (MIME, ...)
-
-Layer 5: **Session layer** (SOCKS, NetBIOS, ...)
-
-Layer 4: **Transport layer** (TCP, UDP, ...)
-
-Layer 3: **Network layer** (IP, ICMP, ...)
-
-Layer 2: **Data link layer** (MAC, ARP, ...)
-
-Layer 1: **Physical layer** (ethernet, wifi, ...)
-
-# TCP/IP Model:
-
-Layer 4: **Application layer** (HTTP, SNMP, ...)
-
-Layer 3: **Transport layer** (TCP, UDP, ...)
-
-Layer 2: **Internet layer** (IP, ICMP, ...)
-
-Layer 1: **Link layer** (ARP, MAC, ...)
-
-# Definitions
+## Definitions
 
 These definitions is must-know !
 
-**Read the links extensively!**
+- [TCP](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) (Transmission Control Protocol)
+
+- [UDP](https://en.wikipedia.org/wiki/User_Datagram_Protocol) (User Datagram Protocol)
 
 - [ARP](https://www.tummy.com/articles/networking-basics-how-arp-works/)
 
@@ -69,15 +20,61 @@ These definitions is must-know !
 
 - [UPnP](https://en.wikipedia.org/wiki/Universal_Plug_and_Play)
 
-# Scanning Techniques
 
-## TCP Connect() / Full Open Scan:
+## TCP Flags
+
+- `SYN`: Initates a connection between two hosts to facilitate communication
+- `ACK`: Acknowledge the receipt of a packet
+- `URG`: Indicates that the data contained in the packet is urgent and should process it immediately
+- `PSH`: Insturcts the sending system to send all buffered data immediately
+- `FIN`: Tells te remote system about tthe end of the communiction. In essence, this gracefully closes the connection
+- `RST`:  Reset a connection
+
+## Three-way handshake
+
+- Establish a TCP conncetion
+
+| Computer1 | Direction | Computer2 |
+|:---------:|:---------:|:---------:|           
+|    SYN    |    ->     |           |
+|	        |    <-     |  SYN+ACK  |
+|    ACK    |    ->     |           |
+
+## OSI Model
+
+Layer 7: *Application layer* (HTTP, SNMP, ...)
+
+Layer 6: *Presentation layer* (MIME, ...)
+
+Layer 5: *Session layer* (SOCKS, NetBIOS, ...)
+
+Layer 4: *Transport layer* (TCP, UDP, ...)
+
+Layer 3: *Network layer* (IP, ICMP, ...)
+
+Layer 2: *Data link layer* (MAC, ARP, ...)
+
+Layer 1: *Physical layer* (ethernet, wifi, ...)
+
+## TCP/IP Model:
+
+Layer 4: *Application layer* (HTTP, SNMP, ...)
+
+Layer 3: *Transport layer* (TCP, UDP, ...)
+
+Layer 2: *Internet layer* (IP, ICMP, ...)
+
+Layer 1: *Link layer* (ARP, MAC, ...)
+
+## Scanning Techniques
+
+### TCP Connect() / Full Open Scan:
 
 - Three-way handshake
 - Completed connection
 - Logged and detected
 - Dont need ROOT
-- nmap: **-sT**
+- nmap: `-sT`
 - Open port:
 
 | Attacker  | Direction | Target    |
@@ -96,10 +93,16 @@ These definitions is must-know !
 |           |    <-     |    RST    |
 
 
-## Stealth Scan / Half-Open Scan:
+Example:
+
+```
+nmap -sT danielgorbe.com
+```
+
+### Stealth Scan / Half-Open Scan:
 
 - Half Three-way Handshake
-- Nmap: **-sS**
+- Nmap: `-sS`
 - Open Port:
 
 | Attacker  | Direction | Target    |
@@ -116,16 +119,22 @@ These definitions is must-know !
 |           |    <-     |    RST    |
 
 
-## Inverse TCP Flag Scanning
+Example:
+
+```
+nmap -sS danielgorbe.com
+```
+
+### Inverse TCP Flag Scanning
 
 - Send TCP probe with TCP flags (i.e. FIN, URG, PSH, without flag)
 - Xmas and Null scan
 
-### Xmas Scan:
+#### Xmas Scan:
 
 - PSH+URG+FIN flag or ALL flag
 - Create abnormal situation
-- Nmap: **-sX**
+- Nmap: `-sX`
 - Open port:
 
 |  Attacker   | Direction | Target      |
@@ -140,13 +149,45 @@ These definitions is must-know !
 | FIN+URG+PSH |    ->     |             |
 |             |    <-     |    RST      |
 
+
+Example:
+
+```
+nmap -sX danielgorbe.com
+```
+
+#### NULL Scan:
+
+- No flag
+- Easy to detect
+- Nmap: `-sN`
+- Open port:
+
+|  Attacker   | Direction | Target      |
+|:-----------:|:---------:|:-----------:|
+|     NULL    |    ->     |             |
+|             |    <-     | No response |
+
+- Closed port:
+
+|  Attacker   | Direction | Target      |
+|:-----------:|:---------:|:-----------:|
+|     NULL    |    ->     |             |
+|             |    <-     |    RST      |
+
+
+Example:
+
+```
+nmap -sT danielgorbe.com
+```
 
 ### FIN Scan:
 
 - FIN scan work with RFC-793 based TCP/IP (before Win XP)
 - Only FIN flag
 - Probably pass firewalls
-- Nmap: **-sF**
+- Nmap: `-sF`
 - Open port:
 
 |  Attacker   | Direction | Target      |
@@ -161,25 +202,11 @@ These definitions is must-know !
 |     FIN     |    ->     |             |
 |             |    <-     |    RST      |
 
-### NULL Scan:
+Example:
 
-- No flag
-- Easy to detect
-- Nmap: **-sN**
-- Open port:
-
-|  Attacker   | Direction | Target      |
-|:-----------:|:---------:|:-----------:|
-|     NULL    |    ->     |             |
-|             |    <-     | No response |
-
-- Closed port:
-
-|  Attacker   | Direction | Target      |
-|:-----------:|:---------:|:-----------:|
-|     NULL    |    ->     |             |
-|             |    <-     |    RST      |
-
+```
+nmap -sF danielgorbe.com
+```
 
 ### ACK Flag probe scanning:
 
@@ -187,7 +214,13 @@ These definitions is must-know !
 - The response is always an RST
 - Examine the RST header (i.e. TTL, WINDOW), the decide if port open or not
 - Help identify filtering system: RST mean no firewall, No response mean there is a firewall
-- Nmap: **-sA**
+- Nmap: `-sA`
+
+Example:
+
+```
+nmap -sA danielgorbe.com
+```
 
 ### IDLE / IPID Header scan:
 
@@ -197,12 +230,13 @@ These definitions is must-know !
 - The unsolicited SYN+ACK packet is ignored or responded with RST
 - Every IP packet has Fragment Identification Number (IPID)
 - OS increment IPID for each packet
-- Nmap: **-sI <zombie host[:probeport]>**
-- **Explanation** on Nmap's [website](https://nmap.org/book/idlescan.html)
+- Nmap: `-sI <zombie host[:probeport]>`
+- *Explanation* on Nmap's [website](https://nmap.org/book/idlescan.html)
 
-## UDP Scan:
+### UDP Scan:
 
 - Connectionless protocol
+- nmap: `-sU`
 - Open port:
 
 |      Attacker       | Direction | Target      |
@@ -217,19 +251,37 @@ These definitions is must-know !
 |    UPD Port probe   |    ->     |                       |
 |                     |    <-     | ICMP Port Unreachable |
 
-## IDS / IPS evasion:
+Example:
+
+```
+nmap -sA danielgorbe.com
+```
+
+### IDS / IPS evasion:
 
 - Packet fragmentation:
-- Nmap: **-f**
+- Nmap: `-f`
 - The IDS have to reassemble the packets to detect an attack
 - Sending packet with delay
 
-## OS Fingerprinting:
+Example:
+
+```
+nmap -f danielgorbe.com
+```
+
+### OS Fingerprinting:
 
 #### Active OS fingerprinting:
 
-- Nmap: **-O**
+- Nmap: `-O`
 - Send TCP and UDP packets and observe the response from the host
+
+Example:
+
+```
+nmap -O danielgorbe.com
+```
 
 #### Passive OS fingerprinting:
 
@@ -246,28 +298,48 @@ These definitions is must-know !
 - More values [here](https://subinsb.com/default-device-ttl-values/)
 
 
-## Banner Grabbing: 
+### Banner Grabbing: 
 
 - Determine the service
 - Typically uses Telnet
 
-# Proxy:
+
+Example:
+
+```
+nmap -sV danielgorbe.com
+```
+## Proxy:
 
 - System between the attacker and the target
 - Hiding source IP address
 - Impersonating
 - Hide identity
 
-# Proxy chaning:
+### Proxy chaning:
 
 - Using multiple proxy server
 - Most used proxy chains: TOR
 
-# Spoofing IP address
+## Spoofing IP address
 
 - Modify packet header
+- nmap has a *decoy* scan option, this option send packets with spoofed source IP to cloak the your address.
+
+Example:
+
+```
+nmap -D 192.168.1.1,192.168.1.2 danielgorbe.com
+```
+
+This option sends 3 packets with source IP:
+
+1. 192.168.1.1
+2. 192.168.1.2
+3. Your IP
+
+
 #### Detect Spoofing
 
 - Direct TTL probe (on same subnet)
 - IP Identification Number
-
