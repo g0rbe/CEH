@@ -1,4 +1,4 @@
-### System Hacking Methodology
+#### System Hacking Methodology
 
 - Cracking Password
 - Escalating Privileges
@@ -6,7 +6,7 @@
 - Hiding Files
 - Covering Tracks
 
-### Goals
+#### Goals
 
 - Bypass the access control
 - Gain access to the system
@@ -16,7 +16,7 @@
 - Hide malicious activities
 - Hide the evidence of compromising
 
-# Password Cracking
+## Password Cracking
 
 Three type of authentication factors:
 
@@ -34,9 +34,9 @@ A good password contain:
 - Numbers
 - Lengthy password (more than 8 character)
 
-## Types of Password Attacks
+### Types of Password Attacks
 
-### Non-Electronic Attacks
+#### Non-Electronic Attacks
 
 Dont require any type of technical understanding and knowledge.
 
@@ -46,7 +46,7 @@ Example:
 - Social Engineering
 - Dumpster Diving
 
-### Active Online Attack
+#### Active Online Attack
 
 Directly interact with the target for cracking password.
 
@@ -118,7 +118,7 @@ Windows Autorun feature allows running the application automatically, if enabled
 
 ## Microsoft Authentication
 
-**Authentication** is a verification process to identify any user or device.
+*Authentication* is a verification process to identify any user or device.
 
 Microsoft authentication protocols:
 
@@ -137,13 +137,13 @@ Windows XP and later versions do not store the value of LM hash, or when LM hash
 
 **Format** :
 
-``` sh
+```
 Username: user ID: LM hash: NTLM hash:::
 ```
 
 **Location**: 
 
-``` sh
+```
 C:\windows\system32\config\SAM
 ```
 
@@ -243,11 +243,11 @@ DLL Hijacking tool: Metasploit
 
 **Known DLL**s are specified in the registry key:
 
-``` sh
+```
 HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\
 ```
 
-**Search paths** used by Microsoft:
+*Search paths* used by Microsoft:
 
 - Directory of application or current directory
 - System directory (i.e. C:\\Windows\\System32\)
@@ -297,8 +297,6 @@ Goals:
 - Take screenshots
 - Capture mouse
 - Many more...
-
-#### Types of Keyloggers:
 
 #### Software Keyloggers
 
@@ -498,7 +496,7 @@ Methods:
 - Choosen stego: have stego object and algorithm
 
 
-# Covering tracks
+## Covering tracks
 
 Aftre gaining access, escalating privileges, executing applications, the next step is to wipe the evidence.
 In this phase, attacker removes all the event logs, error messages and other evidence to prevent its attack from being discovered easily.
@@ -518,13 +516,13 @@ Auditing in a system is enabled to detect and track events.
 
 List auditing categories in windows:
 
-``` sh
+```
 C:\Windows\system32>auditpol /list /category /v
 ```
 
 Check all category audit policies:
 
-``` sh
+```
 C:\Windows\system32>auditpol /get /category:*
 ```
 
@@ -536,19 +534,19 @@ Folder of log files:
 
 Windows 2000/Server2003/Windows XP:
 
-``` sh
+```
 %SystemRoot%\System32\Config
 ```
 
 Server 2008/Vista and up:
 
-``` sh
+```
 %SystemRoot%\system32\winevt\logs
 ```
 
 Linux, OpenBSD:
 
-``` sh
+```
 /var/log/
 ```
 
