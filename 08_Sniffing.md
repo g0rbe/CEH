@@ -107,7 +107,7 @@ Internet traffic routing through the US, or data stored on a US server are wiret
 - ARP method
 - Promiscuous port detection
 
-# MAC Attacks
+## MAC Attacks
 
 **Media Access Control** (MAC) is the physical address of a device.
 MAC ddress is a 48-bit unique identfication number that is assiged to a network device for communication at data-link layer (layer 2).
@@ -143,46 +143,44 @@ If the attacker send a bogus ARP packet immediatelly after the target packet, th
 Port Security is used to bind MAC addres of known devices to the physical ports and violation action is also defined.
 
 
-# DHCP Attacks
+## DHCP Attacks
 
-## Dynamic Host Configuration Protocol (DHCP)
+### Dynamic Host Configuration Protocol (DHCP)
 
 DHCP is the process of allocating the IP address dynamically so these addresses are assigned automatically and they can be reused when hosts dont need them.
 **Round Trip Time** is the measurement of time from discovery of DHCP server until obtaining the leased IP address.
 
-**IPv4 DHCP process**:
+##### IPv4 DHCP process
 
-By using UDP broadcast, DHCP client sends an initial **DHCP-Discovery** packet.
-The DHCP server reply with a **DHCP-Offer** packet, offering the configuration parameters.
-The DHCP client send back a **DHCP-Request** packet destined for DHCP server for requesting the DHCP parameters.
-Finally, the DHCP server send the **DHCP-Acknowledgement** packet containing configuration parameters.
+1. By using UDP broadcast, DHCP client sends an initial **DHCP-Discovery** packet.
+2. The DHCP server reply with a **DHCP-Offer** packet, offering the configuration parameters.
+3. The DHCP client send back a **DHCP-Request** packet destined for DHCP server for requesting the DHCP parameters.
+4. Finally, the DHCP server send the **DHCP-Acknowledgement** packet containing configuration parameters.
 
-CLIENT				SERVER 
---------------------------------------
-DHCP-Discovery  ->	
-		<-	DHCP-Offer
-DHCP-Request	->
-		<-	DHCP-Acknowledgement
+|         CLIENT         |    |         SERVER         | 
+|:----------------------:|:--:|:----------------------:|
+|     DHCP-Discovery     | -> |	                       |
+|                        | <- |       DHCP-Offer       |
+|       DHCP-Request     | -> |                        |
+|                        | <- |  DHCP-Acknowledgement  |
 
 
-**DHCPv4 Ports**:
+- **Ports**:
+    - UDP port 67 for Server
+    - UDP port 68 for Client
 
-- UDP port 67 for Server
-- UDP port 68 for Client
+##### IPv6 DHCP process
 
-**IPv6 DHCP process**:
+|      CLIENT     |    |    SERVER    |
+|:---------------:|:--:|:------------:|  
+|     Solicit     | -> |              |
+|                 | <- |   Advertise  |
+|     Request     | -> |              |
+|                 | <- |     Reply    |
 
-CLIENT				SERVER
---------------------------------------
-Solicit		->
-		<-	Advertise
-Request		->
-		<-	Reply
-
-**DHCPv6 Ports**:
-
-- UDP port 546 for Client
-- UDP port 547 for Server
+- **Ports**:
+    - UDP port 546 for Client
+    - UDP port 547 for Server
 
 **DHCP Relay** is needed when the DHCP server is not on the same subnet, because routers do not forward any broadcast IP packet to interfaces.
 **DHCP Relay** Agent allows DHCP messages to be exchanged betwee the DHCP client and the DHCP server residing on different subnet.
@@ -217,9 +215,9 @@ Any access port who tries to reply the DHCP request will be ignored.
 - Limit the learning number of a maximum number of MAC addresses on a port
 - Configure violation action, aging time, ...
 
-# ARP Poisoning
+## ARP Poisoning
 
-## Address Resolution Protocol (ARP)
+### Address Resolution Protocol (ARP)
 
 The Address Resolution Protocol (ARP) is a communication protocol used for discovering the link layer address, such as a MAC address, associated with a given internet layer address, typically an IPv4 address. 
 By broadcasting the ARP request with IP address, the switch can learn the associated MAC address information from the reply of the specific host.
@@ -250,7 +248,7 @@ DAI is used with DHCP snooping, IP-to-MAC bindings can be tracked from DHCP tran
 
 ## Spoofing Attacks
 
-### MAC Spoofing/Duplicating
+#### MAC Spoofing/Duplicating
 
 Manipulating the MAC address to impersonate the legitimate user or launch attack such as DoS.
 Attacker sniffs the MAC address of users which are active on switch ports and duplicate the MAC address.
