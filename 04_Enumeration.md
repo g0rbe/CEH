@@ -1,207 +1,206 @@
-NOTE: THIS MAY CROSS LEGAL BOUNDARIES !!!!!
-      YOU MUST HAVE PROPER PERMISSION TO PERFORM THESE ACTIONS
+**NOTE**: This may cross legal boundaries, you must have proper permission to perform these actions.
 
--initates active connection with the target
--direct queries are generated
+- initates active connection with the target
+- direct queries are generated
 
--enumerated informations:
-	-routing information
-	-SNMP information
-	-DNS information
-	-machine name
-	-user information
-	-group information
-	-application and abnners
-	-network sharing information
-	-network resources
+- enumerated informations:
 
-Enumeration using Email ID:
-	-extract usefull information (username, domain, ..)
+	- routing information
+	- SNMP information
+	- DNS information
+	- machine name
+	- user information
+	- group information
+	- application and abnners
+	- network sharing information
+	- network resources
 
-Enumeration using default password:
-	-sometimes the default credentials didn't changed
+#### Email
 
-Brute force attack on Active Directory (AD):
-	-centralized command and control of doamin users, computers, printers
-	-brute force or generating queries to LDAP
-	-ports:
-		-TCP / UDP 389
-	-information from LDAP:
-		-username
-		-address
-		-credentials
-		-privileges information
+- Extract usefull information (username, domain, ..)
 
-LDAP enumeration:
-	-Lightweight Directory Access Protocol
-	-accessing and maintaining distributed directory information services
-	 in a hierarchical and logicl structure
-	-allowing the shareing of information like user, system, network,
-	 services, etc. throughout the network
-	-provides a central place to store usernames and passwords
-	-apps and services connect to LDAP to validate users
-	-client initates an LDAP session bt sending an  operation request to
-	 Directory System Agent (DSA)
-	-communication between client and server uses Basic Encoding Rules
-	 (BER)
-	-port:
-		-TCP 389
-	-directory services using LDAP:
-		-Active Directory
-		-Open Directory
-		-Oracle iPlanet
-		-OpenLDAP
+#### Default password
+
+- sometimes the default credentials didn't changed
+
+#### Active Directory (AD)
+
+- Centralized command and control of doamin users, computers, printers
+- Brute force or generating queries to LDAP
+- Ports:
+	- **TCP / UDP 389**
+- Information from LDAP:
+	- Username
+	- Address
+	- Credentials
+	- Privileges information
+
+#### Lightweight Directory Access Protocol (LDAP)
+
+- Accessing and maintaining distributed directory information services in a hierarchical and logicl structure
+- Allowing the shareing of information like user, system, network services, etc. throughout the network
+- Provides a central place to store usernames and passwords
+- Apps and services connect to LDAP to validate users
+- Client initates an LDAP session bt sending an  operation request to Directory System Agent (DSA)
+- Communication between client and server uses Basic Encoding Rules (BER)
+- Port:
+	- **TCP 389**
+- Directory services using LDAP:
+	- Active Directory
+	- Open Directory
+	- Oracle iPlanet
+	- OpenLDAP
 
 
-Enumeration using SNMP:
-	-Simple Network Management Protocol
-	-allow management of devices (routers, servers, ...)
-	-manage network performance
-	-find, troubleshoot, solve problems
-	-design, plan for network growth
-	-application layer protocol
-	-ports:
-		-UDP 161
-		-UDP 162 (Trap)
-	-three element:
-		-SNMP manager:
-			-a sofware running on the management station
-			-display collected information
-		-SNMP agent:
-			-a software running on the network nodes
-			-different components are monitored (CPU, RAM, ...)
-		-Management Information Base (MIB):
-			-a colloection of information organized hierarchically
-			 in a virtual database
-			-2 types:
-				-scaler: single object instance
-				-tabular: multiple related object instance
-	-use default community strings or guess to extract information
-	-community strings:
-		-used for authentication
-		-types:
-			-read-only (read only information from a device)
-			-read-write (read information, modify settings)
-			-trap
-	-SNMP Trap:
-		-initated by the SNMP agent
-		-report an issue
-	-information from SNMP:
-		-host
-		-devices
-		-shares
-		-network information
-	-versions:
-		-v1:
-			-no support for encryption and hashing
-			-plain text community string
-		-v2:
-			-no support for encryption and hashing
-			-some function added (i.e. get data in bulk from agents)
-		-v3:
-			-support encryption (DES)
-			-support hashing (MD5 or SHA)
-			-3 model:
-				-NoAuthNoPriv: no encrypt and no hashing
-				-AuthNoPriv: no encrypt, just hashing
-				-AuthPriv: encryption + hashing used
+#### Simple Network Management Protocol (SNMP)
 
-Enumeration through DNS Zone Transfer:
-	-zone transfer is a process to update DNS server, copy containing
-	 database record to another DNS server
-	-ports:
-		-UDP 53 (DNS queries)
-		-TCP 53 (DNS Zone Transfer)
-	-information from DNS zone transfer process:
-		-locating DNS server
-		-DNS records
-		-hostname
-		-IP address
-		-username
-	-tool:
-		-Linux: nslookup, dig
+- Allow management of devices (routers, servers, ...)
+- Manage network performance
+- Find, troubleshoot, solve problems
+- Design, plan for network growth
+- Application layer protocol
+- Ports:
+	- **UDP 161**
+	- **UDP 162** (Trap)
+- Three element:
+	-SNMP manager:
+		- A sofware running on the management station
+		- Display collected information
+	- SNMP agent:
+		- A software running on the network nodes
+		- Different components are monitored (CPU, RAM, ...)
+	- Management Information Base (MIB):
+		- A colloection of information organized hierarchically in a virtual database
+		- 2 types:
+			- Scaler: single object instance
+			- Tabular: multiple related object instance
+- Use default community strings or guess to extract information
+- Community strings:
+	- Used for authentication
+	- Types:
+		- read-only (read only information from a device)
+		- read-write (read information, modify settings)
+		- trap
+- SNMP Trap:
+	- Initated by the SNMP agent
+	- Report an issue
+- Information from SNMP:
+	- Host
+	- Devices
+	- Shares
+	- Network information
+- Versions:
+	- v1:
+		- No support for encryption and hashing
+		- Plain text community string
+	- v2:
+		- No support for encryption and hashing
+		- Some function added (i.e. get data in bulk from agents)
+	- v3:
+		- Support encryption (DES)
+		- Support hashing (MD5 or SHA)
+		- 3 model:
+			- *NoAuthNoPriv*: no encrypt and no hashing
+			- *AuthNoPriv*: no encrypt, just hashing
+			- *AuthPriv*: encryption + hashing used
 
-NetBIOS Enumeration:
-	-Network Basic Input / Output System
-	-allows communication between different application on different
-	 system within LAN
-	-uses a 16 ASCII Character string to identify devices
-	-the initial 15 chars is identifying the device, the last char
-	 identify the service
-	-session layer protocol
-	-ports:
-		-UDP 137 (name services)
-		-UDP 138 (datagram services)
-		-TCP 139 (session services)
-	-information from NetBIOS:
-		-list of machines within a domain
-		-file sharing
-		-printer sharing
-		-username
-		-group information
-		-password
-		-policies
-	-NetBIOS names are classified into the following types:
-		-Unique
-		-Group
-		-Domain name
-		-Internet group
-		-Multihomed
-	-Tools:
-		-Windows: nbtstat
-		-Linux: nbtscan 
+#### DNS Zone Transfer
+	
+- Zone transfer is a process to update DNS server, copy containing database record to another DNS server
+- Ports:
+	- **UDP 53** (DNS queries)
+	- **TCP 53** (DNS Zone Transfer)
+- Information from DNS zone transfer process:
+	- Locating DNS server
+	- DNS records
+	- Hostname
+	- IP address
+	- Username
+- Tool:
+	- Linux: `nslookup`, `dig`, `host`
 
-NTP enumeration:
-	-Network Time Protocol
-	-synchronize the clocks accross the hosts and network devices
-	-a lot of services rely on clock settings (logging, login, ...)
-	-application layer protocol
-	-port:
-		-UDP 123
-	-based on UTC
-	-startum:
-		-distance between NTP server and device
-		-like TTL
-		-start from 1 and increases by every hop
-	-attacker may change time to mislead forensic team, who investigate
-	 the events (change timestamp)
-	-version 3 and above:
-		-support a cryptographic authentication technique between
-		 NTP peers
-		-without authentication, the client do not authenticate the
-		 server as a secure source, if the legitimate server goes down,
-		 a fake NTP server can replace the real
-	-information from NTP:
-		-host information
-		-client information (IP, machine name, OS)
-		-network information
-	-tool:
-		-Linux: ntpdc, ntptrace, ntpq, nmap, wireshark
+[Example](https://security.stackexchange.com/questions/69290/how-to-test-for-zone-transfer):
 
-SMTP enumeration:
-	-Simple Mail Transfer Protocol
-	-ensures mail communication between Email servers
-	-application layer protocol
-	-port:
-		-TCP 25 (traditional)
-		-TCP 567 
-	-enumeration with Telnet
-	-commands:
-		-HELO (identify domain name of the sender)
-		-EXPN (verify Mailbox on localhost)
-		-MAIL FROM (identify sender of the email)
-		-RCPT TO (specify the message recipients)
-		-SIZE (specify maximum supported size)
-		-DATA (define data)
-		-RSET (reser connection and buffer of SMTP)
-		-VRFY (verify the avaliabilty of Mail server)
-		-HELP (show help)
-		-QUIT (terminate session) 
+```
+host -t axfr zonetransfer.me nsztm1.digi.ninja.
+```
 
-Enumeration Countermeasures:
-	-advanced security softwares
-	-updated version of protocols
-	-strong security protocols
-	-unique and difficult password
-	-strong encrypted communications
-	-disable unnecessary ports
+#### Network Basic Input/Output System (NetBIOS)
+
+- Allows communication between different application on different system within LAN
+- Uses a 16 ASCII Character string to identify devices
+- The initial 15 chars is identifying the device, the last char identify the service
+- Session layer protocol
+- Ports:
+	- **UDP 137** (name services)
+	- **UDP 138** (datagram services)
+	- **TCP 139** (session services)
+- Information from NetBIOS:
+	- List of machines within a domain
+	- File sharing
+	- Printer sharing
+	- Username
+	- Group information
+	- Password
+	- Policies
+- NetBIOS names are classified into the following types:
+	- Unique
+	- Group
+	- Domain name
+	- Internet group
+	- Multihomed
+- Tools:
+		-Windows: `nbtstat`
+		-Linux: `nbtscan`
+
+#### Network Time Protocol (NTP)
+
+- Synchronize the clocks accross the hosts and network devices
+- A lot of services rely on clock settings (logging, login, ...)
+- Application layer protocol
+- Port:
+	- **UDP 123**
+- Based on UTC
+- Stratum:
+	- Distance between NTP server and device
+	- Like TTL
+	- Start from 1 and increases by every hop
+- Attacker may change time to mislead forensic team, who investigate the events (change timestamp)
+- Version 3 and above:
+	- Support a cryptographic authentication technique between NTP peers
+	- Without authentication, the client do not authenticate the server as a secure source, if the legitimate server goes down, a fake NTP server can replace the real
+- Information from NTP:
+	- Host information
+	- Client information (IP, machine name, OS)
+	- Network information
+- Tool:
+	- Linux: `ntpdc`, `ntptrace`, `ntpq`, `nmap`, `wireshark`
+
+#### Simple Mail Transfer Protocol (SMTP)
+
+- Ensures mail communication between Email servers
+- Application layer protocol
+- Port:
+	- **TCP 25** (Unencrypted)
+	- **TCP 587** (TLS)
+- Enumeration with Telnet
+- Commands:
+	- `HELO`: identify domain name of the sender
+	- `EXPN`: verify Mailbox on localhost
+	- `MAIL FROM`: identify sender of the email
+	- `RCPT TO` specify the message recipients
+	- `SIZE`: specify maximum supported size
+	- `DATA`: define data
+	- `RSET`: reser connection and buffer of SMTP
+	- `VRFY`: verify the avaliabilty of Mail server
+	- `HELP`: show help
+	- `QUIT`: terminate session
+
+### Enumeration Countermeasures
+
+- Advanced security softwares
+- Updated version of protocols
+- Strong security protocols
+- Unique and difficult password
+- Strong encrypted communications
+- Disable unnecessary ports
