@@ -4,7 +4,7 @@ Because of the high traffic, i decided to **reformat** the chapters and upload e
 
 **But I need YOUR help!**
 
-If you have anything to append to the chapters, please do a [pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request), open an issue or [contact me](https://danielgorbe.com/contact/). Every help is warmly welcome!
+If you have anything to append to the chapters, please do a [pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request), open an [issue](https://github.com/g0rbe/CEH/issues) or [contact me](https://danielgorbe.com/contact/). Every help is warmly welcome!
 
 ### Examples
 
