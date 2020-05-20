@@ -12,7 +12,7 @@ I try to include examples to the chapters.
 
 These examples are for Linux users only!
 
-You can always run those examples on `danielgorbe.com`, but please, dont be a d*ckhead!
+You can always run those examples on [danielgorbe.com](https://danielgorbe.com), but please, **dont be a d*ckhead**!
 
 ## Study material for CEHv10
 
