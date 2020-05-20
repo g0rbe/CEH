@@ -1,6 +1,6 @@
 ## UPDATE
 
-Because of the high traffic, i decided to **reformat** the chapters and upload everything to my blog at [danielgorbe.com/tag/ceh/](https://danielgorbe.com/tag/ceh/) to be more readable.
+Because of the high traffic, i decided to **reformat** the chapters and upload everything to my blog at [danielgorbe.com/category/ceh/](https://danielgorbe.com/category/ceh/) to be more readable.
 
 **But I need YOUR help!**
 
