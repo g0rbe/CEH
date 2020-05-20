@@ -1,0 +1,427 @@
+<!-- wp:heading -->
+<h2>Definitions</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>These definitions is <strong>must-know</strong> !</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li><a href="https://en.wikipedia.org/wiki/Transmission_Control_Protocol">TCP</a> (Transmission Control Protocol)</li><li><a href="https://en.wikipedia.org/wiki/User_Datagram_Protocol">UDP</a> (User Datagram Protocol)</li><li><a href="https://www.tummy.com/articles/networking-basics-how-arp-works/">ARP</a></li><li><a href="https://www.webopedia.com/TERM/I/ICMP.html">ICMP</a></li><li>Ping Sweep: Mass ICMP echo (ping) message</li><li><a href="https://wiki.wireshark.org/SSDP">SSDP</a></li><li><a href="https://www.lifewire.com/what-is-dhcp-2625848">DHCP</a></li><li><a href="https://dyn.com/blog/dns-why-its-important-how-it-works/">DNS</a></li><li><a href="https://en.wikipedia.org/wiki/Universal_Plug_and_Play">UPnP</a></li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>TCP Flags</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li><code>SYN</code>: Initiates a connection between two hosts to facilitate communication</li><li><code>ACK</code>: Acknowledge the receipt of a packet</li><li><code>URG</code>: Indicates that the data contained in the packet is urgent and should process it immediately</li><li><code>PSH</code>: Instructs the sending system to send all buffered data immediately</li><li><code>FIN</code>: Tells the remote system about the end of the communication. In essence, this gracefully closes the connection</li><li><code>RST</code>: Reset a connection</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>Three-way handshake</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Establish a TCP connection</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:table -->
+<figure class="wp-block-table"><table><thead><tr><th>Computer1</th><th>Direction</th><th>Computer2</th></tr></thead><tbody><tr><td>SYN</td><td>-&gt;</td><td></td></tr><tr><td></td><td>&lt;-</td><td>SYN+ACK</td></tr><tr><td>ACK</td><td>-&gt;</td><td></td></tr></tbody></table><figcaption>Three-way handshake</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:heading -->
+<h2>OSI Model</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Layer 7: <em>Application layer</em> (HTTP, SNMP, ...)</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Layer 6: <em>Presentation layer</em> (MIME, ...)</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Layer 5: <em>Session layer</em> (SOCKS, NetBIOS, ...)</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Layer 4: <em>Transport layer</em> (TCP, UDP, ...)</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Layer 3: <em>Network layer</em> (IP, ICMP, ...)</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Layer 2: <em>Data link layer</em> (MAC, ARP, ...)</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Layer 1: <em>Physical layer</em> (ethernet, wifi, ...)</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>TCP/IP Model:</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Layer 4: <em>Application layer</em> (HTTP, SNMP, ...)</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Layer 3: <em>Transport layer</em> (TCP, UDP, ...)</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Layer 2: <em>Internet layer</em> (IP, ICMP, ...)</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Layer 1: <em>Link layer</em> (ARP, MAC, ...)</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>Scanning Techniques</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3>TCP Connect() / Full Open Scan:</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Three-way handshake</li><li>Completed connection</li><li>Logged and detected</li><li>Dont need ROOT</li><li>nmap: <code>-sT</code></li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Open port:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:table -->
+<figure class="wp-block-table"><table><thead><tr><th>Attacker</th><th>Direction</th><th>Target</th></tr></thead><tbody><tr><td>SYN</td><td>-&gt;</td><td></td></tr><tr><td></td><td>&lt;-</td><td>SYN+ACK</td></tr><tr><td>ACK</td><td>-&gt;</td><td></td></tr><tr><td>RST</td><td>-&gt;</td><td></td></tr></tbody></table><figcaption>connect() scan on open port</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>Closed port:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:table -->
+<figure class="wp-block-table"><table><thead><tr><th>Attacker</th><th>Direction</th><th>Target</th></tr></thead><tbody><tr><td>SYN</td><td>-&gt;</td><td></td></tr><tr><td></td><td>&lt;-</td><td>RST</td></tr></tbody></table><figcaption>connect() scan on closed port</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>Example:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>nmap -sT danielgorbe.com</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Stealth Scan / Half-Open Scan:</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Half Three-way Handshake</li><li>Nmap: <code>-sS</code></li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Open Port:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:table -->
+<figure class="wp-block-table"><table><thead><tr><th>Attacker</th><th>Direction</th><th>Target</th></tr></thead><tbody><tr><td>SYN</td><td>-&gt;</td><td></td></tr><tr><td></td><td>&lt;-</td><td>SYN+ACK</td></tr><tr><td>RST</td><td>-&gt;</td><td></td></tr></tbody></table><figcaption>Stealth scan on open port</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>Closed port:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:table -->
+<figure class="wp-block-table"><table><thead><tr><th>Attacker</th><th>Direction</th><th>Target</th></tr></thead><tbody><tr><td>SYN</td><td>-&gt;</td><td></td></tr><tr><td></td><td>&lt;-</td><td>RST</td></tr></tbody></table><figcaption>Stealth scan on closed port</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>Example:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>nmap -sS danielgorbe.com</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Inverse TCP Flag Scanning</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Send TCP probe with TCP flags (i.e. FIN, URG, PSH, without flag)</li><li>Xmas and Null scan</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Xmas Scan:</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>PSH+URG+FIN flag or ALL flag</li><li>Create abnormal situation</li><li>Nmap: <code>-sX</code></li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Open port:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:table -->
+<figure class="wp-block-table"><table><thead><tr><th>Attacker</th><th>Direction</th><th>Target</th></tr></thead><tbody><tr><td>FIN+URG+PSH</td><td>-&gt;</td><td></td></tr><tr><td></td><td>&lt;-</td><td>No response</td></tr></tbody></table><figcaption>Xmas scan on open port</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>Closed port:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:table -->
+<figure class="wp-block-table"><table><thead><tr><th>Attacker</th><th>Direction</th><th>Target</th></tr></thead><tbody><tr><td>FIN+URG+PSH</td><td>-&gt;</td><td></td></tr><tr><td></td><td>&lt;-</td><td>RST</td></tr></tbody></table><figcaption>Xmas scan on closed port</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>Example:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>nmap -sX danielgorbe.com</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:heading {"level":4} -->
+<h4>NULL Scan:</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>No flag</li><li>Easy to detect</li><li>Nmap: <code>-sN</code></li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Open port:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:table -->
+<figure class="wp-block-table"><table><thead><tr><th>Attacker</th><th>Direction</th><th>Target</th></tr></thead><tbody><tr><td>NULL</td><td>-&gt;</td><td></td></tr><tr><td></td><td>&lt;-</td><td>No response</td></tr></tbody></table><figcaption>NULL scan on open port</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>Closed port:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:table -->
+<figure class="wp-block-table"><table><thead><tr><th>Attacker</th><th>Direction</th><th>Target</th></tr></thead><tbody><tr><td>NULL</td><td>-&gt;</td><td></td></tr><tr><td></td><td>&lt;-</td><td>RST</td></tr></tbody></table><figcaption>NULL scan on closed port</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>Example:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>nmap -sT danielgorbe.com</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:heading {"level":3} -->
+<h3>FIN Scan:</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>FIN scan work with RFC-793 based TCP/IP (before Win XP)</li><li>Only FIN flag</li><li>Probably pass firewalls</li><li>Nmap: <code>-sF</code></li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Open port:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:table -->
+<figure class="wp-block-table"><table><thead><tr><th>Attacker</th><th>Direction</th><th>Target</th></tr></thead><tbody><tr><td>FIN</td><td>-&gt;</td><td></td></tr><tr><td></td><td>&lt;-</td><td>No response</td></tr></tbody></table><figcaption>FIN scan on open port</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:list -->
+<ul><li>Closed port:</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:table -->
+<figure class="wp-block-table"><table><thead><tr><th>Attacker</th><th>Direction</th><th>Target</th></tr></thead><tbody><tr><td>FIN</td><td>-&gt;</td><td></td></tr><tr><td></td><td>&lt;-</td><td>RST</td></tr></tbody></table><figcaption>FIN scan on closed port</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>Example:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>nmap -sF danielgorbe.com</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:heading {"level":3} -->
+<h3>ACK Flag probe scanning:</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Only ACK flag</li><li>The response is always an RST</li><li>Examine the RST header (i.e. TTL, WINDOW), the decide if port open or not</li><li>Help identify filtering system: RST mean no firewall, No response mean there is a firewall</li><li>Nmap: <code>-sA</code></li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Example:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>nmap -sA danielgorbe.com</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:heading {"level":3} -->
+<h3>IDLE / IPID Header scan:</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Remaining low profile</li><li>Scanning done by a zombie</li><li>Based on Full Open scan</li><li>The unsolicited SYN+ACK packet is ignored or responded with RST</li><li>Every IP packet has Fragment Identification Number (IPID)</li><li>OS increment IPID for each packet</li><li>Nmap: <code>-sI &lt;zombie host[:probeport]&gt;</code></li><li>Explanation on Nmap's <a href="https://nmap.org/book/idlescan.html">website</a></li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3>UDP Scan:</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Connectionless protocol</li><li>nmap: <code>-sU</code></li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Open port:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:table -->
+<figure class="wp-block-table"><table><thead><tr><th>Attacker</th><th>Direction</th><th>Target</th></tr></thead><tbody><tr><td>UPD Port probe</td><td>-&gt;</td><td></td></tr><tr><td></td><td>&lt;-</td><td>No response</td></tr></tbody></table><figcaption>UDP scan on open port</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>Closed port:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:table -->
+<figure class="wp-block-table"><table><thead><tr><th>Attacker</th><th>Direction</th><th>Target</th></tr></thead><tbody><tr><td>UPD Port probe</td><td>-&gt;</td><td></td></tr><tr><td></td><td>&lt;-</td><td>ICMP Port Unreachable</td></tr></tbody></table><figcaption>UDP scan on closed port</figcaption></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>Example:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>nmap -sA danielgorbe.com</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:heading {"level":3} -->
+<h3>IDS / IPS evasion:</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Packet fragmentation:</li><li>Nmap: <code>-f</code></li><li>The IDS have to reassemble the packets to detect an attack</li><li>Sending packet with delay</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Example:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>nmap -f danielgorbe.com</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:heading {"level":3} -->
+<h3>OS Fingerprinting:</h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Active OS fingerprinting:</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Nmap: <code>-O</code></li><li>Send TCP and UDP packets and observe the response from the host</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Example:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>nmap -O danielgorbe.com</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Passive OS fingerprinting:</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Detail assessment of the traffic (TTL, TCP Window Size)</li><li>Common values:</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:table -->
+<figure class="wp-block-table"><table><thead><tr><th>OS</th><th>TTL</th><th>TCP Window Size</th></tr></thead><tbody><tr><td>Linux</td><td>64</td><td>5840</td></tr><tr><td>Windows XP</td><td>128</td><td>65535</td></tr><tr><td>Windows 2008</td><td>128</td><td>8192</td></tr><tr><td>FreeBSD</td><td>64</td><td>5840</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:list -->
+<ul><li>More values <a href="https://subinsb.com/default-device-ttl-values/">here</a></li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Banner Grabbing:</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Determine the service</li><li>Typically uses Telnet</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Example:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>nmap -sV danielgorbe.com</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:heading -->
+<h2>Proxy:</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>System between the attacker and the target</li><li>Hiding source IP address</li><li>Impersonating</li><li>Hide identity</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Proxy chaning:</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Using multiple proxy server</li><li>Most used proxy chains: TOR</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>Spoofing IP address</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Modify packet header</li><li>nmap has a <em>decoy</em> scan option, this option send packets with spoofed source IP to cloak the your address.</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Example:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>nmap -D 192.168.1.1,192.168.1.2 danielgorbe.com</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:paragraph -->
+<p>This option sends 3 packets with source IP:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+<ol><li>192.168.1.1</li><li>192.168.1.2</li><li>Your IP</li></ol>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Detect Spoofing</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Direct TTL probe (on same subnet)</li><li>IP Identification Number</li></ul>
+<!-- /wp:list -->
