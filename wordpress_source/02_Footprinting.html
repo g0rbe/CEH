@@ -1,0 +1,91 @@
+<!-- wp:list -->
+<ul><li><strong>Footprinting</strong>: Collect information about a target network.</li><li><strong>Passive Footprinting</strong>: Collect without direct interaction.</li><li><strong>Active Footprinting</strong>: Collect with direct interaction.</li><li><strong>Social Network Footprinting</strong>: Get information about the target.</li><li><strong>Website Footprinting</strong>: Information about the target through web pages:<ul><li>Examining the web page's source code</li><li>Examining cookies</li><li>Extarcting metadata of web sites</li><li>Monitoring website for updates</li><li>Tracking email</li><li>Email header analysis</li><li>Competitive Intelligence Gathering</li><li>Monitoring website traffic</li><li>Tracking online reputation</li><li>WHOIS</li><li>IP geolocation</li><li>DNS footprinting</li></ul></li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Information collected</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Organization Information (phone numbers, employee details, etc...)</li><li>Relations with other companies</li><li>Network Information (Domains, IPs, etc...)</li><li>System Information (OSes, passwords)</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Objectives of Footprinting</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li><strong>Know Security Posture</strong>: know the security posture of the target organization</li><li><strong>Reduce Focus Area</strong>: reduce the attackers focus area to a specific range of IP, network, domain names, etc...</li><li><strong>Identify Vulnerabilities</strong>: identify vulnerabilities in the target system</li><li><strong>Draw Network Map</strong>: draw a map or outline the target organization's network infrastructure</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>Advanced Google Hacking Techniques</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Operators</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li><code>cache:</code> - Display the web page stored in the google cache</li><li><code>link:</code> - List of web pages that have links to the specified web page</li><li><code>related:</code> - List of web pages that are similar to a specified web page</li><li><code>info:</code> - Presents some information that google has about the particular page</li><li><code>site:</code> - Restrict the results to those websites in the given domain</li><li><code>allintitle:</code> - Restricts the result to those websites with all of the search keywords in the title</li><li><code>intitle:</code> - Restrict the results to documents containing the search keyword in the title</li><li><code>allinurl:</code> - Restrict the results to those with all of the search keywords in the URL</li><li><code>inurl:</code> - Restrict the results to documents containing the search keyword in the URL</li><li><code>location:</code> - Find information for a specific location</li><li><code>intext:</code> - Restrict the results to documents containing the search keyword in the content</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Find more at <a href="https://ahrefs.com/blog/google-advanced-search-operators/">ahrefs blog</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>WHOIS</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Whois databases are maintained by Regional Internet Registries and contain personal information of domain owner (eg.: email address).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><code>whois</code> uses TCP port 43.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Example on Linux:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>whois danielgorbe.com</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:heading -->
+<h2>DNS footprinting</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>DNS record types:</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li><code>A</code>: Points to a host's IP address</li><li><code>MX</code>: Points to a domain's mail server</li><li><code>NS</code>: Points to a host's name server</li><li><code>CNAME</code>: Canonical naming allows aliases to a host</li><li><code>SOA</code>: Indocate authority for domain</li><li><code>SRV</code>: Service records</li><li><code>PTR</code>: Maps IP address to a hostname</li><li><code>RP</code>: Responsible person</li><li><code>HINFO</code>: Host information record includes CPU type and OS</li><li><code>TXT</code>: Unstructured text records</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Example on Linux:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>dig danielgorbe.com</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:heading -->
+<h2>Traceroute</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Trace the path between you and your target computer.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Example on Linux:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>traceroute danielgorbe.com</code></pre>
+<!-- /wp:code -->
