@@ -1,0 +1,95 @@
+<!-- wp:paragraph -->
+<p><strong>NOTE</strong>: This may cross legal boundaries, you must have proper permission to perform these actions.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>initiates active connection with the target</li><li>direct queries are generated</li><li>enumerated informations:<ul><li>routing information</li><li>SNMP information</li><li>DNS information</li><li>machine name</li><li>user information</li><li>group information</li><li>application and banners</li><li>network sharing information</li><li>network resources</li></ul></li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Email</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Extract useful information (username, domain, ..)</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Default password</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>sometimes the default credentials didn't changed</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Active Directory (AD)</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Centralized command and control of domain users, computers, printers</li><li>Brute force or generating queries to LDAP</li><li>Ports:<ul><li><strong>TCP / UDP 389</strong></li></ul></li><li>Information from LDAP:<ul><li>Username</li><li>Address</li><li>Credentials</li><li>Privileges information</li></ul></li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Lightweight Directory Access Protocol (LDAP)</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Accessing and maintaining distributed directory information services in a hierarchical and logical structure</li><li>Allowing the sharing of information like user, system, network services, etc. throughout the network</li><li>Provides a central place to store usernames and passwords</li><li>Apps and services connect to LDAP to validate users</li><li>Client initiates an LDAP session at sending an operation request to Directory System Agent (DSA)</li><li>Communication between client and server uses Basic Encoding Rules (BER)</li><li>Port:<ul><li><strong>TCP 389</strong></li></ul></li><li>Directory services using LDAP:<ul><li>Active Directory</li><li>Open Directory</li><li>Oracle iPlanet</li><li>OpenLDAP</li></ul></li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Simple Network Management Protocol (SNMP)</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Allow management of devices (routers, servers, ...)</li><li>Manage network performance</li><li>Find, troubleshoot, solve problems</li><li>Design, plan for network growth</li><li>Application layer protocol</li><li>Ports:<ul><li>UDP 161</li><li>UDP 162 (Trap)</li></ul></li><li>Three element: -SNMP manager: - A sofware running on the management station - Display collected information<ul><li>SNMP agent:<ul><li>A software running on the network nodes</li><li>Different components are monitored (CPU, RAM, ...)</li></ul></li><li>Management Information Base (MIB):<ul><li>A collection of information organized hierarchically in a virtual database</li><li>2 types:<ul><li>Scaler: single object instance</li><li>Tabular: multiple related object instance</li></ul></li></ul></li></ul></li><li>Use default community strings or guess to extract information</li><li>Community strings:<ul><li>Used for authentication</li><li>Types:<ul><li>read-only (read only information from a device)</li><li>read-write (read information, modify settings)</li><li>trap</li></ul></li></ul></li><li>SNMP Trap:<ul><li>Initiated by the SNMP agent</li><li>Report an issue</li></ul></li><li>Information from SNMP:<ul><li>Host</li><li>Devices</li><li>Shares</li><li>Network information</li></ul></li><li>Versions:<ul><li>v1:<ul><li>No support for encryption and hashing</li><li>Plain text community string</li></ul></li><li>v2:<ul><li>No support for encryption and hashing</li><li>Some function added (i.e. get data in bulk from agents)</li></ul></li><li>v3:<ul><li>Support encryption (DES)</li><li>Support hashing (MD5 or SHA)</li><li>3 model:<ul><li><em>NoAuthNoPriv</em>: no encrypt and no hashing</li><li><em>AuthNoPriv</em>: no encrypt, just hashing</li><li><em>AuthPriv</em>: encryption + hashing used</li></ul></li></ul></li></ul></li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>DNS Zone Transfer</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Zone transfer is a process to update DNS server, copy containing database record to another DNS server</li><li>Ports:<ul><li><strong>UDP 53</strong> (DNS queries)</li><li><strong>TCP 53</strong> (DNS Zone Transfer)</li></ul></li><li>Information from DNS zone transfer process:<ul><li>Locating DNS server</li><li>DNS records</li><li>Hostname</li><li>IP address</li><li>Username</li></ul></li><li>Tool:<ul><li>Linux: <code>nslookup</code>, <code>dig</code>, <code>host</code></li></ul></li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p><a href="https://security.stackexchange.com/questions/69290/how-to-test-for-zone-transfer">Example</a>:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>host -t axfr zonetransfer.me nsztm1.digi.ninja.</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Network Basic Input/Output System (NetBIOS)</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Allows communication between different application on different system within LAN</li><li>Uses a 16 ASCII Character string to identify devices</li><li>The initial 15 chars is identifying the device, the last char identify the service</li><li>Session layer protocol</li><li>Ports:<ul><li><strong>UDP 137</strong> (name services)</li><li><strong>UDP 138</strong> (datagram services)</li><li><strong>TCP 139</strong> (session services)</li></ul></li><li>Information from NetBIOS:<ul><li>List of machines within a domain</li><li>File sharing</li><li>Printer sharing</li><li>Username</li><li>Group information</li><li>Password</li><li>Policies</li></ul></li><li>NetBIOS names are classified into the following types:<ul><li>Unique</li><li>Group</li><li>Domain name</li><li>Internet group</li><li>Multihomed</li></ul></li><li>Tools: -Windows: <code>nbtstat</code> -Linux: <code>nbtscan</code></li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Network Time Protocol (NTP)</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Synchronize the clocks across the hosts and network devices</li><li>A lot of services rely on clock settings (logging, login, ...)</li><li>Application layer protocol</li><li>Port:<ul><li><strong>UDP 123</strong></li></ul></li><li>Based on UTC</li><li>Stratum:<ul><li>Distance between NTP server and device</li><li>Like TTL</li><li>Start from 1 and increases by every hop</li></ul></li><li>Attacker may change time to mislead forensic team, who investigate the events (change timestamp)</li><li>Version 3 and above:<ul><li>Support a cryptographic authentication technique between NTP peers</li><li>Without authentication, the client do not authenticate the server as a secure source, if the legitimate server goes down, a fake NTP server can replace the real</li></ul></li><li>Information from NTP:<ul><li>Host information</li><li>Client information (IP, machine name, OS)</li><li>Network information</li></ul></li><li>Tool:<ul><li>Linux: <code>ntpdc</code>, <code>ntptrace</code>, <code>ntpq</code>, <code>nmap</code>, <code>wireshark</code></li></ul></li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Simple Mail Transfer Protocol (SMTP)</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Ensures mail communication between Email servers</li><li>Application layer protocol</li><li>Port:<ul><li><strong>TCP 25</strong> (Unencrypted)</li><li><strong>TCP 587</strong> (TLS)</li></ul></li><li>Enumeration with Telnet</li><li>Commands:<ul><li><code>HELO</code>: identify domain name of the sender</li><li><code>EXPN</code>: verify Mailbox on localhost</li><li><code>MAIL FROM</code>: identify sender of the email</li><li><code>RCPT TO</code> specify the message recipients</li><li><code>SIZE</code>: specify maximum supported size</li><li><code>DATA</code>: define data</li><li><code>RSET</code>: reset connection and buffer of SMTP</li><li><code>VRFY</code>: verify the availability of Mail server</li><li><code>HELP</code>: show help</li><li><code>QUIT</code>: terminate session</li></ul></li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Enumeration Countermeasures</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Advanced security softwares</li><li>Updated version of protocols</li><li>Strong security protocols</li><li>Unique and difficult password</li><li>Strong encrypted communications</li><li>Disable unnecessary ports</li></ul>
+<!-- /wp:list -->
