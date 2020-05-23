@@ -1,0 +1,825 @@
+<!-- wp:heading {"level":4} -->
+<h4>System Hacking Methodology</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Cracking Password</li><li>Escalating Privileges</li><li>Executing Applications</li><li>Hiding Files</li><li>Covering Tracks</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Goals</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Bypass the access control</li><li>Gain access to the system</li><li>Exploit vulnerabilities</li><li>Gain privileges</li><li>Execute applications</li><li>Hide malicious activities</li><li>Hide the evidence of compromising</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>Password Cracking</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Three type of authentication factors:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li><strong>Something i have</strong> : username, password, ...</li><li><strong>Something i am</strong> : biometrics, ...</li><li><strong>Something i possess</strong> : allowed / registered devices, ...</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Password Cracking is the method for extracting the password to gain authorized access to the target system in the guise of a legitimate user. Usually, only the username and password authentication are configured, but now password authentication is moving toward two-factor authentication or multiple-factor authentication.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>A good password contain:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Case sensitive letters</li><li>Special characters</li><li>Numbers</li><li>Lengthy password (more than 8 character)</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Types of Password Attacks</h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Non-Electronic Attacks</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Dont require any type of technical understanding and knowledge.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Example:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Shoulder surfing</li><li>Social Engineering</li><li>Dumpster Diving</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Active Online Attack</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Directly interact with the target for cracking password.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Dictionary Attack</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A password cracking application is used along with with a dictionary file. This dictionary file contains entire dictionary or a list of known and common words. This is the most common type of password cracking. Systems are not vulnerable if they use a strong, unique alphanumeric password.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Brute Force Attack</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Attempt to recover the password by trying every possible combination of characters until password is accepted. Common and basic technique.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Hash Injection</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Compromising a workstation by exploiting the vulnerability, and extract the log-on hashes. Hashing and other cryptography knowledge require.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Passive Online Attacks</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Password Attack without probing the target.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Wire Sniffing</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Sniffing the packets with a packet sniffing tool within the Local Area Network (LAN), and inspecting the captured packets.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Man-in-the-Middle (MITM) Attack</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The attacker involves himself into the communication, insert himself in.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>MITM Attacks:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>SSL Strip</li><li>Burp Suite</li><li>Browser Exploitation Framework (BeEF)</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p><strong>Replay Attack</strong> : Capture the packets and extract information such as password from it. Then generating a replay traffic with the injection of extracted information to gain access to the system.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Default Password</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Gain access to the system by using the preconfigured password. The default password can be find on the manufacturer site or through online tools.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Offline Attack</h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Pre-computed hashes and Rainbow table</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Comparing a password using a rainbow table. Rainbow Table is the pregenerated hashes of the words in a dictionary or the combination of characters. The advantage of Rainbow Table is the speed, because it takes less time to compare the hashes. The disadvantage is the time and storage, it takes much more time and storage to compute and store the hashes.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Distributed Network Attack (DNA)</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Using the unused processing power of machines across the network to decrypt the hashes. DNA requires a DNA manager and DNS Clients. DNA Manager allocate small tasks over the distributed network to be computed in the background.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Password Guessing</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The attacker uses the information extracted by initial phases and guess the password. Not common method and the rate of failure is high.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3>USB Drive</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Attacker plug in an USB Drive that contain a password hacking tool. Windows Autorun feature allows running the application automatically, if enabled.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>Microsoft Authentication</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p><em>Authentication</em> is a verification process to identify any user or device.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Microsoft authentication protocols:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Kerberos</li><li>Security Account Manager (SAM)</li><li>NT LAN Manager (NTLM)</li><li>LM</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Security Account Manager (SAM)</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>SAM is database that stores credentials and other account parameters such as passwords for the authentication process in Windows. While the OS running, this database os locked to be accessed by any other service and process. There are several other security algorithms are applied to the database to secure and validate the intergrity of data. Within Microsoft, SAM stores password in LM/NTLM hashing format. Windows XP and later versions do not store the value of LM hash, or when LM hash is exceeding 14 characters, it stores blank or dummy value instead.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Format</strong> :</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>Username: user ID: LM hash: NTLM hash:::</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:paragraph -->
+<p><strong>Location</strong>:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>C:\windows\system32\config\SAM</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:heading {"level":3} -->
+<h3>NTLM Authentication</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>NT Lan Manager is a proprietary authentication protocol by Microsoft. In the authentication process, user sends login credentials to a domain controller in hashed format. Domain controller responds to a challenge known as <strong>nonce</strong> to be encrypted by the password's hash. This challenge is a 16 byte random number generated ny the domain controller. By comparing the challenge with the database, domain controller permit or deny the login. Microsoft upgraded its default authentication mechanism from NTLM to Kerberos.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>NTLM has two version:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>NTLMv1 (Older)</li><li>NTLMv2 (Improved)</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>For additional security layer, NTLM is combined with Security Support Provider.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Kerberos</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Kerberos is an advanced authentication protocol. Clients receive tickets from Kerberos Key Distributor Center (KDC)</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>KDC depend upon two components:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Authentication Server (AS)</li><li>Ticket-Granting Server (TGS)</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>The client send a request to the AS to grant Tick-granting-ticket. The AS authenticates the client by comparing the user identity and password from its datbase and reply with Tick-Granting Ticket and a session key. The session key is for a session between client and TGS. Now, client can communicate with the Ticket-Granting Server (TGS). The client send TGT to TGS, ask for communication with another user. TGS reply with a Ticket and session key. Ticket and Session key is for communicating with other user within a trusted domain.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Password salting</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Password salting is the process of adding additional character in the password to one-way function. This makes the password more difficult to reverse the hash. The function os salting is to defeat the Dictionary Attacks and Rainbow Table attacks</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Password file by Operating Systems</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Windows: SAM Linux: SHADOW Domain Controller: NTDS:DIT</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Password Cracking tools</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>pwdump7</li><li>fgdump</li><li>RainbowCrack</li><li>Cain and Abel</li><li>John The Ripper</li><li>Pyrit</li><li>Hashcat</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3><a href="https://github.com/g0rbe/CEH/blob/master/06_System_Hacking.md#password-cracking-countermeasures"></a></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Password Cracking Countermeasures</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Change default password</li><li>Do not store/save passwords in applications</li><li>Do not use guessable passwords</li><li>Set strong password</li><li>Password encryption</li><li>Keep credentials secure and secret</li><li>Enable SYSKEY</li><li>Password salting</li><li>Advance security audits</li><li>Periodically update passwords</li><li>Monitor attacks</li><li>Different password for each service</li><li>Configure policies for incorrect password attempts</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2><a href="https://github.com/g0rbe/CEH/blob/master/06_System_Hacking.md#escalating-privileges"></a></h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading -->
+<h2>Escalating Privileges</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The main goal is to get a high-level access to the system.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><a href="https://github.com/g0rbe/CEH/blob/master/06_System_Hacking.md#horizontal-privileges-escalation"></a></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Horizontal Privileges Escalation</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The attacker attempts to gain access to user that has same set of privileges.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><a href="https://github.com/g0rbe/CEH/blob/master/06_System_Hacking.md#vertical-privileges-escalation"></a></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Vertical Privileges Escalation</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The attacker attepmts to escalate privileges to a higher level. Vertical privileges occurs when attacker is trying to gain access to the Administrator account. Higher privileges allow attacker to access sensitive information, modify files and execute programs.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4><a href="https://github.com/g0rbe/CEH/blob/master/06_System_Hacking.md#privilege-escalation-using-dll-hijacking"></a></h4>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Privilege Escalation using DLL Hijacking</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Applications need Dynamic Link Libraries (DLL) to run. In Windows, most of the application search for DLL in directories, instead of using the full qualified path. The Attacker replace the DLL to a malicious one.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>DLL Hijacking tool: Metasploit</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Known DLL</strong>s are specified in the registry key:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Session Manager\
+</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:paragraph -->
+<p><em>Search paths</em> used by Microsoft:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Directory of application or current directory</li><li>System directory (i.e. C:\Windows\System32)</li><li>Windows directory</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2><a href="https://github.com/g0rbe/CEH/blob/master/06_System_Hacking.md#executing-applications"></a></h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading -->
+<h2>Executing Applications</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The Attacker's next step is to execute malicious applications. This execution is for gaining access to system resources, crack passwords, set up backdoors and many more. This process is called as "System Owning".</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Goals:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Install malware to collect information</li><li>Setup Backdoor to maintain access</li><li>crack passwords and scripts</li><li>Install Keylogger</li><li>etc...</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3><a href="https://github.com/g0rbe/CEH/blob/master/06_System_Hacking.md#remoteexec"></a></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3>RemoteExec</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>RemoteExec is software designed for installation of application, execution of code and scripts remotely. RemoteExec can upload file across the network.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Features:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Deploy packages</li><li>Remotely execution of programs</li><li>Scheduling execution</li><li>Remote configuration (settings, files, ...)</li><li>Remote controlling (turn off, lock, ...)</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3><a href="https://github.com/g0rbe/CEH/blob/master/06_System_Hacking.md#pdq-deploy"></a></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3>PDQ Deploy</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>PDQ Deploy is a software for system administrators to install and send updates silently to the remote systems. It can silently deploy almost every application (.exe, .msi, ...). It can install, uninstall, copy, execute and send files.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3><a href="https://github.com/g0rbe/CEH/blob/master/06_System_Hacking.md#keyloggers"></a></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Keyloggers</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Keystroke logging, keylogging and keyboard capturing is a process of monitoring and/or recording the actions by any user. Logging the actions to steal information from the target machine.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Goals:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Capture the pushed buttons</li><li>Take screenshots</li><li>Capture mouse</li><li>Many more...</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4><a href="https://github.com/g0rbe/CEH/blob/master/06_System_Hacking.md#software-keyloggers"></a></h4>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Software Keyloggers</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Software-based keyloggers are remotely installed, or send it to the target to execute the application.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Types:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Application keyloggers</li><li>Kernel keyloggers</li><li>Hypervisor-based keyloggers</li><li>Form Grabbing based keyloggers</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4><a href="https://github.com/g0rbe/CEH/blob/master/06_System_Hacking.md#hardware-keyloggers"></a></h4>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Hardware Keyloggers</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>It is a physical hardware which are installed on hardware by physically accessing the device.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Types:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>PC/BIOS Embedded keyloggers</li><li>Keylogger keyboard</li><li>External keylogger (video, bluetooth, wi-fi, accoustic, ...)</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4><a href="https://github.com/g0rbe/CEH/blob/master/06_System_Hacking.md#anti-keyloggers"></a></h4>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Anti-Keyloggers</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Anti-Keylogger is an application which ensures protection against keylogging by providing SSl protection, keylogging protection, clipboard logging protection and screen logging protection.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Anti-Kelogger softwares:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Zemana</li><li>Spyshelter Anti-keylogger</li><li>Anti-Keylogger</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4><a href="https://github.com/g0rbe/CEH/blob/master/06_System_Hacking.md#key-logging-countermeasures"></a></h4>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Key-logging Countermeasures</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Keystroke interference software</li><li>Don't click on doubtful URLs</li><li>Anti-Keylogger software</li><li>On-Screen keyboard for secrets</li><li>Physical monitoring</li><li>Host-based IDS</li><li>File scanning prior to installation</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3><a href="https://github.com/g0rbe/CEH/blob/master/06_System_Hacking.md#spyware"></a></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Spyware</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Spywares are the software designed for gathering user interaction information with a system such as login credentials, emails and many more without informing the user of the system. The gathered information is sent to a remote destination. Spyware hides its files and processes to avoid detection.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Types:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Adware</li><li>System monitors</li><li>Tracking cookies</li><li>Trojans</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Features:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Tracking users (i.e. keylogging)</li><li>Monitor user's activity</li><li>Blocking services</li><li>Remote delivery of logs</li><li>Email tracking</li><li>Record removable media communication (i.e. USB)</li><li>Voice recording</li><li>Video recording</li><li>Tracking location (GPS)</li><li>Mobile tracking</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3><a href="https://github.com/g0rbe/CEH/blob/master/06_System_Hacking.md#rootkits"></a></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Rootkits</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Rootkit is a software designed to provide privileged access to a remote user over a system, creates a backdoor. Deployed after attacker gain high-level access to a system. Rootkits often mask their existence to avoid detection.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4><a href="https://github.com/g0rbe/CEH/blob/master/06_System_Hacking.md#types"></a></h4>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Types:</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Application level rootkit: perform manipulation of standard application file with an injection of codes.</li><li>Kernel-level rootkit: inject malicious code to the kernel</li><li>Hardware/Firmware level rootkit: built into a chipset</li><li>Hypervisor level rootkit: exploits hardware features like AMD-V or Intel VT</li><li>Boot Loader level rootkits (Bootkits): replace the legitimate boot loader with the malicious one, which enables the bootkit to activated before an OS run. It can attack Master Boot Record (MBR), Volume Boot Record (VBR) or boot sector. It can be used to attack full disk encryption systems, hack encryption keys and passwords.</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Tool:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Avatar</li><li>Necurs</li><li>Azazel</li><li>ZeroAccess</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4><a href="https://github.com/g0rbe/CEH/blob/master/06_System_Hacking.md#detecting-and-defending-rootkits"></a></h4>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Detecting and Defending Rootkits</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Integrity-Based Detection</li><li>Digital signatures</li><li>Difference-based detection</li><li>Behaviour-based detection</li><li>Cross-view based detection</li><li>Run-time execution path profiling</li><li>Anti-rootkit software</li><li>Deploying a network-based firewall</li><li>Host-based firewall</li><li>Install application/OS from trusted sources</li><li>Integrity verification</li><li>Kernel memory dump analysis</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Unix tools:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Zeppo</li><li>chrootkit</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Windows tools:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Microsoft Sysinternals Rootkit Revealer</li><li>Sophos Anti-Rootkit</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3><a href="https://github.com/g0rbe/CEH/blob/master/06_System_Hacking.md#new-technology-file-system-ntfs-data-stream"></a></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3>New Technology File System (NTFS) Data Stream</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>NTFS is a Windows file system by Microsoft. NTFS is the deafult file system for Windows 10,- 7,- Vista,- XP,- 2000,- NT.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4><a href="https://github.com/g0rbe/CEH/blob/master/06_System_Hacking.md#alternate-data-stream-ads"></a></h4>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Alternate Data Stream (ADS)</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>ADS is a file attribute in in NTFS file system, contains metadata for locating a particular file. ADS is capable of hiding file data into an existing file without altering or modifying any noticable changes. It can be security threat because it can hide malicious files.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>NTFS Streams Countermeasures:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Movung file to a FAT partition (FAT doesn't support ADS, but this will corrupt the file)</li><li>Third-party tools (ADS Spy, ADS Tools, LADS, ...)</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3><a href="https://github.com/g0rbe/CEH/blob/master/06_System_Hacking.md#steganography"></a></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Steganography</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Steganography is a technique for hiding sensitive information in an ordinary message to ensure the cofidentiality. Steganography uses encryption to maintain the confidentiality and integrity. It hides the encrypted data to avoid detection. An attacker may use this to technique to transfer data without being detected.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4><a href="https://github.com/g0rbe/CEH/blob/master/06_System_Hacking.md#classification-of-steganography"></a></h4>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Classification of Steganography</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p><strong>Technical Steganography</strong> icludes concealing information using methods like using invisible link, microdots.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Linguistic Steganography</strong> uses text as covering media to hide information like using ciphers and code to hide information.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4><a href="https://github.com/g0rbe/CEH/blob/master/06_System_Hacking.md#types-of-steganography"></a></h4>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Types of Steganography</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Whitespace Steganography</li><li>Image/Pixel Steganography</li><li>Document Steganography</li><li>Video Steganography</li><li>Audio Steganography</li><li>File/Folder Steganography</li><li>Spam/Email Steganography</li><li>Web Steganography</li><li>Frequency Steganography</li><li>Least Significant Bit Steganography</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4><a href="https://github.com/g0rbe/CEH/blob/master/06_System_Hacking.md#whitespace-steganography"></a></h4>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Whitespace Steganography</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>hise information in a text file using extra blank space inserted in between words covering file. Using LZW and Huffman compression method to decrease the size of the message.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4><a href="https://github.com/g0rbe/CEH/blob/master/06_System_Hacking.md#image-steganography"></a></h4>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Image Steganography</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Hidden information can be kept in image formats, such as PNG, JPG, others. Image steganography pelaces redundant bits of the image in the message. It cannot be detected by human eye.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Techniques:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Least significant bit insertion</li><li>Masking and filtering</li><li>Algorithm and transfomation</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Tools:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>OpenStego</li><li>QuickStego</li><li>Stegohide (Linux)</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4><a href="https://github.com/g0rbe/CEH/blob/master/06_System_Hacking.md#steganalysis"></a></h4>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Steganalysis</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Analysis of suspected information using steganography techniques to discover nad retrieve the hidden information.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Methods:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Stego-only: have only stego object</li><li>Known stego: have stego object, algorithm and cover</li><li>Known message: have stego object and hidden message</li><li>Known cover: have stego object and cover</li><li>Choosen message: generate stego form known message to identify the algorithm</li><li>Choosen stego: have stego object and algorithm</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2><a href="https://github.com/g0rbe/CEH/blob/master/06_System_Hacking.md#covering-tracks"></a></h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading -->
+<h2>Covering tracks</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Aftre gaining access, escalating privileges, executing applications, the next step is to wipe the evidence. In this phase, attacker removes all the event logs, error messages and other evidence to prevent its attack from being discovered easily.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Common techniques:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Disable auditing</li><li>Clearing logs</li><li>Manipulating logs</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3><a href="https://github.com/g0rbe/CEH/blob/master/06_System_Hacking.md#disable-auditing"></a></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Disable auditing</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Preventing another security mechanism to indicate an alert any sort of intrusion, and leaving to track leaving to track on the machine. The best practice for leaving no track and prevent detection is by disabling the auditing as you logged in on the system. It will not only prevent to log events, but also resist in the detection. Auditing in a system is enabled to detect and track events.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>List auditing categories in windows:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>C:\Windows\system32>auditpol /list /category /v
+</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:paragraph -->
+<p>Check all category audit policies:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>C:\Windows\system32>auditpol /get /category:*
+</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:heading {"level":3} -->
+<h3><a href="https://github.com/g0rbe/CEH/blob/master/06_System_Hacking.md#clearing-logs"></a></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Clearing logs</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>By clearing logs, all events logged during the compromise will be ereased.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Folder of log files:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Windows 2000/Server2003/Windows XP:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>%SystemRoot%\System32\Config
+</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:paragraph -->
+<p>Server 2008/Vista and up:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>%SystemRoot%\system32\winevt\logs
+</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:paragraph -->
+<p>Linux, OpenBSD:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>/var/log/
+</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:heading {"level":3} -->
+<h3><a href="https://github.com/g0rbe/CEH/blob/master/06_System_Hacking.md#other-methods"></a></h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Other methods</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Clear cookies</li><li>Clear cache</li><li>Clear temporary files</li><li>CCleaner</li><li>Clear Most Recent Used (MRU)</li></ul>
+<!-- /wp:list -->
