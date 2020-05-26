@@ -1,0 +1,136 @@
+<!-- wp:heading -->
+<h2>Terms</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Clear text / plaintext : the unencrypted data</li><li>Cipher text : the encrypted data</li><li>Key : specifies the transformation of data for encryption / decryption ("key" is not synonymous with "password", although a password can in fact be used as a key)</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Symmetric cryptography</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Use the same key for the encryption and the decryption</li><li>Symmetric-key either use stream cipher and block cipher</li><li>Popular algorithms: AES, DES</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Asymmetric / Public Key cryptography</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Two key used: public and private</li><li>Public key is publicly known to everyone, issued by Public Key Infrastructure (PKI) and use to encrypt the data</li><li>Private key is a secret for the public,only known by the owner and it is used to decrypt the data</li><li>Asymmetric cryptography delivers confidentiality, integrity, authenticity and non-repudiation</li><li>Popular algorithms : RSA, DSA and Diffie-Hellman</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Cipher</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Cipher is an algorithm for performing encryption and decryption</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Substitution Cipher</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Every character is substituted with another one</li><li>More on <a href="https://en.wikipedia.org/wiki/Substitution_cipher">Wikipedia</a></li><li>Example cipher : <a href="https://en.wikipedia.org/wiki/Caesar_cipher">Caesar cipher</a></li><li>Example:</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>Plaintext :  THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG
+Ciphertext : QEB NRFZH YOLTK CLU GRJMP LSBO QEB IXWV ALD
+
+Key : right shift of 3 </code></pre>
+<!-- /wp:code -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Transposition Cipher</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>The positions held by units of plaintext are shifted according to a regular system</li><li>Example cipher <a href="https://en.wikipedia.org/wiki/Rail_fence">Rail Fence cipher</a></li><li>Example:</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>Clear text: WE ARE DISCOVERED. FLEE AT ONCE
+
+W . . . E . . . C . . . R . . . L . . . T . . . E
+. E . R . D . S . O . E . E . F . E . A . O . C .
+. . A . . . I . . . V . . . D . . . E . . . N . .
+
+Ciphertext: WECRLTEERDSOEEFEAOCAIVDEN</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Polyalphabetic Cipher</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Based on substitution</li><li>Using multiple substitution alphabets</li><li>Example cipher : <a href="https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher">Vigenère cipher</a></li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Stream Cipher</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Text digits are combined with a pseudorandom cipher digit stream (key stream)</li><li>Each plaintext digit is encrypted one at a time with the corresponding digit of the stream</li><li>2 type:</li><li><strong>Synchronous Stream Ciphers</strong> : stream of pseudo-random digits is generated independently of the plaintext and ciphertext messages, and then combined with the plaintext (to encrypt) or the ciphertext (to decrypt)</li><li><strong>Self-Synchronizing Stream Cipher</strong> : uses several of the previous N ciphertext to compute the key stream</li><li>Example cipher: RC4</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Block Cipher</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Operating on fixed-length groups of bits, called a block, with an unvarying transformation that is specified by a symmetric key</li><li>Example cipher: AES, DES</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>Stream Cipher</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3>RC4</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Designed in 1987, leaked in 1994</li><li>Used in SSL, WEP</li><li>Simple and fast algorithm</li><li>RC4 generates a pseudorandom stream of bits (a key stream) and combining it with the plaintext using bit-wise exclusive-or for encryption</li><li>The permutation is initialized with a variable length key, typically between 40 and 2048 bits</li><li>Marked as insecure</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>Symmetric Algorithms</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Data Encryption Standard (DES)</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Introduced in 1975</li><li>Standardized in 1977</li><li>Problem with DES: short key length (56 bits)</li><li>Now considered as insecure</li><li>Improved version: Triple DES (involves DES three times)</li><li>Problem with Triple DES: slow, compute heavy</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Parameters</h4>
+<!-- /wp:heading -->
+
+<!-- wp:table -->
+<figure class="wp-block-table"><table><tbody><tr><td>Parameter</td><td>Value</td></tr><tr><td>Block Size</td><td>64 bits</td></tr><tr><td>Key Size</td><td>56 bits</td></tr><tr><td>No. of rounds</td><td>16</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:heading -->
+<h2>Advanced Encryption Standard (AES)</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>First published in 1998</li><li>Became a federal government standard in 2002</li><li>First approved (and only) publicly accessible cipher approved by the NSA for top secret information</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Parameters</h4>
+<!-- /wp:heading -->
+
+<!-- wp:table -->
+<figure class="wp-block-table"><table><tbody><tr><td>Parameter</td><td>AES-128</td><td>AES192</td><td>AES-256</td></tr><tr><td>Block Size</td><td>128 bits</td><td>128 bits</td><td>128 bits</td></tr><tr><td>Key Size</td><td>128</td><td>192</td><td>256</td></tr><tr><td>No. of rounds</td><td>10</td><td>12</td><td>14</td></tr></tbody></table></figure>
+<!-- /wp:table -->
