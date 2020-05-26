@@ -1,0 +1,255 @@
+<!-- wp:paragraph -->
+<p>Web servers are the programs that are used for hosting services.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Web servers are deployed on a separate web server hardware or installed on a host as a program.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>It delivers content over <strong>Hyper Text Transfer Protocol</strong> (HTTP).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Web Servers support different types of application extensions whereas all of the support <strong>Hypertext Markup Language</strong> (HTML).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Web Server Security Issue</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Web server vulnerabilities:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Improper permission of file directories</li><li>Default configurations</li><li>Enabling unnecessary services</li><li>Lack of security</li><li>Bugs</li><li>Misconfigured SSL certificate</li><li>Enabled debugging</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Open Source Web Servers</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Apache HTTP Server</li><li>Nginx</li><li>Apache Tomcat</li><li>Lighttpd</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Internet Information Services (IIS)</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>IIS is a Windows-based webserver.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Components of IIS</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li><strong>Protocol listener</strong> are responsible for receiving and returning protocol-specific requests.</li><li><strong>HTTP.sys</strong> are responsible for HTTP requests.</li><li><strong>World Wide Web Publishing Service</strong> (WWW Service)</li><li><strong>Windows Process Activation Service</strong> (WAS)</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Web Server Attacks</h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>DoS/DDoS</h4>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>DNS Server Hijacking</h4>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>DNS Amplification Attack</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Spoof the source address of the DNS request, by the amplification of the size of the request and using botnets, it results a DDoS attack.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Directory Traversal Attacks</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Attacker using trials and error method to access restricted directories to reveal sensitive information.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Man-in-the-Middle / Sniffing Attacks</h4>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Phishing Attacks</h4>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Website Defacement</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>After a successful intrusion, attacker alters and modify the content of the website.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Web server Misconfiguration</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Attacker looks for misconfigurations and vulnerabilities to exploit.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>HTTP Response Splitting Attack</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p><a href="http://projects.webappsec.org/w/page/13246931/HTTP%20Response%20Splitting">Read more here</a></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Web Cache Poisoning Attack</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The attacker wipe the actual cache of the webserver and sending crafted request to store fake entries.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>SSH Brute Force Attack</h4>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Web Application Attacks</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Cookie Tampering</li><li>DoS</li><li>SQL Injection</li><li>Session Hijacking</li><li>Cross-Site Request Forgery (CSRF)</li><li>Cross-Site Scripting (XSS)</li><li>Buffer Overflow</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>Attack Methodology</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Information Gathering</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Collecting information from internet.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3>robots.txt</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Attacker extract information about internal files.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><a href="https://en.wikipedia.org/wiki/Robots.txt">Read more</a></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>Web Server Footprinting</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Results the server name, type, OS, applications, etc.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Tools:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Netcraft</li><li>Maltego</li><li>httprecon</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>Mirroring a website</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Download the website, to inspect offline, without any interaction to the target.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Tool:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>httrack</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>Vulnerability Scanning</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Automated tool to inspect website and detect vulnerabilities. These tools perform deep inspection of scripts, open ports, banners, etc.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Tools:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>owasp-zap</li><li>openvas</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>Hacking Web Passwords</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Extract passwords to gain authorized access to the system. Password may be get from social engineering, tampering the communication, etc.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Password Attacks classification:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Non-Electronic attacks</li><li>Active online attacks</li><li>Passive online attacks</li><li>Default password</li><li>offline attack</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>Countermeasures</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Place web server in a secure zone (behind firewall, IDS, IPS, DMZ)</li><li>Detect potential changes (hashing, script to detect change)</li><li>Auditing ports</li><li>Disable insecure and unnecessary ports</li><li>Using port 443 (HTTPS) over port 80 (HTTP)</li><li>Encrypted traffic</li><li>Server certificate</li><li>Code Access Security Policy</li><li>Disable tracing</li><li>Disable debug complies</li><li>Software update</li><li>Disable default account</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Patch Management</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Hotfix is a small update which fix an issue. Patch is a bigger of software to fix one or more issues.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Methods:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Manual download</li><li>Auto-Update</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p><strong>Patch Management</strong> is an automated process to detect missing security patches, find out solutions, download patch, test the patch in an isolated environment then deploy the patch onto the systems.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Tools:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Microsoft Baseline Security Analyzer (MBSA)</li></ul>
+<!-- /wp:list -->
