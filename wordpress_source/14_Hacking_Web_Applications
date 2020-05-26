@@ -1,0 +1,268 @@
+
+<!-- wp:paragraph -->
+<p><strong>Clients</strong> are the endpoints which interact with the web application / server.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>How Web Applications work?</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p><strong>Front-end</strong> &lt;-&gt; <strong>Back-end</strong></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Users are interacting with the front-end. The processing was controlled and processed by the back-end.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Server-side languages:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>PHP</li><li>Java</li><li>C#</li><li>Python</li><li>JavaScript</li><li>many more...</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Client-side languages:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>CSS</li><li>JavaScript</li><li>HTML</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Layers of Web Applications</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li><strong>Presentation Layer</strong> is responsible for displaying the information to the user.</li><li><strong>Logical Layer</strong> : manipulate information to and from the forms.</li><li><strong>Data Layer</strong> : hold the data for the application.</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Web 2.0</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>In web 1.0, the users are limited to passive viewing the content.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>In web 2.0, the users can interact and collaborate, it contain rich user experience, dynamic content.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>Web Application Threats</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Cookie poisoning</li><li>Insecure storage</li><li>Information leakage</li><li>Directory traversal</li><li>Parameter/Form tampering</li><li>DOS attack</li><li>Buffer overflow</li><li>Log tampering</li><li>SQL injection</li><li>Cross-site Script</li><li>Cross-site Request Forgery</li><li>Security misconfiguration</li><li>Broken session management</li><li>DMZ attacks</li><li>Session hijacking</li><li>Network access attacks</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Unvalidated input</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Process an non-validated input from the client to the back-end. This is a major vulnerability, this is the basics of injection attacks (SQL injection, xss, buffer overflow).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Parameter / Form Tampering</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Parameter tempering is an attack, where the attacker manipulate the parameter while client and server are communicating with each other. Parameters such as <strong>Uniform Resource Locator</strong> (URL) or web page form fields are modified (cookies, HTTP Header, form fields).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Injection Flaws</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Works if a web application allows untrusted input to be executed.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Malicious code injection</li><li>File injection</li><li>SQL injection</li><li>Command injection</li><li>LDAP injection</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>SQL Injection</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Injection of malicious SQL queries. Attacker can manipulte the database These vulnerabilities can be detected by using an automated scanner.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Command Injection</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Shell injection</li><li>File injection</li><li>HTML embedding</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>LDAP Injection</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Attacker can access the database using LDAP filter to search information.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>DoS Attack</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li><strong>User Registration DoS</strong> : an automated process, the attacker keep registering fake accounts.</li><li><strong>Login DoS</strong> : attacker keep sending login requests.</li><li><strong>User Enumeration</strong> : attacker brute force login credentials with a dictionary attacks.</li><li><strong>Account Lock</strong> : attacker attempt to lock the user account by attempting invalid passwords.</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>Web Application Hacking Methodology</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Analyze Web Application</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Observing functionality</li><li>Identify vulnerabilities, entry points, servers</li><li>HTTP request analyze</li><li>HTTP fingerprinting</li><li>Hidden content discovery</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>Attack Authentication</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Exploit the authentication mechanism:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Username enumerate</li><li>Cookie exploitation</li><li>Session attacks</li><li>Password attacks</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Authorization Attack Schemes</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Accessing the web application with low level privilege account, then escalate privileges to get information</li><li>Parameter tampering (URL, POST data, Query string, cookies, HTTP header)</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Session Management Attack</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Impersonate a legitimate user.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Session hijacking techniques:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Session token prediction</li><li>Session token tampering</li><li>Man-in-the-Middle attack</li><li>Session replay</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Injection Attacks</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Inject malicious code, commands and files.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Techniques:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Web Script injection</li><li>OS Command injection</li><li>SMTP injection</li><li>SQL injection</li><li>LDAP injection</li><li>XPath injection</li><li>Buffer Overflow</li><li>Canonicalization</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Data Connectivity Attack</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Exploit the data connectivity between application and its database. Data connection requires a connection string.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Connection String Injection</li><li>Connection String Parameters Pollution (CSPP)</li><li>Connection Pool DoS</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>Countermeasures</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Percent Encoding</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p><a href="https://en.wikipedia.org/wiki/Percent-encoding">Percent Encoding</a> or URL Encoding is a technique for secure handling of URL by replaces unsafe and non-ascii characters with % followed by two hexadecimal digits.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Example:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><code>%20</code> or <code>+</code> both are used for SPACE</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>In URL:, there are some reserved character such as '/' that is used to separate paths in URL. To use this not as separator, then it must be encoded.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><code>%2F</code> used for '/'</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Full list of percent encoded characters <a href="https://www.degraeve.com/reference/urlencoding.php">here</a></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>HTML Encoding</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>HTML Encoding specify how special character will shown.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>SQL Injection Countermeasures</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Input validation</li><li>Customized error messages</li><li>Monitoring database traffic</li><li>Limit length of user input</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>XSS Attack Countermeasures</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Testing tools</li><li>Filtering meta</li><li>Filtering output</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>DOS Attack Countermeasures</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Reverse proxy</li><li>Remove unnecessary functions</li><li>Secure remote administration</li><li>Firewall</li><li>IDS</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Other Countermeasures</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Dynamic testing</li><li>Source Code analysis</li><li>Strong cryptography</li><li>Use SSL</li><li>Hotfixes / patches</li><li>Cookie timeout</li></ul>
+<!-- /wp:list -->
