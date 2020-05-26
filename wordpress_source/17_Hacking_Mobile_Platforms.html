@@ -1,0 +1,231 @@
+<!-- wp:heading -->
+<h2>Mobile Platform Attack Vectors</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3>OWASP Top 10 Mobile Threats</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p><a href="https://www.owasp.org/index.php/OWASP_Mobile_Security_Project#Top_Ten_Mobile_Risks">OWASP Mobile Security Project</a> maintain a list of the most common mobile security risks.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Top Ten (2014)</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list {"ordered":true} -->
+<ol><li>Weak Server Side Controls</li><li>Insecure Data Storage</li><li>Insufficient Transport Layer Protection</li><li>Unintended Data Leakage</li><li>Poor Authorization and Authentication</li><li>Broken Cryptography</li><li>Client Side Injection</li><li>Security Decisions via Untrusted Inputs</li><li>Improper Session Handling</li><li>Lack of Binary Protections</li></ol>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Top Ten (2016)</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Improper Platform Usage: misuse of a platform feature or failure to use a platform security controls</li><li>Insecure Data Storage: insecure data storage + unintended data leakage</li><li>Insecure Communication: poor handshaking, incorrect SSL, weak negotiation, cleartext communication of sensitive assests, ...</li><li>Insecure Authentication: captures notions of authenticating the end user or bad session management</li><li>Insuficient Cryptography: cryptography was attempted, but it wasn't done correctly</li><li>Insecure Authorization: capture any failures in authorization</li><li>Client Code Quality: all of the code-level implementation problem in the mobile client</li><li>Code Tampering: binary patching, local resource modification, method hooking, dynamic memory modification, ...</li><li>Reverse Engineering: analysis of the final core binary to determine the source code, libraries, ...</li><li>Extraneous Functionality: internal development security controls that are not intended to be released into a production environment</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Attack Vector</h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Basic Threats</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Malware / rootkit</li><li>Data Loss</li><li>Data Tampering</li><li>Data Exfiltration</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Vulnerabilities And Risks on Mobile Platforms</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Malicious third-party application / in the store</li><li>Application vulnerability</li><li>Data security</li><li>Excessive permissions</li><li>Weak encryptions</li><li>Operating System update issue</li><li>Application update issue</li><li>Jailbreaking / rooting</li><li>Physical attack</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>OS Sandboxing Issue</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Sandbox is a security mechanism for separating running programs, usually in an effort to mitigate system failures or software vulnerabilities from spreading</li><li>Sandbox limits the app's access to files, preferences, network resources, ...</li><li>Advanced malware designed to bypass it, by fragment code or put sleep timer in the script to bypass the inspection process</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>Android</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Device Administration API</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Provides device administration features at the system level</li><li>This API allows to create security-aware apps that are useful in the enterprise settings, where require rich control over employee devices</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Rooting</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>A process of allowing user to attain privileged control</li><li>Needed for modify settings, get full control over the kernel or install custom ROMs</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>iOS</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Jailbreaking</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Rooting the iOS</li><li>Escalating the privileges on iOS to remove or bypass the factory default restrictions</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Types of Jailbreaking</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li><strong>Userland Exploit</strong> : allow user-level access without escalating iBoot-level access</li><li><strong>iBoot Exploit</strong> : allow user-level and boot-level access</li><li><strong>Bootrom Exploit</strong> : allow user-level and boot-level access</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Jailbreaking Techniques</h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Untethered Jailbreak</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Does not require to reboot with a connection to your computer</li><li>Exploit bypass the iBoot sequence</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Tethered Jailbreak</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Need a connection to your computer to reboot, without it, the boot stuck with an Apple logo</li><li>Offers complete jailbreak features</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Semi-Untethered Jailbreak</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Allows to boot into the iOS device, but with limited functionality</li><li>The jailbreak functions will be disabled until the launch of a jailbreak app</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Semi-Tethered Jailbreak</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Allows you to boot with limited functionality</li><li>To get the full functionality, a reboot with a tethered jailbreak required</li><li>Semi-Tethered Jailbreak: tethered jailbreak + a package to allow reboot with limited functionality</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>Windows Phone</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Windows Phone 8 using the Windows NT Kernel</li><li>Windows Phone 8 include app sandboxing, remote device management, native code support (C++)</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>BlackBerry OS</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Support for Java Micro Edition MIDP 1.0 and MIDP 2.0</li><li>OS update with BlackBerry over the air software loading service (OTASL)</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Attack Vectors</h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Malicious Code Signing</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Obtaining a code-signing key from the code signing service to create a malicious application</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>JAD File Exploit</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Java Application Description (.jad) contains attributes of Java application</li><li>Attacker can craft a .jad file with spoofed information</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>Mobile Device Management (MDM)</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Deployment, maintenance and monitoring of mobile devices</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>MDM Functions</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Enforce device to be locked after certain failed login</li><li>Enforce strong password policy for all BYOD</li><li>MDM can detect attempt of hacking BYOD device and then limit the network access of the affected device</li><li>Enforce confidentiality by using encryption as per organization's policy</li><li>Administration and implementation of Data Loss Prevention (DLP)</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>MDM Deployment Methods</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3>On-Site MDM Deployment</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Install MDM application on local servers</li><li>Management is done by local staff</li><li>Provide full control over the MDM</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Cloud-Based MDM Deployment</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>MDM apllication is installed and maintained by a third party</li><li>Less administration needed</li><li>The deployment and maintenance is the responsibility of the service provider</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>Bring Your Own Device (BYOD)</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>BYOD is a trend of employees using their personal devices for work. It could be a laptop, a phone, etc...</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>BYOD Policies</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>BYOD policies should include:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Device: which devices and operating systems are supported</li><li>Password: require all devices to be password protected</li><li>Access: determine which datas can be accessed from employee's device</li><li>Application: which applications allowed, which should be banned</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>Mobile Security Guideline</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Avoid auto-upload of files</li><li>Perform security assessment of applications</li><li>Turn off Bluetooth</li><li>Allow only necessary GPS-enbaled applications</li><li>Do not connect to open network</li><li>Install applications from trusted sources</li><li>Use strong password</li><li>Use Mobile Device Management (MDM) softwares</li><li>Update operating system often</li><li>Do not allow rooting / jailbreaking</li><li>Encrypt phone storage</li><li>Periodic backup</li><li>Configure mobile device policies</li></ul>
+<!-- /wp:list -->
