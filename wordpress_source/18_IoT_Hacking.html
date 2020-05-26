@@ -1,0 +1,183 @@
+<!-- wp:paragraph -->
+<p>The Internet of things (IoT) is the network of devices, vehicles, and home appliances that contain electronics, software, actuators, and connectivity which allows these things to connect, interact and exchange data. IoT involves extending Internet connectivity beyond standard devices, such as desktops, laptops, smartphones and tablets, to any range of traditionally dumb or non-internet-enabled physical devices and everyday objects. Embedded with technology, these devices can communicate and interact over the Internet, and they can be remotely monitored and controlled.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Main Components</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list {"ordered":true} -->
+<ol><li>Sensors</li><li>Device</li><li>Gateway</li><li>Cloud</li></ol>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>IoT Architecture</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list {"ordered":true} -->
+<ol><li>Perception Layer : sensors that gather information about the environment (heat sensor)</li><li>Transport Layer : transfer the sensor data through network (Wi-Fi, Bluetooth, ...)</li><li>Processing Layer : stores, processes, analyses data (cloud computing, big data, ...)</li><li>Application Layer : delivering application specific services to the user</li><li>Business Layer : manage the whole IoT system (business and profit model, user's privacy)</li></ol>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>IoT Technologies</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>IoT uses IPv6 due to the limited number of IPv4 addresses</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Short-Range Wireless Communication</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Bluetooth Low Energy (BLE)</li><li>Wi-FI</li><li>Radio-Frequency Identification (RFID)</li><li>Light-Fidelity (Li-Fi): similar to Wi-Fi, but using visible light for communication</li><li>Near-Field Communication (NFC)</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Medium-Range Wireless Communication</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>LTE-Advanced : formally submitted as a candidate 4G, often being described as 3.9G (beyond 3G but pre-4G)</li><li>Wi-Fi HaLow : uses 900MHz to provide extended range, lower energy consumption</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Long Range Wireless Communication</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Low-Power Wild-Area Network (LPWAN) : designed to allow long range communication at a low bit rate among things</li><li>Very Small Aperture Terminal (VSAT) : satellite communication technology uses small dish antennas</li><li>Cellular</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Wired Communication</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Ethernet</li><li>Power-Line Communication (PLC) : using electrical wiring to carry power and data</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Operating System</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Linux on embedded systems</li><li>Windows IoT</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>IoT Communication Models</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Device-To-Device Model</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>The devices communicating with each other without interfering any other device</li><li>Using communication medium such as a wireless network</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Device-To-Cloud Model</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>The IoT device directly communicating with the application server</li><li>The application server provide information exchange between these devices</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Device-To-Gateway Model</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Gateway collects the data from the sensors, then send it to the application server</li><li>Gateway provides security or information and protocol translation</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Back-End Data-Sharing Model</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Used a collective partnership between different application providers</li><li>Access granted to the uploaded data to third-parties</li><li>An extended Device-To-Cloud model</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>Challenges to IoT</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Lack of security</li><li>Vulnerable interfaces</li><li>Physical security risk</li><li>Lack of vendor support</li><li>Difficult to update firmware and OS</li><li>Interoperability issues</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>OWASP Top Ten IoT (2014)</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list {"ordered":true} -->
+<ol><li>Insecure web interface</li><li>Insufficient authentication / authorization</li><li>Insecure network services</li><li>Lack of transport encryption / integrity verification</li><li>Privacy concerns</li><li>Insecure cloud interface</li><li>Insecure mobile interface</li><li>Insufficient security configurability</li><li>Insecure software / hardware</li><li>Poor physical security</li></ol>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Common Attacks</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Device memory containing credentials</li><li>Access control</li><li>Firmware extraction</li><li>Privilege escalation</li><li>Resetting to an insecure state</li><li>Removal of storage media</li><li>Web attacks</li><li>Firmware attack</li><li>Network service attacks</li><li>Unencrypted local data storage</li><li>Confidentiality and integrity issues</li><li>Cloud computing attacks</li><li>Malicious updates</li><li>Insecure APIs</li><li>Mobile application threats</li><li>DoS / DDoS</li><li>Rolling Code Attack: attacker capture signal from transmitter device, simultaneously blocking the receiver to receive the signal, later it will used to gain unauthorized access (steal car with captured signal)</li><li>BlueBorn Attack: using different exploits to gain unauthorized access to the target device</li><li>Jamming Attack: jamming the signal to prevent the communication of devices</li><li>Backdoor (not just IoT related)</li><li>Eavesdropping</li><li>Sybil attack</li><li>Exploit kits</li><li>Man-in-the-middle attack</li><li>Replay attack</li><li>Forged malicious devices</li><li>Side channel attack</li><li>Ransomware attack</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>Hacking Methodology</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Information Gathering</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>IP address</li><li>Running protocols</li><li>Open ports</li><li>Type of device</li><li>Vendor</li><li><a href="https://www.shodan.io/">shodan</a> is a helpful search engine for IoT</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Vulnerability Scanning</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Scanning the network and devices to find vulnerabilities</li><li>Search for weak password</li><li>Software and firmware vulnerabilities</li><li>Tools: nmap, hping, ...</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Attack</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Exploiting vulnerabilities</li><li>Tools: HackRF</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Gain Access</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Gain unauthorized access</li><li>Privilege escalation</li><li>Install backdoor</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Maintain Attack</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Logging out</li><li>Clearing logs</li><li>Covering tracks</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>Countermeasures</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Firmware update</li><li>Block unnecessary ports</li><li>Disable telnet</li><li>Use encrypted communication (SSL/TLS)</li><li>Use strong password</li><li>Encrypt drives</li><li>Periodic assessment of devices</li><li>Secure password recovery</li><li>Two-Factor Authentication</li><li>Disable UPnP</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p></p>
+<!-- /wp:paragraph -->
