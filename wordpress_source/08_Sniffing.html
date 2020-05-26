@@ -1,0 +1,451 @@
+<!-- wp:paragraph -->
+<p>With sniffing, you can monitor all sorts of traffic either protected or unprotected. Sniffing is the process pf scanning and monitoring of the captured data like DNS traffic, web traffic and many more by enabling the promiscuous mode on the network interface. The attacker can reveal information from it such as usernames and passwords. Anyone within the same LAN can sniff the packets.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Working of Sniffers</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>In the process of sniffing, the attacker gets connected to the target network to start sniffing. Sniffers turns Network Interface Card (NIC) into promiscuous mode. Promiscuous mode is a mode of the interface in which NIC respond for every packet it receives. The attacker decrypt the packets to extract information.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Concept:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Switch maintain its MAC table to validate the connected hosts</li><li>Attacker alter this table with Port Mirroring, Switched Port Analyzer (SPAN) and many other techniques</li><li>All packets copied to the attacker</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Switch forward broadcast and multicast to all ports, but forward unicast packets to a specific port. <strong>Hub</strong> transmits all packets to all ports.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Types of Sniffing</h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Passive Sniffing</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>There is no need of sending additional packet or interfering the device, for example when connected to a hub.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Active Sniffing</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Attacker has to send additional packets to the connected device to start receiving packets.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Techniques:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>MAC Flooding</li><li>DHCP Attacks</li><li>DNS Poisoning</li><li>Switch Port Stealing</li><li>ARP Poisoning</li><li>Spoofing</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Hardware Protocol Analyzer</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A hardware or software that analyze the captured packets and signals over the transmission channel. Hardware Protocol Analyzers are the physical equipment which is used to capture without interfering the network traffic. A major advantage of this hardwares are the mobility, flexibility and throughput.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Hardware Protocol Analyzer can:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Monitor network usage</li><li>Identify traffic</li><li>Decrypt packets</li><li>Extract information</li><li>Seize packet</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Switch Port Analyzer (SPAN) Port</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>In other name: <strong>Port Mirroring</strong></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>It is used on a network switch to send a copy of network packets seen on one switch port (or an entire VLAN) to a network monitoring connection an other switch port.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Wiretapping</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Gaining information by tapping the signal from wire such as telephone lines or the internet. Wiretapping mostly performed by a third party. Legal Wiretapping is called legal interception which is mostly performed by governments or security agencies.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Active Wiretapping</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Monitoring and recording the information with alteration of the communication.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Passive Wiretapping</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Monitoring and recording the information without any alteration in the communication.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Lawful Interception</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Wiretapping with legal authorization which allows law enforcement agencies to wiretap the communication of user.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Telecommunication standardization organization standardized the legal interception gateways for the interception of communication by agencies.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Planning tool for Resource Integration, Synchronization, and Management (PRISM)</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>PRISM is a tool designed to collect information and process that passing through American servers. Developed by Special Source Operation (SSO) division of National Security Agencies (NSA). PRISM is intended for identificating and monitoring of suspicious communication. Internet traffic routing through the US, or data stored on a US server are wiretap by NSA.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>Sniffing Countermeasures</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>HTTPS instead of HTTP</li><li>SFTP instead of FTP</li><li>Switch instead of Hub</li><li>Port security</li><li>DHCP Snooping</li><li>Dynamic ARP inspection</li><li>Source guard</li><li>Sniffing detection tool</li><li>Strong encryption protocol</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Detection:</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Ping method</li><li>ARP method</li><li>Promiscuous port detection</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>MAC Attacks</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Media Access Control (MAC) is the physical address of a device. MAC address is a 48-bit unique identification number that is assigned to a network device for communication at data-link layer (layer 2). First 24 bits are the Object Unique Identifier (QUI), the last 24 bits are the Network Interface Controller (NIC).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>MAC Address Table / CAM Table</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>MAC address table or Content-Addressable Memory table is used in Ethernet switches to record MAC address, and it's associated information which is used to forward packets.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The switch observe the incoming frames and records the source MAC of the frames in it's MAC address table. It also records the specific port for the source MAC address. Based on this, switch can make intelligent frame forwarding. Switch removes MAC from the table after switch not seen it for a while.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>MAC Flooding</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Attacker sends random MAC addresses mapped with random IP to overflow the storage capacity of CAM table. CAM table has a fixed length, so when filled, switch act as a hub, broadcast every packet on every port, help attacker to sniff packets.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Linux tool:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li><code>macof</code></li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Switch Port Stealing</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>This technique base on MAC flooding, the attacker send bogus ARP packets with the source MAC address of the target and destination address of its own. The switch update the CAM table because of it.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>If the attacker send a bogus ARP packet immediately after the target packet, the attacker will get the respond instead of the target.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Defending against MAC Attacks</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Port Security is used to bind MAC address of known devices to the physical ports and violation action is also defined.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>DHCP Attacks</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Dynamic Host Configuration Protocol (DHCP)</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>DHCP is the process of allocating the IP address dynamically so these addresses are assigned automatically and they can be reused when hosts don't need them. <strong>Round Trip Time</strong> is the measurement of time from discovery of DHCP server until obtaining the leased IP address.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":5} -->
+<h5>IPv4 DHCP process</h5>
+<!-- /wp:heading -->
+
+<!-- wp:list {"ordered":true} -->
+<ol><li>By using UDP broadcast, DHCP client sends an initial <strong>DHCP-Discovery</strong> packet.</li><li>The DHCP server reply with a <strong>DHCP-Offer</strong> packet, offering the configuration parameters.</li><li>The DHCP client send back a <strong>DHCP-Request</strong> packet destined for DHCP server for requesting the DHCP parameters.</li><li>Finally, the DHCP server send the <strong>DHCP-Acknowledgement</strong> packet containing configuration parameters.</li></ol>
+<!-- /wp:list -->
+
+<!-- wp:table -->
+<figure class="wp-block-table"><table><thead><tr><th>CLIENT</th><th></th><th>SERVER</th></tr></thead><tbody><tr><td>DHCP-Discovery</td><td>-&gt;</td><td></td></tr><tr><td></td><td>&lt;-</td><td>DHCP-Offer</td></tr><tr><td>DHCP-Request</td><td>-&gt;</td><td></td></tr><tr><td></td><td>&lt;-</td><td>DHCP-Acknowledgement</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:list -->
+<ul><li><strong>Ports</strong>:<ul><li>UDP port 67 for Server</li><li>UDP port 68 for Client</li></ul></li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":5} -->
+<h5>IPv6 DHCP process</h5>
+<!-- /wp:heading -->
+
+<!-- wp:table -->
+<figure class="wp-block-table"><table><thead><tr><th>CLIENT</th><th></th><th>SERVER</th></tr></thead><tbody><tr><td>Solicit</td><td>-&gt;</td><td></td></tr><tr><td></td><td>&lt;-</td><td>Advertise</td></tr><tr><td>Request</td><td>-&gt;</td><td></td></tr><tr><td></td><td>&lt;-</td><td>Reply</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:list -->
+<ul><li><strong>Ports</strong>:<ul><li>UDP port 546 for Client</li><li>UDP port 547 for Server</li></ul></li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>DHCP Relay is needed when the DHCP server is not on the same subnet, because routers do not forward any broadcast IP packet to interfaces. DHCP Relay Agent allows DHCP messages to be exchanged between the DHCP client and the DHCP server residing on different subnet. <strong>DHCP Option 82</strong> allows Agents to insert circuit specific information into a request that is being forwarded to a DHCP server.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>DHCP Starvation Attack</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>DHCP Starvation Attack is a Denial-of-Service attack on a DHCP server. Attacker send bogus requests to DHCP server with spoofed MAC address to lease all IP address in DHCP address pool. Once all IP address is allocated, upcoming users will be unable to obtain IP address or renew the lease.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Tools:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Dhcpstarv</li><li>Yersinia</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Rogue DHCP Server</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Attacker deploy the rogue DHCP server in the network along with the DHCP starvation attack. When legitimate DHCP server is in Denial-of-Service attacks, DHCP clients are unable to gain IP address from the legitimate DHCP server. Upcoming DHCP Discovery (IPv4) and Solicit (IPv6) are replied by the bogus SHCP server with configuration parameter which directs the traffic towards it.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Defending against DHCP Starvation and Rogue Server Attack</h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>DHCP Snooping</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>DHCP snooping feature identify the only trusted ports from DHCP traffic. Any access port who tries to reply the DHCP request will be ignored.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Port Security</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Limit the learning number of a maximum number of MAC addresses on a port</li><li>Configure violation action, aging time, ...</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>ARP Poisoning</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Address Resolution Protocol (ARP)</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The Address Resolution Protocol (ARP) is a communication protocol used for discovering the link layer address, such as a MAC address, associated with a given internet layer address, typically an IPv4 address. By broadcasting the ARP request with IP address, the switch can learn the associated MAC address information from the reply of the specific host. If there is no map, or map is unknown, the source will send a broadcast to all node.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>ARP Spoofing Attack</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Attacker send forged ARP packets over Local Area Network (LAN). In this case, switch will update the attacker's MAC address with the IP address of a legitimate user or server, then start forwarding the packets to the attacker. Attacker can steal information by extracting it from packets.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>ARP Poisoning used for:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Session hijacking</li><li>Denial-of-Service attacks</li><li>Man-in-the-Middle attacks</li><li>Packet sniffing</li><li>Data interceptions</li><li>VoIP tapping</li><li>Connection resetting</li><li>Stealing passwords</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Defending ARP Poisoning</h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Dynamic ARP Inspection (DAI)</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>DAI is used with DHCP snooping, IP-to-MAC bindings can be tracked from DHCP transactions to protect against ARP poisoning.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>Spoofing Attacks</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>MAC Spoofing/Duplicating</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Manipulating the MAC address to impersonate the legitimate user or launch attack such as DoS. Attacker sniffs the MAC address of users which are active on switch ports and duplicate the MAC address. This can intercept the traffic and traffic destined to the legitimate user may direct to the attacker.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Defend against MAC Spoofing</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>DHCP Snooping</li><li>Dynamic ARP Injection</li><li>Source Guard: monitor and prevent the host to impersonate another host</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>DNS Poisoning</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Domain Name System (DNS)</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>DNS is used in networking to translate human-readable domain names to IP address. When DNS Server reveives the request, it doesnt have the entry, it generates the query to another DNS Server for the translation and so on. DNS server having the translation will send back the IP address.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3>DNS Poisoning Techniques</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>When DNS server receives a false entry, it updates its database. To increase performance, DNS servers maintain a cache in which this entry is updated to provide quick resolution of queries. This false entry causing poison in DNS translation until the cache expires.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Intranet DNS Spoofing</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Normally performed over Local Area Network (LAN) with switched network. With the help of ARP poisoning, attacker sniff packet, extarct the ID of DNS requests and reply with fake IP translation directing traffic to the malicious site.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Internet DNS Poisoning</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Attacker replace the DNS configuration on the target machine.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Proxy Server DNS Poisoning</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Attacker replace the DNS configuration of the web browser.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>DNS Cache Poisoning</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Attacker exploiting flaws in DNS software, adds or alter the entries.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Defending Techniques against DNS Poisoning</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Segregate authoritative and recursive resolver</li><li>Query and response verification using DNS Guard</li><li>Restrict external DNS lookup</li><li>Prevent DNS Open Resolver configuration</li><li>Transaction ID randomization</li><li>DNS application inspection configuration</li><li>DNS resolver</li><li>IP Source Guard</li><li>IDS deployment</li><li>Disable recursion</li><li>DNS non-existent domain rate limiting</li><li>Uni-Cast path forwarding</li><li>UDP source port randomization</li><li>DNSSEC</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Sniffing Tools</h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Wireshark</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Filters in Wireshark:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li><code>==</code> Equal</li><li><code>eq</code> Equal</li><li><code>!=</code> Not equal</li><li><code>ne</code> Not equal</li><li><code>contains</code> Contains specified value</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>Defending Against Sniffing</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>HTTPS instead of HTTP</li><li>SFTP instead if FTP</li><li>Switch instead if Hub</li><li>Port security</li><li>DHCP Snooping</li><li>Dynamic ARP Inspection</li><li>Source guard</li><li>Sniffing detection tools</li><li>Strong encryption protocol</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Sniffing Detection Technique</h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Ping Method</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A ping is sent to the suspect IP address with spoofed MAC. If the NIC is not in promiscuous mode, it will not it will not respond.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>ARP Method</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>First, sending non broadcast ARP packet to the suspect, MAC address will be cached if the NIC is in promiscuous mode.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Second, send a broadcast with spoofed MAC, if NIC is in promiscuous mode, it will be able to reply the packet only as it has already learned the actual MAC from sniffed non-broadcast ARP packet.</p>
+<!-- /wp:paragraph -->
