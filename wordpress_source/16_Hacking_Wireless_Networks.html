@@ -1,0 +1,311 @@
+<!-- wp:paragraph -->
+<p>Wireless network is a computer network that uses wireless data connection between network nodes.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>Terms</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>GSM</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Global System for Mobile Communication</li><li>Generations: 2G (GSM), 3G (UMTS), 4G (LTE)</li><li>Frequency: 900 MHz - 1800 MHz</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Access Point</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Access Point (AP) or Wireless Access Point (WAP) is a hardware device that allows wireless connectivity to the end devices.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Service Set Identifier (SSID)</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>32 bit identification string of the Access Point, the AP's name</li><li>SSID inserted into the header of every data packet</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Basic Service Set Identifier (BSSID)</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>MAC address of the Access Point</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>ISM Band</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A frequency band dedicated to the Industrial, Scientific and Medical purpose.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Wireless Standards</h4>
+<!-- /wp:heading -->
+
+<!-- wp:table -->
+<figure class="wp-block-table"><table><thead><tr><th>Protocol</th><th>Frequency</th><th>Modulation</th></tr></thead><tbody><tr><td>802.11a</td><td>5 GHz</td><td>OFDM</td></tr><tr><td>802.11b</td><td>2.4 GHz</td><td>DSSS</td></tr><tr><td>802.11g</td><td>2.4 Ghz</td><td>OFDM</td></tr><tr><td>802.11n</td><td>2.4/5 Ghz</td><td>MIMO-OFDM</td></tr><tr><td>802.11ac</td><td>5 Ghz</td><td>MIMO-OFDM</td></tr><tr><td>Bluetooth</td><td>2.4 Ghz</td><td></td></tr></tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:heading -->
+<h2>Wi-FI</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Wi-Fi is a local area networking technology based on the IEEE 802.11 standard.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Wi-Fi Authentication</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Open authentication</li><li>Shared Key authentication</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Open Authentication</h4>
+<!-- /wp:heading -->
+
+<!-- wp:table -->
+<figure class="wp-block-table"><table><thead><tr><th>Client</th><th></th><th>WAP</th></tr></thead><tbody><tr><td>Probe Request</td><td>-&gt;</td><td></td></tr><tr><td></td><td>&lt;-</td><td>Probe Response</td></tr><tr><td>Open System Authentication Request</td><td>-&gt;</td><td></td></tr><tr><td></td><td>&lt;-</td><td>Open System Authentication Response</td></tr><tr><td>Association Request</td><td>-&gt;</td><td></td></tr><tr><td></td><td>&lt;-</td><td>Association Response</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:list -->
+<ul><li>The Probe Request is to discover the network</li><li>The Probe Response contains the parameters (SSID, data rate, encryption, ...)</li><li>The Open System Authentication Request (authentication frame) is to set authentication open, the sequence number is set to 0x0001</li><li>The Open System Request Response's sequence number is 0x0002</li><li>The Association Request contains the security parameters (chosen encryption, ...)</li><li>The Association Response complete the association process</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Shared Key Authentication</h4>
+<!-- /wp:heading -->
+
+<!-- wp:table -->
+<figure class="wp-block-table"><table><thead><tr><th>Client</th><th></th><th>WAP</th></tr></thead><tbody><tr><td>Authentication Request</td><td>-&gt;</td><td></td></tr><tr><td></td><td>&lt;-</td><td>Authentication Response with Challenge Text</td></tr><tr><td>Encrypted Challenge Response</td><td>-&gt;</td><td></td></tr><tr><td></td><td>&lt;-</td><td>Successful / Unsuccessful response</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p><strong>Challenge test</strong> :</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>The client encrypt the challenge test with his shared key</li><li>The AP decrypt the encrypted challenge test with his shared key, if the decrypted text matches, the successful authentication response frame is sent to the client</li><li>This challenge test can be captured by a hacker as a clear text, so the hacker can get the shared key</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3>IEEE 802.1X</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>IEEE 802.1X is an IEEE Standard for port-based Network Access Control (PNAC). It provides an authentication mechanism to devices wishing to attach to a LAN or WLAN.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Extensible Authentication Protocol (EAP) is an authentication framework frequently used in wireless networks and point-to-point connections. For example, in IEEE 802.11 (Wi-Fi) the WPA and WPA2 standards have adopted IEEE 802.1X with one hundred EAP Types as the official authentication mechanisms.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Parties</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li><strong>Supplicant</strong> : a client device (such as a laptop) that wishes to attach to the LAN/WLAN</li><li><strong>Authenticator</strong> : a network device, such as an Ethernet switch or wireless access point</li><li><strong>Authentication server</strong> : typically a host running software supporting the RADIUS and EAP protocols</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Authentication Progress</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list {"ordered":true} -->
+<ol><li>The client may send an EAP-start message.</li><li>The access point sends an EAP-request identity message.</li><li>The client's EAP-response packet with the client's identity is "proxied" to the authentication server by the authenticator.</li><li>The authentication server challenges the client to prove themselves and may send its credentials to prove itself to the client (if using mutual authentication).</li><li>The client checks the server's credentials (if using mutual authentication) and then sends its credentials to the server to prove itself.</li><li>The authentication server accepts or rejects the client's request for connection.</li><li>If the end user was accepted, the authenticator changes the virtual port with the end user to an authorized state allowing full network access to that end user.</li><li>At log-off, the client virtual port is changed back to the unauthorized state.</li></ol>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Wardriving</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Wardriving is the act of searching for Wi-Fi wireless networks by a person usually in a moving vehicle, using a laptop or smartphone.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Variants</strong> : warwalking, warcycling, warflying (drone)</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Warchalking</strong> is the drawing of <a href="https://78.media.tumblr.com/tumblr_llnht1usC11qk3ul6o1_500.jpg">symbols</a> in public places to advertise Wi-Fi networks.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>Types of Wireless Antennas</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Directional Antenna</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Direction antennas are designed to function in a specific direction to improve efficiency</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Some types of directional antenna: <a href="https://en.wikipedia.org/wiki/Parabolic_antenna">Parabolic antenna</a> , <a href="https://en.wikipedia.org/wiki/Yagi_antenna">Yagi-Uda antenna</a> , <a href="https://en.wikipedia.org/wiki/Horn_antenna">Horn antenna</a></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Omnidirectional antennas</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Omnidirectional antenna radiates equal radio power in all directions. When graphed in three dimensions this radiation pattern is often described as doughnut-shaped.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Use cases: radio broadcasting, cell phones, GPS</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Some type: <a href="https://en.wikipedia.org/wiki/Whip_antenna">Whip antenna</a> , <a href="https://en.wikipedia.org/wiki/Rubber_Ducky_antenna">Rubber Ducky antenna</a> , <a href="https://en.wikipedia.org/wiki/Monopole_antenna">Monopole antenna</a></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>Wireless Encryption</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Wired Equivalent Privacy (WEP)</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Designed to provide the same level of security as that of a wired LAN</li><li>Authentications: Open System authentication, Shared Key (need to provide a key)</li><li>WEP Key is a sequence of hexadecimal values</li><li>WEP Key length: 10 digit (40 or 64 bit), 26 digit (104 or 128), 58 digit (256 bit)</li><li>WEP is used in Physical layer and Data Link layer of OSI model</li><li>Initialization Vector (IV) is 24-bit long</li><li><a href="https://www.quora.com/How-does-WEP-work">WEP work</a></li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Breaking WEP Encryption</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list {"ordered":true} -->
+<ol><li>Monitor the Access Point channel</li><li>Test injection capability to the AP</li><li>Use tool for fake authentication</li><li>Sniff the packets</li><li>Inject encrypted packets</li><li>Extract the encryption key form IV with a cracking tool</li></ol>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Wi-Fi Protected Access (WPA)</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Used for WLAN network based on 802.11i</li><li>Temporal Key Integrity Protocol (TKIP) implements a key mixing function that combines the secret key with the initialization vector before passing it to the RC4 cipher. WEP, in comparison, merely concatenated the initialization vector to the root key, and passed this value to the RC4 routine.</li><li>TKIP increased the key length to 128-bit</li><li>Implements a sequence counter to protect against replay attacks</li><li>Implements a 64-bit Message Integrity Check, a checksum to protect against tampering</li><li>Initialization Vector is 48-bit long</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3>WPA2</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Counter Mode Cipher Block Chaining Message Authentication Code Protocol (CCMP) is an enhanced data cryptographic encapsulation mechanism designed for data confidentiality</li><li>Implements AES based encryption mode</li><li>Wi-Fi Protected Setup (WPS) allows users to quickly connect to a WPA protected WLAN</li><li>WPA-Personal uses password (Pre-Shared Key(PSK)) for authentication</li><li>WPA-Enterprise includes EAP or RADIUS for centralized authentication</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Breaking WPA Encryption</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list {"ordered":true} -->
+<ol><li>Brute forcing the PSK with a dictionary attack</li><li>Capture the Authentication Handshake packets to crack the WPA-PSK offline</li><li>Deauthenticate client to force to reconnect to brute force the Pairwise Master Key (PMK)</li></ol>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>Wireless Threats</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li><strong>Access Contorl Attacks</strong> : evading access controll parameters (MAC spoofing, Rogue Access point)</li><li><strong>Integrity Attacks</strong> : Data frame injection, replay attacks, etc...</li><li><strong>Confidentiality Attacks</strong> : traffic analysis, session hijacking, MITM, etc...</li><li><strong>Availability Attacks</strong> : prevent user from accessing the wireless network (flooding, ARP poisoning, De-Authentication attacks)</li><li><strong>Authentication Attacks</strong> : steal identity information or impersonating clients (password cracking, identity theft, password guessing)</li><li><strong>Rogue Access Point</strong> : a fake access point in a place with the legitimate one, with the same SSID to monitor victims activity by sniffing packets</li><li><strong>Client Mis-Association Attacks</strong> : a rogue access point outside the place with the legitimate one, when Wi-Fi turned on, it will probe for networks that previously connected to</li><li><strong>Misconfigured Access Point Attacks</strong> : get legitimate access by taking advantage of access point's misconfiguration (default or week password, without password)</li><li><strong>Unauthorized Association</strong> : a trojan turns the victims computer into an access point to get connection with the target network</li><li><strong>Ad Hoc Connection Attack</strong> : attacker compromise the client ad hoc mode</li><li><strong>Jamming Signal Attacks</strong> : jamming or blocking the wireless communication, causing a denial of service</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>Hacking Methodology</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Wi-Fi Discovery</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Passive footprinting (sniffing packets)</li><li>Active footprinting (probing the AP to get information)</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>GPS Mapping</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Create list of discovered Wi-Fi networks including GPS location</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Wireless Traffic Analysis</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Capture the packets to reveal any information (SSID, authentication method, ...)</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Launch Attacks</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>ARP poisoning</li><li>MAC spoofing</li><li>De-Authentication</li><li>Rogue access point</li><li>MITM</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Wireless Intrusion Prevention System (WIPS)</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Monitors the wireless network</li><li>Protect against unauthorized access points</li><li>Perform automatic intrusion prevention</li><li>Monitors the radio spectrum to prevents rogue access point and alert the network administrator</li><li>Fingerprint approach to filter devices with spoofed MAC address</li><li>WIPS has three component: server, sensor and console</li><li>Can detect AP misconfiguration</li><li>Detect honeypots</li><li>Mitigate DoS</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Wi-Fi Security Auditing Tool</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Wireless network auditing</li><li>Troubleshooting</li><li>Intrusion detection / prevention</li><li>Threat mitigation</li><li>Rogue detection</li><li>Zero-day threat protection</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>Wi-Fi Countermeasures</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Change default parameters</li><li>Disable remote login to wireless devices</li><li>Wireless IPS deployment</li><li>Use strong password</li><li>Use the latest standards (WPA2 AES)</li><li>MAC filtering</li><li>Update software often</li><li>Enable firewall</li><li>Use network management software</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>Bluetooth</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Bluetooth is a wireless technology for exchanging data over short distance</li><li>Range: typically less then 10m</li><li>Operates on the 2.4 GHz</li><li>Discovery feature can control the visibility of the device</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Bluetooth Attacks</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li><strong>BlueSmacking</strong> : flooding echo packages to cause a denial of service</li><li><strong>BlueBugging</strong> : exploiting bugs in Bluetooth devices to gain remote access</li><li><strong>BlueJacking</strong> : send unsolicited data to Bluetooth devices</li><li><strong>BluePrinting</strong> : extract information about the device</li><li><strong>BlueSnarfing</strong> : steal data from target device</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Countermeasures</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Check paired devices</li><li>Turn off visibility / turn off Bluetooth if not used</li><li>Use strong PIN</li><li>Use encryption</li><li>Don't accept unknown requests</li></ul>
+<!-- /wp:list -->
