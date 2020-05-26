@@ -1,0 +1,161 @@
+<!-- wp:paragraph -->
+<p>The intention of SQL injection is to reveal or manipulate sensitive information from the database by injecting commands into existing queries.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Bypassing authentication</li><li>Revealing sensitive information</li><li>Compromise data integrity</li><li>Erase database</li><li>Remote code execution</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p><strong>Tool</strong> :</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>sqlmap</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>SQL</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>SQL stands for <strong>S</strong>tructured <strong>Q</strong>uery <strong>L</strong>anguage.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>SQL tutorial <a href="https://www.w3schools.com/sql/sql_delete.asp">here</a></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Types of SQL Injection</h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>In-Band SQL Injection</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Use the same communication channel to launch the attack and get the result.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Error Based SQL Injection</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Server throw an error message</li><li>Error message is useful during the development, but should be disabled it when the application is live</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Techniques to perform SQL Injection</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>System stored procedure</li><li>End of line comment</li><li>Illegal / Logically incorrect query</li><li>Tautology (something that is inherently true, like " OR 1=1")</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Union SQL Injection</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Involves the UNION SQL operator, to combine the queries.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Select the <code>password</code> from <code>table1</code> and <code>table2</code> using UNION:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:code -->
+<pre class="wp-block-code"><code>SELECT password FROM table1
+UNION
+SELECT password FROM table2</code></pre>
+<!-- /wp:code -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Inferential SQL Injection</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Known as Blind SQL Injection</li><li>No data is transferred from the via the application, the attacker sending payloads, then observe the web apllication's response and behavior.</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Boolean-based Blind SQL Injection</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Sending an SQL query to the database which send a different result depending on whether the query returns TRUE or FALSE result, the HTTP response will change or remain the same.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>This type of attack is slow, attacker need to enumerate the database, character by character.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Time-based Blind SQL Injection</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Attacker send a query, force the database to wait for a specified time before respond. The respond time indicate that the query TRUE or FALSE.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Out-of-band SQL Injection</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Depends on the features allowed on the database server (DNS, HTTP request), so not a very common attack.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Use different channel to launch the attack.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>SQL Injection Methodology</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Information Gathering And Vulnerability Detection</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Collect the information about the web application, server, OS, database, ...</li><li>Identify vulnerabilities</li><li>Evaluate input fields</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Launch Attack</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Select the appropriate type of SQL Injection, based on the gathered information</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Advanced SQL Injection</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Enumerate the database (PostgreSQL, MySQL, Oracle, ...)</li><li>Identify privilege level of users</li><li>Passwords and hashes grabbing</li><li>Transfer database to a remote machine</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>Evasion Techniques</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Evading IDS</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Inserting inline comment in between keywords</li><li>Character encoding</li><li>String Concatenation</li><li>Obfuscated codes</li><li>Manipulating white spaces</li><li>Hex encoding</li><li>Sophisticated matches</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2>Countermeasures</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Penetration testing (manual, with tool)</li><li>Source code analysis</li><li>Wed Application Firewall (WAF)</li><li>Remove debugging messages</li><li>Database account with minimal privileges</li><li>Input validation</li><li>Filter data</li><li>Customize error messages</li><li>IDS</li></ul>
+<!-- /wp:list -->
