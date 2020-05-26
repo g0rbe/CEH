@@ -1,0 +1,163 @@
+<!-- wp:paragraph -->
+<p>Denial-of-Service is type of attack on which service offered by a system or a network is denied. Service may either be denied, reduce the functionality or prevent the access.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Symptoms of DoS attack:</h4>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>Slow performance</li><li>Increase in spam email</li><li>Unavailability of a resource</li><li>Loss of access to a website</li><li>Disconnection of a wireless or wired internet connection</li><li>Denial of access to any internet services</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Distributed Denial of Service (DDoS)</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>In DDoS, multiple compromised systems are involved to attack a target.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The attacker send several connection request to the server with fake return address, so the server can't find a user to send the connection approval. The authentication process waits for a certain time to close the session. The attacker is continuously sending requests which causing a number of open connection on the server that lead to a denial of service.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3>Categories of DoS/DDoS Attacks</h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Volumetric Attacks</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Denial of Service attack performed by sending a high amount of traffic towards the target. Volumetric attack are focused on overloading the bandwidth capability.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Fragmentation Attacks</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>DoS attacks witch fragment the IP datagram into multiple smaller size packets. It requires to reassembly at the destination which requires resources of routers.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Types:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>UDP and ICMP fragmentation attacks</li><li>TCP fragmentation attacks</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>TCP-State-Exhaustion Attacks</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>TCP-State-Exhaustion Attacks are focused on web servers, firewalls, load balancers and other infrastructure component to disrupt connections by exhausting their finite number of concurrent connections.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Most common state-exhaustion attack is ping of death.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Application Layer Attacks / Layer 7 DDoS</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The application level attack overloads the particular service of a website or application.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3>DoS/DDoS Attack Techniques</h3>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Bandwidth Attacks</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Bandwidth attack requires multiple sources to generate q request to overload the target. The goal is to consume the bandwith completely.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Zombie servers or Botnets used to perform this type of attack.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Service Request Floods</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Attacker flood the request towards a web service or server until it is overloaded.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>SYN Attack / Flooding</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The attacker sending a lot of SYN request to tying up a system. The victim waits for the acknowledgement from the IP address, but there will be no response because the source address is spoofed. This waiting period ties up a connection "listen to queue", that can tie up for 75 seconds.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>ICMP Flood Attack</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Flooding ICMP request without waiting for the response overwhelm the resource of the network device.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Peer-to-Peer Attacks</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Exploit bugs in peer-to-peer servers using Direct Connect (DC++). Using one or more malicious hosts in a peer-to-peer network to perfomr the attack.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4><a href="https://github.com/g0rbe/CEH/blob/master/10_Denial_of_Services.md#permanent-dos-attack-pdos"></a></h4>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Permanent DoS Attack (PDoS)</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Permanent DoS attack is focused on hardware sabotage, cause irreversible damage to the hardware. Affected hardware require replacement or reinstall the software.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Methods:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li><strong>Phlashing</strong></li><li><strong>Bricking a system</strong> : sending fraudulent hardware updates</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Application Level Flood Attacks</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Attacker finds the fault and flaws in an application or operating system and exploits the vulnerability to gain control over a system.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>Distributed Reflection Denial of Service (DRDoS)</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Attacker uses an intermediary victim which redirect the traffic to a secondary victim. Secondary victim redirects the traffic to the target. The intermediary and secondary victim is used for spoofing the attack.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>Botnet</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Attacker compromises victims to make bot, which compromise other system to create a botnet. These botnets are controlled by <strong>Command and Control server</strong> owned by the attacker. This server is used to send instructions to perform the attack.</p>
+<!-- /wp:paragraph -->
