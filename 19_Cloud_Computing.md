@@ -81,7 +81,7 @@ cloud bursting for load balancing between clouds).
 
 - National Institute od Standards and Technology (NIST) presented a high-level conceptual 
 reference architecture
-- Idetifies the major components and their functions in cloud computing
+- Identifies the major components and their functions in cloud computing
 - Intended to facilitate the understanding of the requirements, uses, characteristics and 
 standards of cloud computing
 
@@ -91,13 +91,13 @@ standards of cloud computing
 uses services from cloud providers
 - **Cloud Provider** : A company or individual that delivers cloud computing based services and 
 solutions to businesses and/or individuals.
-- **Cloud Auditor** : A party that can conduct an idependent assessment of cloud services
+- **Cloud Auditor** : A party that can conduct an independent assessment of cloud services
 - **Cloud Broker** : An entity that manages the use, performance and delivery of cloud services, 
 negotiates relationships between providers and consumers
-- **Clous Carrier** : An intermediary that provides connectivity and transport of cloud services 
+- **Cloud Carrier** : An intermediary that provides connectivity and transport of cloud services 
 from providers to consumers
 
-## Cloud Compiuting Threads
+## Cloud Computing Threads
 
 - Data loss / breach
 - Abusing cloud services
@@ -117,7 +117,7 @@ from providers to consumers
 - XSS attacks
 - DNS attacks (DNS poisoning, domain hijacking, ...)
 - SQL injection
-- Network sniffing (obtain credentials, cooikes, ...)
+- Network sniffing (obtain credentials, cookies, ...)
 - Session hijacking (cookie stealing, ...)
 - Cryptanalysis (weak encryption, ...)
 - DoS / DDoS 
@@ -126,16 +126,16 @@ from providers to consumers
 
 - Deploy a malicious virtual machine on the same host
 - Take advantage of sharing resources (processor cache, keys, ...)
-- Installation can be done by a malicious insider or an impersonated legtitimate user
+- Installation can be done by a malicious insider or an impersonated legitimate user
 
 ## Cloud Security
 
 #### Application Layer
 
-- Application firewall (filter and observe tarffic)
-- Systems Developement Life Cycle (SDLC)
-- Binary Code Anlysis 
-- Script anlysis
+- Application firewall (filter and observe traffic)
+- Systems Development Life Cycle (SDLC)
+- Binary Code Analysis 
+- Script analysis
 - Transactional security 
 
 #### Network Layer
@@ -153,7 +153,7 @@ from providers to consumers
 
 #### Trusted Computing
 
-- Root of Trust (RoT) is estabilished by validating each component of hardware and software to ensure that only trusted hardware 
+- Root of Trust (RoT) is established by validating each component of hardware and software to ensure that only trusted hardware 
 and software can be used
 
 #### Computer and Storage
@@ -190,7 +190,7 @@ and software can be used
 #### Cloud Service Consumer
 
 - Public Key Infrastructure (PKI)
-- Security Developement Life Cycle (SDLC)
+- Security Development Life Cycle (SDLC)
 - Firewall
 - Encryption
 - Intrusion Prevention System (IPS)

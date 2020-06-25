@@ -23,23 +23,23 @@ can communicate and interact over the Internet, and they can be remotely monitor
 
 - IoT uses IPv6 due to the limited number of IPv4 addresses
 
-#### Shart-Range Wireless Communication
+#### Short-Range Wireless Communication
 
 - Bluetooth Low Energy (BLE)
 - Wi-FI
 - Radio-Frequency Identification (RFID)
-- Light-Fidelity (Li-Fi): similar to Wi-Fi, but using visible ligth for communication
+- Light-Fidelity (Li-Fi): similar to Wi-Fi, but using visible light for communication
 - Near-Field Communication (NFC)
 
 #### Medium-Range Wireless Communication
 
 - LTE-Advanced : formally submitted as a candidate 4G, often being described as 3.9G (beyond 3G but pre-4G)
-- Wi-Fi HaLow : uses 900MHz to provide extended range, lower energy comsumption
+- Wi-Fi HaLow : uses 900MHz to provide extended range, lower energy consumption
 
 #### Long Range Wireless Communication
 
 - Low-Power Wild-Area Network (LPWAN) : designed to allow long range communication at a low bit rate among things
-- Very Small Aperture Terminal (VSAT) : satellite communication technologu uses small dish antennas
+- Very Small Aperture Terminal (VSAT) : satellite communication technology uses small dish antennas
 - Cellular
 
 #### Wired Communication
@@ -77,7 +77,6 @@ can communicate and interact over the Internet, and they can be remotely monitor
 
 ## Challenges to IoT
 
-
 - Lack of security
 - Vulnerable interfaces
 - Physical security risk
@@ -104,7 +103,7 @@ can communicate and interact over the Internet, and they can be remotely monitor
 - Access control
 - Firmware extraction
 - Privilege escalation
-- Reseting to an insecure state
+- Resetting to an insecure state
 - Removal of storage media
 - Web attacks
 - Firmware attack

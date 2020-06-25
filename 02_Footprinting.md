@@ -10,7 +10,7 @@
 	
 - Examining the web page's source code
 - Examining cookies
-- Extarcting metadata of web sites
+- Extracting metadata of web sites
 - Monitoring website for updates
 - Tracking email
 - Email header analysis
@@ -31,11 +31,8 @@ Information collected:
 ### Objectives of Footprinting:
 
 - *Know Security Posture*: know the security posture of the target organization
-
 - *Reduce Focus Area*: reduce the attackers focus area to a specific range of IP, network, domain names, etc...
-
 - *Identify Vulnerabilities*: identify vulnerabilities in the target system
-
 - *Draw Network Map*: draw a map or outline the target organization's network infrastructure
 
 ## Advanced Google Hacking Techniques
@@ -56,7 +53,6 @@ Operators:
 
 Find more at [ahrefs blog](https://ahrefs.com/blog/google-advanced-search-operators/).
 
-
 ## WHOIS
 
 Whois databases are maintained by Regional Internet Registries and
@@ -66,7 +62,7 @@ contain personal information of domain owner (eg.: email address).
 
 Example on Linux:
 
-```
+``` bash
 whois danielgorbe.com
 ```
 
@@ -77,7 +73,7 @@ DNS record types:
 - `MX`: Points to a domain's mail server
 - `NS`: Points to a host's name server
 - `CNAME`: Canonical naming allows aliases to a host
-- `SOA`: Indocate authority for domain
+- `SOA`: Indicate authority for domain
 - `SRV`: Service records
 - `PTR`: Maps IP address to a hostname
 - `RP`:  Responsible person
@@ -86,7 +82,7 @@ DNS record types:
 
 Example on Linux:
 
-```
+``` bash
 dig danielgorbe.com
 ```
 
@@ -96,6 +92,6 @@ Trace the path between you and your target computer.
 
 Example on Linux:
 
-```
+``` bash
 traceroute danielgorbe.com
 ```

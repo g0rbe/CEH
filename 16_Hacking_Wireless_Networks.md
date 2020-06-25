@@ -1,4 +1,4 @@
-**Wireless network** is a computer network that uses wireless data connectionbetween network 
+**Wireless network** is a computer network that uses wireless data connection between network 
 nodes.
 
 # Terms
@@ -54,7 +54,7 @@ Wi-Fi is a local area networking technology based on the IEEE 802.11 standard.
 |          Probe Request             | -> |                                      |
 |                                    | <- |          Probe Response              |
 | Open System Authentication Request | -> |                                      |
-|                                    | <- |  Open System Authetication Response  |
+|                                    | <- |  Open System Authentication Response |
 |       Association Request          | -> |                                      |
 |                                    | <- |      Association Response            | 
 
@@ -64,7 +64,7 @@ Wi-Fi is a local area networking technology based on the IEEE 802.11 standard.
 the sequence number is set to 0x0001
 - The Open System Request Response's sequence number is 0x0002
 - The Association Request contains the security parameters (choosen encryption, ...)
-- The Association Response complete the assiciation process
+- The Association Response complete the associations process
 
 ### Shared Key Authentication
 
@@ -72,8 +72,8 @@ the sequence number is set to 0x0001
 |:----------------------------------:|:--:|:-------------------------------------------:|
 |      Authentication Request        | -> |                                             |
 |                                    | <- | Authentication Response with Challenge Text |
-|   Encypted Challenge Response      | -> |                                             |
-|                                    | <- |     Successful / Unseccessful response      |
+|  Encrypted Challenge Response      | -> |                                             |
+|                                    | <- |     Successful / Unsuccessful response      |
 
 **Challenge test** :
 
@@ -137,7 +137,7 @@ antenna](https://en.wikipedia.org/wiki/Yagi_antenna) , [Horn antenna](https://en
 Omnidirectional antenna radiates equal radio power in all directions.
 When graphed in three dimensions this radiation pattern is often described as doughnut-shaped.
 
-Use cases: radio broadcating, cell phones, GPS
+Use cases: radio broadcasting, cell phones, GPS
 
 Some type: [Whip antenna](https://en.wikipedia.org/wiki/Whip_antenna) , [Rubber Ducky 
 antenna](https://en.wikipedia.org/wiki/Rubber_Ducky_antenna) , [Monopole antenna](https://en.wikipedia.org/wiki/Monopole_antenna)
@@ -151,7 +151,7 @@ antenna](https://en.wikipedia.org/wiki/Rubber_Ducky_antenna) , [Monopole antenna
 - WEP Key is a sequence of hexadecimal values
 - WEP Key length: 10 digit (40 or 64 bit), 26 digit (104 or 128), 58 digit (256 bit)
 - WEP is used in Physical layer and Data Link layer of OSI model
-- Initalization Vector (IV) is 24-bit long
+- Initialization Vector (IV) is 24-bit long
 - [WEP work](https://www.quora.com/How-does-WEP-work)
 
 #### Breaking WEP Encryption
@@ -166,17 +166,17 @@ antenna](https://en.wikipedia.org/wiki/Rubber_Ducky_antenna) , [Monopole antenna
 ### Wi-Fi Protected Access (WPA)
 
 - Used for WLAN network based on 802.11i
-- Temporal Key Integrity Protocol (TKIP) implements a key mixing function that combines the secret key with the initalization 
+- Temporal Key Integrity Protocol (TKIP) implements a key mixing function that combines the secret key with the initialization 
 vector before passing it to the RC4 cipher. WEP, in comparison, merely concatenated the initialization vector to the root key, and 
 passed this value to the RC4 routine.
 - TKIP increased the key length to 128-bit
 - Implements a sequence counter to protect against replay attacks
 - Implements a 64-bit Message Integrity Check, a checksum to protect against tampering
-- Initalization Vector is 48-bit long
+- Initialization Vector is 48-bit long
 
 ### WPA2
 
-- Counter Mode Cipher Block Chaining Message Authentication Code Protocol (CCMP) is an enchanced data cryptographic encapsulation 
+- Counter Mode Cipher Block Chaining Message Authentication Code Protocol (CCMP) is an enhanced data cryptographic encapsulation 
 mechanism designed for data confidentiality
 - Implements AES based encryption mode
 - Wi-Fi Protected Setup (WPS) allows users to quickly connect to a WPA protected WLAN
@@ -186,12 +186,12 @@ mechanism designed for data confidentiality
 #### Breaking WPA Encryption
 
 1. Brute forcing the PSK with a dictionary attack
-2. Capture the Authetication Handshake packets to crack the WPA-PSK offline
+2. Capture the Authentication Handshake packets to crack the WPA-PSK offline
 3. Deauthenticate client to force to reconnect to brute force the Pairwise Master Key (PMK)
 
 ## Wireless Threats
 
-- **Access Contorl Attacks** : evading access controll parameters (MAC spoofing, Rogue Access 
+- **Access Control Attacks** : evading access control parameters (MAC spoofing, Rogue Access 
 point)
 - **Integrity Attacks** : Data frame injection, replay attacks, etc...
 - **Confidentiality Attacks** : traffic analysis, session hijacking, MITM, etc...
@@ -290,4 +290,4 @@ of service
 - Turn off visibility / turn off Bluetooth if not used
 - Use strong PIN
 - Use encryption
-- Don't accept unknow requests
+- Don't accept unknown requests

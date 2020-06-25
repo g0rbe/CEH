@@ -33,7 +33,7 @@ IIS is a Windows-based webserver.
 
 - **Protocol listener** are responsible for receiving and returning protocol-specific requests.
 - **HTTP.sys** are responsible for HTTP requests.
-- **World Wide Web Pblishing Service** (WWW Service)
+- **World Wide Web Publishing Service** (WWW Service)
 - **Windows Process Activation Service** (WAS)
 
 ### Web Server Attacks
@@ -115,8 +115,8 @@ Tool:
 
 ## Vulnerability Scanning
 
-Automted tool to inspect website and detect vulnerabilities.
-These tools perfomr depp inspection of scripts, open ports, banners, etc.
+Automated tool to inspect website and detect vulnerabilities.
+These tools perform depp inspection of scripts, open ports, banners, etc.
 
 Tools:
 
@@ -126,7 +126,7 @@ Tools:
 ## Hacking Web Passwords
 
 Extract passwords to gain authorized access to the system.
-Passwrod may be get from social engineering, tampering the communication, etc.
+Password may be get from social engineering, tampering the communication, etc.
 
 Password Attacks classification:
 

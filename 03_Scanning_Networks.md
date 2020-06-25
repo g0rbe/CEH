@@ -3,36 +3,28 @@
 These definitions is must-know !
 
 - [TCP](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) (Transmission Control Protocol)
-
 - [UDP](https://en.wikipedia.org/wiki/User_Datagram_Protocol) (User Datagram Protocol)
-
 - [ARP](https://www.tummy.com/articles/networking-basics-how-arp-works/)
-
 - [ICMP](https://www.webopedia.com/TERM/I/ICMP.html)
-
 - Ping Sweep: mass ICMP echo (ping) message
-
 - [SSDP](https://wiki.wireshark.org/SSDP)
-
 - [DHCP](https://www.lifewire.com/what-is-dhcp-2625848)
-
 - [DNS](https://dyn.com/blog/dns-why-its-important-how-it-works/)
-
 - [UPnP](https://en.wikipedia.org/wiki/Universal_Plug_and_Play)
 
 
 ## TCP Flags
 
-- `SYN`: Initates a connection between two hosts to facilitate communication
+- `SYN`: Initiates a connection between two hosts to facilitate communication
 - `ACK`: Acknowledge the receipt of a packet
 - `URG`: Indicates that the data contained in the packet is urgent and should process it immediately
-- `PSH`: Insturcts the sending system to send all buffered data immediately
-- `FIN`: Tells te remote system about tthe end of the communiction. In essence, this gracefully closes the connection
+- `PSH`: Instructs the sending system to send all buffered data immediately
+- `FIN`: Tells te remote system about the end of the communication. In essence, this gracefully closes the connection
 - `RST`:  Reset a connection
 
 ## Three-way handshake
 
-- Establish a TCP conncetion
+- Establish a TCP connection
 
 | Computer1 | Direction | Computer2 |
 |:---------:|:---------:|:---------:|           
@@ -73,7 +65,7 @@ Layer 1: *Link layer* (ARP, MAC, ...)
 - Three-way handshake
 - Completed connection
 - Logged and detected
-- Dont need ROOT
+- Don't need ROOT
 - nmap: `-sT`
 - Open port:
 
@@ -95,7 +87,7 @@ Layer 1: *Link layer* (ARP, MAC, ...)
 
 Example:
 
-```
+``` bash
 nmap -sT danielgorbe.com
 ```
 
@@ -121,7 +113,7 @@ nmap -sT danielgorbe.com
 
 Example:
 
-```
+``` bash
 nmap -sS danielgorbe.com
 ```
 
@@ -152,7 +144,7 @@ nmap -sS danielgorbe.com
 
 Example:
 
-```
+``` bash
 nmap -sX danielgorbe.com
 ```
 
@@ -178,7 +170,7 @@ nmap -sX danielgorbe.com
 
 Example:
 
-```
+``` bash
 nmap -sT danielgorbe.com
 ```
 
@@ -204,7 +196,7 @@ nmap -sT danielgorbe.com
 
 Example:
 
-```
+``` bash
 nmap -sF danielgorbe.com
 ```
 
@@ -218,7 +210,7 @@ nmap -sF danielgorbe.com
 
 Example:
 
-```
+``` bash
 nmap -sA danielgorbe.com
 ```
 
@@ -253,7 +245,7 @@ nmap -sA danielgorbe.com
 
 Example:
 
-```
+``` bash
 nmap -sA danielgorbe.com
 ```
 
@@ -266,7 +258,7 @@ nmap -sA danielgorbe.com
 
 Example:
 
-```
+``` bash
 nmap -f danielgorbe.com
 ```
 
@@ -279,7 +271,7 @@ nmap -f danielgorbe.com
 
 Example:
 
-```
+``` bash
 nmap -O danielgorbe.com
 ```
 
@@ -297,16 +289,14 @@ nmap -O danielgorbe.com
 
 - More values [here](https://subinsb.com/default-device-ttl-values/)
 
-
 ### Banner Grabbing: 
 
 - Determine the service
 - Typically uses Telnet
 
-
 Example:
 
-```
+``` bash
 nmap -sV danielgorbe.com
 ```
 ## Proxy:
@@ -316,7 +306,7 @@ nmap -sV danielgorbe.com
 - Impersonating
 - Hide identity
 
-### Proxy chaning:
+### Proxy chaining:
 
 - Using multiple proxy server
 - Most used proxy chains: TOR
@@ -328,7 +318,7 @@ nmap -sV danielgorbe.com
 
 Example:
 
-```
+``` bash
 nmap -D 192.168.1.1,192.168.1.2 danielgorbe.com
 ```
 
@@ -337,7 +327,6 @@ This option sends 3 packets with source IP:
 1. 192.168.1.1
 2. 192.168.1.2
 3. Your IP
-
 
 #### Detect Spoofing
 

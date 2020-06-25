@@ -4,7 +4,7 @@ commands into existing queries.
 - Bypassing authentication
 - Revealing sensitive information
 - Compromise data integrity
-- Erease database
+- Erase database
 - Remote code execution
 
 **Tool** :
@@ -26,7 +26,7 @@ Use the same communication channel to launch the attack and get the result.
 ### Error Based SQL Injection
 
 - Server throw an error message
-- Error meesage is useful during the developement, but should be disabled it when the application is live
+- Error message is useful during the development, but should be disabled it when the application is live
 
 #### Techniques to perform SQL Injection
 
@@ -50,7 +50,7 @@ SELECT password FROM table2
 ## Inferential SQL Injection
 
 - Known as **Blind SQL Injection**
-- No data is transferred from the via the application, the attacker sending payloads, then observe the web apllication's response and behaviour.
+- No data is transferred from the via the application, the attacker sending payloads, then observe the web application's response and behavior.
 
 ### Boolean-based Blind SQL Injection
 
@@ -75,7 +75,7 @@ Use different channel to launch the attack.
 ## Information Gathering And Vulnerability Detection
 
 - Collect the information about the web application, server, OS, database, ...
-- Identify vulnearbilities 
+- Identify vulnerabilities 
 - Evaluate input fields
 
 ## Launch Attack
@@ -84,7 +84,7 @@ Use different channel to launch the attack.
 
 ## Advanced SQL Injection
 
-- Enumarte the database (Postgre, MySQL, Oracle, ...)
+- Enumerate the database (Postgre, MySQL, Oracle, ...)
 - Identify privilege level of users
 - Passwords and hashes grabbing
 - Transfer database to a remote machine
@@ -93,7 +93,7 @@ Use different channel to launch the attack.
 
 ## Evading IDS
 
-- Inserting inline comment in betweeen keywords
+- Inserting inline comment in between keywords
 - Character encoding
 - String Concatenation
 - Obfuscated codes
@@ -106,7 +106,7 @@ Use different channel to launch the attack.
 - Penetration testing (manual, with tool)
 - Source code analysis
 - Wep Application Firewall (WAF)
-- Remove deugging messages
+- Remove debugging messages
 - Database account with minimal privileges
 - Input validation
 - Filter data

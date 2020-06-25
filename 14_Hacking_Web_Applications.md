@@ -1,7 +1,6 @@
-**Web Applications** are that applications that is running on a remote application server and avaliable for 
-clients over the internet.
+**Web Applications** are that applications that is running on a remote application server and available for clients over the internet.
 
-**Server Administrators** are resposible for the web server's safety, speed, functioning and performance.
+**Server Administrators** are responsible for the web server's safety, speed, functioning and performance.
 
 **Application Administrators** are responsible for the management and configuration required for the web 
 application.
@@ -66,7 +65,7 @@ In web 2.0, the users can interact and collaborate, it contain rich user experie
 Process an non-validated input from the client to the back-end. This is a major vulnerability, this is the 
 basics of injection attacks (SQL injection, xss, buffer overflow).
 
-#### Parameter / Form Tanmpering
+#### Parameter / Form Tampering
 
 Parameter tempering is an attack, where the attacker manipulate the parameter while client and server are 
 communicating with each other. Parameters such as **Uniform Resource Locator** (URL) or web page form fields 
@@ -85,7 +84,7 @@ Works if a web application allows untrusted input to be executed.
 #### SQL Injection
 
 Injection of malicious SQL queries.
-Attacker can manipulte the database
+Attacker can manipulate the database
 These vulnerabilities can be detected by using an automated scanner.
 
 #### Command Injection
@@ -100,9 +99,9 @@ Attacker can access the database using LDAP filter to search information.
 
 #### DoS Attack
 
-- **User Registartion DoS** : an automated process, the attacker keep registering fake accounts. 
+- **User Registration DoS** : an automated process, the attacker keep registering fake accounts. 
 - **Login DoS** : attacker keep sending login requests.
-- **User Enumeration** : attacker brute force login credebtials with a dictionary attacks.
+- **User Enumeration** : attacker brute force login credentials with a dictionary attacks.
 - **Account Lock** : attacker attempt to lock the user account by attempting invalid passwords.
 
 # Web Application Hacking Methodology
@@ -160,7 +159,7 @@ Techniques:
 Exploit the data connectivity between application and its database.
 Data connection requires a connection string.
 
-- Connetcion String Injection
+- Connection String Injection
 - Connection String Parameters Pollution (CSPP)
 - Connection Pool DoS
 
@@ -197,7 +196,7 @@ HTML Encoding specify how special character will shown.
 
 #### XSS Attack Countermeasures
 
-- Testiong tools
+- Testing tools
 - Filtering meta
 - Filtering output
 

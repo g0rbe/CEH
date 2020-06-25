@@ -1,9 +1,9 @@
 **NOTE**: This may cross legal boundaries, you must have proper permission to perform these actions.
 
-- initates active connection with the target
+- initiates active connection with the target
 - direct queries are generated
 
-- enumerated informations:
+- enumerated information:
 
 	- routing information
 	- SNMP information
@@ -11,13 +11,13 @@
 	- machine name
 	- user information
 	- group information
-	- application and abnners
+	- application and banners
 	- network sharing information
 	- network resources
 
 #### Email
 
-- Extract usefull information (username, domain, ..)
+- Extract useful information (username, domain, ..)
 
 #### Default password
 
@@ -25,7 +25,7 @@
 
 #### Active Directory (AD)
 
-- Centralized command and control of doamin users, computers, printers
+- Centralized command and control of domain users, computers, printers
 - Brute force or generating queries to LDAP
 - Ports:
 	- **TCP / UDP 389**
@@ -37,11 +37,11 @@
 
 #### Lightweight Directory Access Protocol (LDAP)
 
-- Accessing and maintaining distributed directory information services in a hierarchical and logicl structure
-- Allowing the shareing of information like user, system, network services, etc. throughout the network
+- Accessing and maintaining distributed directory information services in a hierarchical and logical structure
+- Allowing the sharing of information like user, system, network services, etc. throughout the network
 - Provides a central place to store usernames and passwords
 - Apps and services connect to LDAP to validate users
-- Client initates an LDAP session bt sending an  operation request to Directory System Agent (DSA)
+- Client initiates an LDAP session bt sending an  operation request to Directory System Agent (DSA)
 - Communication between client and server uses Basic Encoding Rules (BER)
 - Port:
 	- **TCP 389**
@@ -64,13 +64,13 @@
 	- **UDP 162** (Trap)
 - Three element:
 	-SNMP manager:
-		- A sofware running on the management station
+		- A software running on the management station
 		- Display collected information
 	- SNMP agent:
 		- A software running on the network nodes
 		- Different components are monitored (CPU, RAM, ...)
 	- Management Information Base (MIB):
-		- A colloection of information organized hierarchically in a virtual database
+		- A collection of information organized hierarchically in a virtual database
 		- 2 types:
 			- Scaler: single object instance
 			- Tabular: multiple related object instance
@@ -82,7 +82,7 @@
 		- read-write (read information, modify settings)
 		- trap
 - SNMP Trap:
-	- Initated by the SNMP agent
+	- Initiated by the SNMP agent
 	- Report an issue
 - Information from SNMP:
 	- Host
@@ -121,7 +121,7 @@
 
 [Example](https://security.stackexchange.com/questions/69290/how-to-test-for-zone-transfer):
 
-```
+``` bash
 host -t axfr zonetransfer.me nsztm1.digi.ninja.
 ```
 
@@ -155,7 +155,7 @@ host -t axfr zonetransfer.me nsztm1.digi.ninja.
 
 #### Network Time Protocol (NTP)
 
-- Synchronize the clocks accross the hosts and network devices
+- Synchronize the clocks across the hosts and network devices
 - A lot of services rely on clock settings (logging, login, ...)
 - Application layer protocol
 - Port:
@@ -191,8 +191,8 @@ host -t axfr zonetransfer.me nsztm1.digi.ninja.
 	- `RCPT TO` specify the message recipients
 	- `SIZE`: specify maximum supported size
 	- `DATA`: define data
-	- `RSET`: reser connection and buffer of SMTP
-	- `VRFY`: verify the avaliabilty of Mail server
+	- `RSET`: reset connection and buffer of SMTP
+	- `VRFY`: verify the availability of Mail server
 	- `HELP`: show help
 	- `QUIT`: terminate session
 

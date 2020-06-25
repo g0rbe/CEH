@@ -15,9 +15,9 @@
 #### Asymmetric / Public Key cryptography
 
 - Two key used: public and private
-- Public key is publically known to everyone, issued by Public Key Infrastructure (PKI) and use to encrypt the data
+- Public key is publicly known to everyone, issued by Public Key Infrastructure (PKI) and use to encrypt the data
 - Private key is a secret for the public,only known by the owner and it is used to decrypt the data
-- Asymmetric crytography delivers confidentiality, integrity, authenticity and non-repudation
+- Asymmetric cryptography delivers confidentiality, integrity, authenticity and non-repudiation
 - Popular algorithms : RSA, DSA and Diffie-Hellman
 
 ### Cipher
@@ -28,7 +28,7 @@ Methods:
 
 #### Substitution Cipher
 
-- Every character is substituded with another one
+- Every character is substituted with another one
 - More on [Wikipedia](https://en.wikipedia.org/wiki/Substitution_cipher)
 - Example cipher : [Caesar cipher](https://en.wikipedia.org/wiki/Caesar_cipher)
 - Example:
@@ -89,7 +89,6 @@ encryption
 - The permutation is initialized with a variable length key, typically between 40 and 2048 bits
 - Marked as insecure
 
-
 # Symmetric Algorithms
 
 ## Data Encryption Standard (DES)
@@ -123,4 +122,3 @@ encryption
 |    Block size     |      128 bits      |      128 bits     |      128 bits      |
 |    Key size       |      128 bits      |      192 bits     |      256 bits      |
 |   No. of rounds   |         10         |       12          |         14         |
-

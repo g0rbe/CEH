@@ -15,7 +15,7 @@ Service may either be denied, reduce the functionality or prevent the access.
 In DDoS, multiple compromised systems are involved to attack a target.
 
 
-The attacker send several conncetion request to the server with fake return address, so the server can't find a user to send the connection approval.
+The attacker send several connection request to the server with fake return address, so the server can't find a user to send the connection approval.
 The authentication process waits for a certain time to close the session.
 The attacker is continuously sending requests which causing a number of open connection on the server that lead to a denial of service.
 
@@ -24,12 +24,12 @@ The attacker is continuously sending requests which causing a number of open con
 #### Volumetric Attacks
 
 Denial of Service attack performed by sending a high amount of traffic towards the target.
-Volumetric attack are focused on overloading the bandwith capability.
+Volumetric attack are focused on overloading the bandwidth capability.
 
 #### Fragmentation Attacks
 
 DoS attacks witch fragment the IP datagram into multiple smaller size packets.
-It requires to reassembly at the destination which reuires resources of routers. 
+It requires to reassembly at the destination which requires resources of routers. 
 
 Types:
 
@@ -38,7 +38,7 @@ Types:
 
 #### TCP-State-Exhaustion Attacks
 
-TCP-State-Exhaustion Attacks are focused on web servers, firewalls, load balancers and other infrastructure component to distrupt connections by exhausting their finite number of concurrent connections.
+TCP-State-Exhaustion Attacks are focused on web servers, firewalls, load balancers and other infrastructure component to disrupt connections by exhausting their finite number of concurrent connections.
 
 Most common state-exhaustion attack is ping of death.
 
@@ -48,10 +48,10 @@ The application level attack overloads the particular service of a website or ap
 
 ### DoD/DDoS Attack Techniques
 
-#### Bandwith Attacks
+#### Bandwidth Attacks
 
-Bandwith attack requires multiple sources to generate q request to overload the target.
-The goal is to consume the bandwith completely.
+Bandwidth attack requires multiple sources to generate q request to overload the target.
+The goal is to consume the bandwidth completely.
 
 Zombie servers or Botnets used to perform this type of attack.
 
@@ -72,11 +72,11 @@ Flooding ICMP request without waiting for the response overwhelm the resource of
 #### Peer-to-Peer Attacks
 
 Exploit bugs in peer-to-peer servers using Direct Connect (DC++).
-Using one or more malicious hosts in a peer-to-peer network to perfomr the attack.
+Using one or more malicious hosts in a peer-to-peer network to perform the attack.
 
 #### Permanent DoS Attack (PDoS)
 
-Permanent DoS attack is focused on hardware sabotag, cause irreversible damage to the hardware.
+Permanent DoS attack is focused on hardware sabotage, cause irreversible damage to the hardware.
 Affected hardware require replacement or reinstall the software.
 
 Methods:
@@ -86,7 +86,7 @@ Methods:
 
 #### Application Level Flood Attacks
 
-Attacker finds the fault and flaws in an application or operating system and exploits the vulnerability to gain controll over a system.
+Attacker finds the fault and flaws in an application or operating system and exploits the vulnerability to gain control over a system.
 
 #### Distributed Reflection Denial of Service (DRDoS)
 
@@ -97,5 +97,5 @@ The intermediary and secondary victim is used for spoofing the attack.
 ## Botnet
 
 Attacker compromises victims to make bot, which compromise other system to create a botnet.
-These botnets are controlled by **Command and Controll server** owned by the attacke.
+These botnets are controlled by **Command and Control server** owned by the attacker.
 This server is used to send instructions to perform the attack.

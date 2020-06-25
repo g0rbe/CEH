@@ -38,7 +38,7 @@ A good password contain:
 
 #### Non-Electronic Attacks
 
-Dont require any type of technical understanding and knowledge.
+Don't require any type of technical understanding and knowledge.
 
 Example:
 
@@ -64,7 +64,7 @@ Common and basic technique.
 
 #### Hash Injection
 
-Compromising a workstation by exploiting the vulnerability, and extarct the log-on hashes. 
+Compromising a workstation by exploiting the vulnerability, and extract the log-on hashes. 
 Hashing and other cryptography knowledge require.
 
 
@@ -78,13 +78,13 @@ Sniffing the packets with a packet sniffing tool within the Local Area Network (
 
 #### Man-in-the-Middle (MITM) Attack
 
-The attacket involves himself into the communication, insert himself in.
+The attacker involves himself into the communication, insert himself in.
 
 MITM Attacks:
 
 - SSL Strip
 - Burp Suite
-- Browser Exploitation Framwork (BeEF)
+- Browser Exploitation Framework (BeEF)
 
 **Replay Attack** : Capture the packets and extract information such as password from it. Then generating a replay traffic with the injection of extracted information to gain access to the system.
 
@@ -97,14 +97,14 @@ Gain access to the system by using the preconfigured password. The default passw
 #### Pre-computed hashes and Rainbow table
 
 Comparing a password using a rainbow table. 
-Rainbow Table is the pregenrated hashes of the words in a dictionary or the combination of characters. 
+Rainbow Table is the pregenerated hashes of the words in a dictionary or the combination of characters. 
 The advantage of Rainbow Table is the speed, because it takes less time to compare the hashes. 
 The disadvantage is the time and storage, it takes much more time and storage to compute and store the hashes. 
 
 #### Distributed Network Attack (DNA)
 
 Using the unused processing power of machines across the network to decrypt the hashes.
-DNA requires a DNA manager and DNS Clients. DNA Manager allocate small tasks over the distributed network to be computed in the backgroud.
+DNA requires a DNA manager and DNS Clients. DNA Manager allocate small tasks over the distributed network to be computed in the background.
 
 ### Password Guessing
 
@@ -131,7 +131,7 @@ Microsoft authentication protocols:
 
 SAM is database that stores credentials and other account parameters such as passwords for the authentication process in Windows.
 While the OS running, this database os locked to be accessed by any other service and process.
-There are several other security algorithms are applied to the database to secure and validate the intergrity of data.
+There are several other security algorithms are applied to the database to secure and validate the integrity of data.
 Within Microsoft, SAM stores password in LM/NTLM hashing format.
 Windows XP and later versions do not store the value of LM hash, or when LM hash is exceeding 14 characters, it stores blank or dummy value instead.
 
@@ -229,7 +229,7 @@ The attacker attempts to gain access to user that has same set of privileges.
 
 ### Vertical Privileges Escalation
 
-The attacker attepmts to escalate privileges to a higher level.
+The attacker attempts to escalate privileges to a higher level.
 Vertical privileges occurs when attacker is trying to gain access to the Administrator account.
 Higher privileges allow attacker to access sensitive information, modify files and execute programs.
 
@@ -317,7 +317,7 @@ Types:
 
 - PC/BIOS Embedded keyloggers
 - Keylogger keyboard
-- External keylogger (video, bluetooth, wi-fi, accoustic, ...)
+- External keylogger (video, bluetooth, wi-fi, acoustic, ...)
 
 #### Anti-Keyloggers
 
@@ -397,7 +397,7 @@ Tool:
 - Integrity-Based Detection
 - Digital signatures
 - Difference-based detection
-- Behaviour-based detection
+- Behavior-based detection
 - Cross-view based detection
 - Run-time execution path profiling
 - Anti-rootkit software
@@ -420,29 +420,29 @@ Windows tools:
 ### New Technology File System (NTFS) Data Stream
 
 NTFS is a Windows file system by Microsoft.
-NTFS is the deafult file system for Windows 10,- 7,- Vista,- XP,- 2000,- NT.
+NTFS is the default file system for Windows 10,- 7,- Vista,- XP,- 2000,- NT.
 
 #### Alternate Data Stream (ADS)
 
 ADS is a file attribute in in NTFS file system, contains metadata for locating a particular file.
-ADS is capable of hiding file data into an existing file without altering or modifying any noticable changes.
+ADS is capable of hiding file data into an existing file without altering or modifying any noticeable changes.
 It can be security threat because it can hide malicious files.
 
 NTFS Streams Countermeasures:
 
-- Movung file to a FAT partition (FAT doesn't support ADS, but this will corrupt the file)
+- Moving file to a FAT partition (FAT doesn't support ADS, but this will corrupt the file)
 - Third-party tools (ADS Spy, ADS Tools, LADS, ...)
 
 ### Steganography
 
-Steganography is a technique for hiding sensitive information in an ordinary message to ensure the cofidentiality.
+Steganography is a technique for hiding sensitive information in an ordinary message to ensure the confidentiality.
 Steganography uses encryption to maintain the confidentiality and integrity.
 It hides the encrypted data to avoid detection.
 An attacker may use this to technique to transfer data without being detected.
 
 #### Classification of Steganography
 
-**Technical Steganography** icludes concealing information using methods like using invisible link, microdots.
+**Technical Steganography** includes concealing information using methods like using invisible link, microdots.
 
 **Linguistic Steganography** uses text as covering media to hide information like using ciphers and code to hide information.
 
@@ -461,20 +461,20 @@ An attacker may use this to technique to transfer data without being detected.
 
 #### Whitespace Steganography
 
-hise information in a text file using extra blank space inserted in between words covering file.
+hide information in a text file using extra blank space inserted in between words covering file.
 Using LZW and Huffman compression method to decrease the size of the message.
 
 #### Image Steganography
 
 Hidden information can be kept in image formats, such as PNG, JPG, others.
-Image steganography pelaces redundant bits of the image in the message.
+Image steganography places redundant bits of the image in the message.
 It cannot be detected by human eye.
 
 Techniques:
 
 - Least significant bit insertion
 - Masking and filtering
-- Algorithm and transfomation
+- Algorithm and transformations
 
 Tools:
 
@@ -492,13 +492,13 @@ Methods:
 - Known stego: have stego object, algorithm and cover
 - Known message: have stego object and hidden message
 - Known cover: have stego object and cover
-- Choosen message: generate stego form known message to identify the algorithm
-- Choosen stego: have stego object and algorithm
+- Chosen message: generate stego form known message to identify the algorithm
+- Chosen stego: have stego object and algorithm
 
 
 ## Covering tracks
 
-Aftre gaining access, escalating privileges, executing applications, the next step is to wipe the evidence.
+After gaining access, escalating privileges, executing applications, the next step is to wipe the evidence.
 In this phase, attacker removes all the event logs, error messages and other evidence to prevent its attack from being discovered easily.
 
 Common techniques:
@@ -528,7 +528,7 @@ C:\Windows\system32>auditpol /get /category:*
 
 ### Clearing logs
 
-By clearing logs, all events logged during the compromise will be ereased.
+By clearing logs, all events logged during the compromise will be erased.
 
 Folder of log files:
 

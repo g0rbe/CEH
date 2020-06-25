@@ -16,12 +16,12 @@ Lack of security policies and privacy are also vulnerable.
 #### Research
 
 - Collection of information from the target organization
-- Collected by dumpster diving, scanning, serach on the internet, ...
+- Collected by dumpster diving, scanning, search on the internet, ...
 
 #### Select target
 
-- Select the tagret among other employees
-- A frustrated target is more prefered
+- Select the target among other employees
+- A frustrated target is more preferred
 
 #### Relationship
 
@@ -43,7 +43,7 @@ One-to-one interaction with the target. Earn the trust to gather sensitive infor
 #### Impersonation
 
 Pretend to be something or someone, pretending to be a legitimate user or authorized person.
-Impersonation is perfomed by indentity theft.
+Impersonation is performed by identity theft.
 
 #### Eavesdropping and Shoulder Surfing
 
@@ -97,7 +97,7 @@ Social Engineering is not all about a third person gathering information, it may
 
 ### Social Engineering Through Impersonation on Social Network Sites
 
-Attacker gathers personal information of a target from different sources mostly from social network sites such as full name, date of birth, email address, residental address, etc.
+Attacker gathers personal information of a target from different sources mostly from social network sites such as full name, date of birth, email address, residential address, etc.
 After gathering the information, the attacker create an account that is exactly the same. Then introduced to friends, group joined by the target to get updates or convince the target's friends to reveal information.
 
 #### Risks of Social Network in a Corporate Networks
@@ -116,11 +116,11 @@ The employee while communicating on social network may not take care of sensitiv
 
 - Gathering information: full name, address, contacts, accounts, birth information, bill from social networks, dumpster diving, etc...
 - Fake identity proof: get fake IDs (driving licence, ID card, etc...)
-- Fraud: spend money, unathorized access, use ID for frauds, etc...
+- Fraud: spend money, unauthorized access, use ID for frauds, etc...
 
 # Countermeasures
 
-- Security of sensitive informations
+- Security of sensitive information
 - Physical security
 - Rotational duties
 - Monitoring

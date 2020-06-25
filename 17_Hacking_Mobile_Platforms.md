@@ -15,22 +15,22 @@ of the most common mobile security risks.
 - **6.** Broken Cryptography
 - **7.** Client Side Injection
 - **8.** Security Decisions via Untrusted Inputs
-- **9.** Impoper Session Handling
+- **9.** Improper Session Handling
 - **10.** Lack of Binary Protections
 
 #### Top Ten (2016)
 
 - **1.** Improper Platform Usage: misuse of a platform feature or failure to use a platform security controls
 - **2.** Insecure Data Storage: insecure data storage + unintended data leakage
-- **3.** Insecure Communication: poor handshaking, incorrect SSL, weak negotiation, cleartext communication of sensitive assests, 
+- **3.** Insecure Communication: poor handshaking, incorrect SSL, weak negotiation, cleartext communication of sensitive assets, 
 ...
 - **4.** Insecure Authentication: captures notions of authenticating the end user or bad session management
-- **5.** Insuficient Cryptography: cryptography was attempted, but it wasn't done correctly
+- **5.** Insufficient Cryptography: cryptography was attempted, but it wasn't done correctly
 - **6.** Insecure Authorization: capture any failures in authorization
 - **7.** Client Code Quality: all of the code-level implementation problem in the mobile client
 - **8.** Code Tampering: binary patching, local resource modification, method hooking, dynamic memory modification, ...
-- **9.** Reverse Engineering: analysis of the final core binary to determina the source code, libarires, ...
-- **10.** Extraneous Finctionality: internal devlopement security controls that are not intended to be released into a production 
+- **9.** Reverse Engineering: analysis of the final core binary to determine the source code, libraries, ...
+- **10.** Extraneous Functionality: internal development security controls that are not intended to be released into a production 
 environment
 
 ### Attack Vector
@@ -42,7 +42,7 @@ environment
 - Data Tampering
 - Data Exfiltration
 
-#### Vulnerabilites And Risks on Mobile Platforms
+#### Vulnerabilities And Risks on Mobile Platforms
 
 - Malicious third-party application / in the store
 - Application vulnerability
@@ -101,7 +101,7 @@ devices
 
 #### Semi-Untethered Jailbreak
 
-- Allows to boot into the iOS device, but with limited funcionality
+- Allows to boot into the iOS device, but with limited functionality
 - The jailbreak functions will be disabled until the launch of a jailbreak app
 
 #### Semi-Tethered Jailbreak
@@ -128,7 +128,7 @@ devices
 
 #### JAD File Exploit
 
-- Java Application Description (.jad) contains attributies of Java application
+- Java Application Description (.jad) contains attributes of Java application
 - Attacker can craft a .jad file with spoofed information
 
 # Mobile Device Management (MDM)
@@ -137,10 +137,10 @@ devices
 
 #### MDM Functions
 
-- Enforce device to be locked after certail failed login
+- Enforce device to be locked after certain failed login
 - Enforce strong password policy for all BYOD 
 - MDM can detect attempt of hacking BYOD device and then limit the network access of the affected device
-- Enforce confidentility by using enryption as per organization's policy
+- Enforce confidentiality by using encryption as per organization's policy
 - Administration and implementation of Data Loss Prevention (DLP)
 
 ## MDM Deployment Methods
@@ -155,7 +155,7 @@ Two type:
 
 #### Cloud-Based MDM Deployment
 
-- MDM apllication is installed and maintained by a third party
+- MDM application is installed and maintained by a third party
 - Less administration needed
 - The deployment and maintenance is the responsibility of the service provider
 
@@ -169,7 +169,7 @@ BYOD policies should include:
 
 - Device: which devices and operating systems are supported
 - Password: require all devices to be password protected
-- Access: determine which datas can be accessed from employee's device
+- Access: determine which data can be accessed from employee's device
 - Application: which applications allowed, which should be banned
 
 # Mobile Security Guideline
@@ -177,13 +177,13 @@ BYOD policies should include:
 - Avoid auto-upload of files
 - Perform security assessment of applications
 - Turn off Bluetooth
-- Allow only necessary GPS-enbaled applications
+- Allow only necessary GPS-enabled applications
 - Do not connect to open network
 - Install applications from trusted sources
 - Use strong password
 - Use Mobile Device Management (MDM) softwares
 - Update operating system often
 - Do not allow rooting / jailbreaking
-- Enrypt phone storage
+- Encrypt phone storage
 - Periodic backup
 - Configure mobile device policies
