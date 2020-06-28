@@ -1,10 +1,10 @@
 ## UPDATE
 
-Because of the high traffic, i decided to **reformat** the chapters and upload everything to my blog at [danielgorbe.com/category/ceh/](https://danielgorbe.com/category/ceh/) to be more readable.
+Because of the high traffic, i decided to **reformat** the chapters and upload everything to my blog at [danielgorbe.com/en/tags/ceh/](https://danielgorbe.com/en/tags/ceh/) to be more readable.
 
 **But I need YOUR help!**
 
-If you have anything to append to the chapters, please do a [pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request), open an [issue](https://github.com/g0rbe/CEH/issues) or [contact me](https://danielgorbe.com/contact/). Every help is warmly welcome!
+If you have anything to append to the chapters, please do a [pull request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request), open an [issue](https://github.com/g0rbe/CEH/issues) or [contact me](https://danielgorbe.com/en/contact/). Every help is warmly welcome!
 
 ### Examples
 
@@ -37,7 +37,6 @@ https://ceh.cagy.org/
 ## TODO
 
 - Complete chapter 1,2,11,12
-- Reformat chapter 2,4
 
 ## Sources
 
@@ -45,7 +44,6 @@ The base and the structure provided by [IPSpecialst's CEH v10
 book](https://ipspecialist.net/courses/ec-council-certified-ethical-hacker-ceh-v10-exam-312-50/) (It's worth to buy and read it!)
 
 The details is got from [DuckDuckGo](https://duckduckgo.com/)
-
 
 ### Source code
 

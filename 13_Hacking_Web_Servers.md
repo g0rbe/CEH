@@ -1,3 +1,5 @@
+## Web Server
+
 Web Servers are the programs that are used for hosting services.
 
 Web Servers are deployed on a separate web server hardware or installed on a host as a program.
@@ -6,7 +8,7 @@ It delivers content over **Hyper Text Transfer Protocol** (HTTP).
 
 Web Servers support different types of application extensions whereas all of the support **Hypertext Markup Language** (HTML).
 
-#### Web Server Security Issue
+## Web Server Security Issue
 
 Web server vulnerabilities:
 
@@ -18,7 +20,7 @@ Web server vulnerabilities:
 - Misconfigured SSL certificate
 - Enabled debugging
 
-#### Open Source Web Servers
+## Open Source Web Servers
 
 - Apache HTTP Server
 - Nginx
@@ -36,44 +38,42 @@ IIS is a Windows-based webserver.
 - **World Wide Web Publishing Service** (WWW Service)
 - **Windows Process Activation Service** (WAS)
 
-### Web Server Attacks
+## Web Server Attacks
 
-#### DoS/DDoS
+### DoS/DDoS
 
-#### DNS Server Hijacking
+### DNS Server Hijacking
 
-#### DNS Amplification Attack
+### DNS Amplification Attack
 
 Spoof the source address of the DNS request, by the amplification of the size of the request and using 
 botnets, it results a DDoS attack.
 
-#### Directory Traversal Attacks
+### Directory Traversal Attacks
 
 Attacker using trials and error method to access restricted directories to reveal sensitive information.
 
-#### Man-in-the-Middle / Sniffing Attacks
+### Man-in-the-Middle / Sniffing Attacks
 
-#### Phishing Attacks
+### Phishing Attacks
 
-#### Website Defacement
+### Website Defacement
 
 After a successful intrusion, attacker alters and modify the content of the website.
 
-#### Webserver Misconfiguration
+### Webserver Misconfiguration
 
 Attacker looks for misconfigurations and vulnerabilities to exploit.
 
-#### HTTP Response Splitting Attack
+### HTTP Response Splitting Attack
 
 [Read more here](http://projects.webappsec.org/w/page/13246931/HTTP%20Response%20Splitting)
 
-#### Web Cache Poisoning Attack
+### Web Cache Poisoning Attack
 
 The attacker wipe the actual cache of the webserver and sending crafted request to store fake entries.
 
-#### SSH Brute Force Attack
-
-#### Web Application Attacks
+### Web Application Attacks
 
 - Cookie Tampering 
 - DoS
@@ -83,19 +83,19 @@ The attacker wipe the actual cache of the webserver and sending crafted request 
 - Cross-Site Scripting (XSS)
 - Buffer Overflow
 
-# Attack Methodology
+## Attack Methodology
 
-## Information Gathering
+### Information Gathering
 
 Collecting information from internet.
 
-### robots.txt
+#### robots.txt
 
 Attacker extract information about internal files.
 
 [Read more](https://en.wikipedia.org/wiki/Robots.txt)
 
-## Web Server Footprinting
+### Web Server Footprinting
 
 Results the server name, type, OS, applications, etc.
 
@@ -105,7 +105,7 @@ Tools:
 - Maltego
 - httprecon
 
-## Mirroring a website
+#### Mirroring a website
 
 Download the website, to inspect offline, without any interaction to the target.
 
@@ -113,7 +113,7 @@ Tool:
 
 - httrack
 
-## Vulnerability Scanning
+### Vulnerability Scanning
 
 Automated tool to inspect website and detect vulnerabilities.
 These tools perform depp inspection of scripts, open ports, banners, etc.
@@ -123,7 +123,7 @@ Tools:
 - owasp-zap
 - openvas
 
-## Hacking Web Passwords
+#### Hacking Web Passwords
 
 Extract passwords to gain authorized access to the system.
 Password may be get from social engineering, tampering the communication, etc.
@@ -136,7 +136,7 @@ Password Attacks classification:
 - Default password
 - offline attack
 
-# Countermeasures
+## Countermeasures
 
 - Place web server in a secure zone (behind firewall, IDS, IPS, DMZ)
 - Detect potential changes (hashing, script to detect change)
@@ -151,7 +151,7 @@ Password Attacks classification:
 - Software update
 - Disable default account
 
-#### Patch Management
+### Patch Management
 
 Hotfix is a small update which fix an issue.
 Patch is a bigger of software to fix one or more issues.

@@ -1,4 +1,4 @@
-#### System Hacking Methodology
+## Methodology
 
 - Cracking Password
 - Escalating Privileges
@@ -6,7 +6,7 @@
 - Hiding Files
 - Covering Tracks
 
-#### Goals
+## Goals
 
 - Bypass the access control
 - Gain access to the system
@@ -68,7 +68,7 @@ Compromising a workstation by exploiting the vulnerability, and extract the log-
 Hashing and other cryptography knowledge require.
 
 
-### Passive Online Attacks
+#### Passive Online Attacks
 
 Password Attack without probing the target.
 
@@ -88,25 +88,25 @@ MITM Attacks:
 
 **Replay Attack** : Capture the packets and extract information such as password from it. Then generating a replay traffic with the injection of extracted information to gain access to the system.
 
-### Default Password 
+#### Default Password 
 
 Gain access to the system by using the preconfigured password. The default password can be find on the manufacturer site or through online tools.
 
-### Offline Attack
+#### Offline Attack
 
-#### Pre-computed hashes and Rainbow table
+##### Pre-computed hashes and Rainbow table
 
 Comparing a password using a rainbow table. 
 Rainbow Table is the pregenerated hashes of the words in a dictionary or the combination of characters. 
 The advantage of Rainbow Table is the speed, because it takes less time to compare the hashes. 
 The disadvantage is the time and storage, it takes much more time and storage to compute and store the hashes. 
 
-#### Distributed Network Attack (DNA)
+##### Distributed Network Attack (DNA)
 
 Using the unused processing power of machines across the network to decrypt the hashes.
 DNA requires a DNA manager and DNS Clients. DNA Manager allocate small tasks over the distributed network to be computed in the background.
 
-### Password Guessing
+#### Password Guessing
 
 The attacker uses the information extracted by initial phases and guess the password.
 Not common method and the rate of failure is high.
@@ -116,7 +116,7 @@ Not common method and the rate of failure is high.
 Attacker plug in an USB Drive that contain a password hacking tool.
 Windows Autorun feature allows running the application automatically, if enabled.
 
-## Microsoft Authentication
+### Microsoft Authentication
 
 *Authentication* is a verification process to identify any user or device.
 
@@ -127,7 +127,7 @@ Microsoft authentication protocols:
 - NT LAN Manager (NTLM)
 - LM
 
-### Security Account Manager (SAM)
+#### Security Account Manager (SAM)
 
 SAM is database that stores credentials and other account parameters such as passwords for the authentication process in Windows.
 While the OS running, this database os locked to be accessed by any other service and process.
@@ -147,7 +147,7 @@ Username: user ID: LM hash: NTLM hash:::
 C:\windows\system32\config\SAM
 ```
 
-### NTLM Authentication
+#### NTLM Authentication
 
 NT Lan Manager is a proprietary authentication protocol by Microsoft.
 In the authentication process, user sends login credentials to a domain controller in hashed format.
@@ -163,7 +163,7 @@ NTLM has two version:
 
 For additional security layer, NTLM is combined with Security Support Provider.
 
-### Kerberos
+#### Kerberos
 
 Kerberos is an advanced authentication protocol.
 Clients receive tickets from Kerberos Key Distributor Center (KDC)
@@ -189,11 +189,11 @@ The function os salting is to defeat the Dictionary Attacks and Rainbow Table at
 
 ### Password file by Operating Systems
 
-Windows: SAM
-Linux: SHADOW
-Domain Controller: NTDS:DIT
+- Windows: SAM (`C:\windows\system32\config\SAM`)
+- Linux: Shadow (`/etc/shadow`)
+- Domain Controller: NTDS:DIT
 
-#### Password Cracking tools
+### Password Cracking tools
 
 - pwdump7
 - fgdump
@@ -233,7 +233,7 @@ The attacker attempts to escalate privileges to a higher level.
 Vertical privileges occurs when attacker is trying to gain access to the Administrator account.
 Higher privileges allow attacker to access sensitive information, modify files and execute programs.
 
-#### Privilege Escalation using DLL Hijacking
+### Privilege Escalation using DLL Hijacking
 
 Applications need Dynamic Link Libraries (DLL) to run.
 In Windows, most of the application search for DLL in directories, instead of using the full qualified path.
@@ -372,20 +372,16 @@ Rootkit is a software designed to provide privileged access to a remote user ove
 Deployed after attacker gain high-level access to a system.
 Rootkits often mask their existence to avoid detection.
 
-#### Types:
+#### Types
 
-- Application level rootkit: perform manipulation of standard application file with an injection of codes.
-
-- Kernel-level rootkit: inject malicious code to the kernel
-
-- Hardware/Firmware level rootkit: built into a chipset
-
-- Hypervisor level rootkit: exploits hardware features like AMD-V or Intel VT
-
-- Boot Loader level rootkits (Bootkits): replace the legitimate boot loader with the malicious one, which  enables the bootkit to activated before an OS run. It can attack Master Boot Record (MBR), Volume Boot Record (VBR) or boot sector.
+- **Application level rootkit**: perform manipulation of standard application file with an injection of codes.
+- **Kernel-level rootkit**: inject malicious code to the kernel
+- **Hardware/Firmware level rootkit**: built into a chipset
+- **Hypervisor level rootkit**: exploits hardware features like AMD-V or Intel VT
+- **Boot Loader level rootkits (Bootkits)**: replace the legitimate boot loader with the malicious one, which  enables the bootkit to activated before an OS run. It can attack Master Boot Record (MBR), Volume Boot Record (VBR) or boot sector.
 It can be used to attack full disk encryption systems, hack encryption keys and passwords.
 
-Tool:
+#### Tool
 
 - Avatar
 - Necurs
@@ -442,9 +438,8 @@ An attacker may use this to technique to transfer data without being detected.
 
 #### Classification of Steganography
 
-**Technical Steganography** includes concealing information using methods like using invisible link, microdots.
-
-**Linguistic Steganography** uses text as covering media to hide information like using ciphers and code to hide information.
+- **Technical Steganography** includes concealing information using methods like using invisible link, microdots.
+- **Linguistic Steganography** uses text as covering media to hide information like using ciphers and code to hide information.
 
 #### Types of Steganography
 
@@ -459,12 +454,12 @@ An attacker may use this to technique to transfer data without being detected.
 - Frequency Steganography
 - Least Significant Bit Steganography
 
-#### Whitespace Steganography
+##### Whitespace Steganography
 
 hide information in a text file using extra blank space inserted in between words covering file.
 Using LZW and Huffman compression method to decrease the size of the message.
 
-#### Image Steganography
+##### Image Steganography
 
 Hidden information can be kept in image formats, such as PNG, JPG, others.
 Image steganography places redundant bits of the image in the message.

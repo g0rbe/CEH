@@ -1,3 +1,5 @@
+## Terminology
+
 **Web Applications** are that applications that is running on a remote application server and available for clients over the internet.
 
 **Server Administrators** are responsible for the web server's safety, speed, functioning and performance.
@@ -7,7 +9,7 @@ application.
 
 **Clients** are the endpoints which interact with the web application / server.
 
-# How Web Applications work?
+## How Web Applications work?
 
 **Front-end** <-> **Back-end**
 
@@ -29,19 +31,19 @@ Client-side languages:
 - JavaScript
 - HTML
 
-#### Layers of Web Applications
+### Layers of Web Applications
 
 - **Presentation Layer** is responsible for displaying the information to the user.
 - **Logical Layer** : manipulate information to and from the forms. 
 - **Data Layer** : hold the data for the application.
 
-#### Web 2.0
+### Web 2.0
 
 In web 1.0, the users are limited to passive viewing the content.
 
 In web 2.0, the users can interact and collaborate, it contain rich user experience, dynamic content.
 
-# Web Application Threats
+## Web Application Threats
 
 - Cookie poisoning
 - Insecure storage
@@ -60,18 +62,18 @@ In web 2.0, the users can interact and collaborate, it contain rich user experie
 - Session hijacking
 - Network access attacks
 
-#### Unvalidated input
+### Unvalidated input
 
 Process an non-validated input from the client to the back-end. This is a major vulnerability, this is the 
 basics of injection attacks (SQL injection, xss, buffer overflow).
 
-#### Parameter / Form Tampering
+### Parameter / Form Tampering
 
 Parameter tempering is an attack, where the attacker manipulate the parameter while client and server are 
 communicating with each other. Parameters such as **Uniform Resource Locator** (URL) or web page form fields 
 are modified (cookies, HTTP Header, form fields). 
 
-#### Injection Flaws
+### Injection Flaws
 
 Works if a web application allows untrusted input to be executed.
 
@@ -81,32 +83,32 @@ Works if a web application allows untrusted input to be executed.
 - Command injection
 - LDAP injection
 
-#### SQL Injection
+### SQL Injection
 
 Injection of malicious SQL queries.
 Attacker can manipulate the database
 These vulnerabilities can be detected by using an automated scanner.
 
-#### Command Injection
+### Command Injection
 
 - Shell injection
 - File injection
 - HTML embedding
 
-#### LDAP Injection
+### LDAP Injection
 
 Attacker can access the database using LDAP filter to search information.
 
-#### DoS Attack
+### DoS Attack
 
 - **User Registration DoS** : an automated process, the attacker keep registering fake accounts. 
 - **Login DoS** : attacker keep sending login requests.
 - **User Enumeration** : attacker brute force login credentials with a dictionary attacks.
 - **Account Lock** : attacker attempt to lock the user account by attempting invalid passwords.
 
-# Web Application Hacking Methodology
+## Web Application Hacking Methodology
 
-## Analyze Web Application
+### Analyze Web Application
 
 - Observing functionality
 - Identify vulnerabilities, entry points, servers
@@ -114,7 +116,7 @@ Attacker can access the database using LDAP filter to search information.
 - HTTP fingerprinting
 - Hidden content discovery
 
-## Attack Authentication
+### Attack Authentication
 
 Exploit the authentication mechanism:
 
@@ -135,11 +137,11 @@ Impersonate a legitimate user.
 Session hijacking techniques:
 
 - Session token prediction
-- Sessionn token tampering
+- Session token tampering
 - Man-in-the-Middle attack
 - Session replay
 
-#### Injection Attacks
+### Injection Attacks
 
 Inject malicious code, commands and files.
 
@@ -154,7 +156,7 @@ Techniques:
 - Buffer Overflow
 - Canonicalization
 
-#### Data Connectivity Attack
+### Data Connectivity Attack
 
 Exploit the data connectivity between application and its database.
 Data connection requires a connection string.
@@ -163,9 +165,9 @@ Data connection requires a connection string.
 - Connection String Parameters Pollution (CSPP)
 - Connection Pool DoS
 
-# Countermeasures
+## Countermeasures
 
-## Percent Encoding
+### Percent Encoding
 
 [Percent Encoding](https://en.wikipedia.org/wiki/Percent-encoding) or URL Encoding is a technique for
 secure handling of URL by replaces unsafe and non-ascii characters with % followed by two hexadecimal
@@ -183,24 +185,24 @@ URL. To use this not as separator, then it must be encoded.
 Full list of percent encoded characters 
 [here](https://www.degraeve.com/reference/urlencoding.php)
 
-## HTML Encoding
+### HTML Encoding
 
 HTML Encoding specify how special character will shown.
 
-#### SQL Injection Contermeasures
+### SQL Injection Contermeasures
 
 - Input validation
 - Customized error messages
 - Monitoring database traffic
 - Limit length of user input
 
-#### XSS Attack Countermeasures
+### XSS Attack Countermeasures
 
 - Testing tools
 - Filtering meta
 - Filtering output
 
-#### DOS Attack Countermeasures
+### DOS Attack Countermeasures
 
 - Reverse proxy
 - Remove unnecessary functions
@@ -208,7 +210,7 @@ HTML Encoding specify how special character will shown.
 - Firewall
 - IDS
 
-#### Other Countermeasures
+### Other Countermeasures
 
 - Dynamic testing
 - Source Code analysis

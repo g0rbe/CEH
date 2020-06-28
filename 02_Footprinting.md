@@ -1,13 +1,17 @@
-*Footprinting*: collect information about a target network
+## Terminology
 
-*Passive Footprinting*: collect without direct interaction
+**Footprinting**: collect information about a target network.
 
-*Active Footprinting*: collect with direct interaction
+**Passive Footprinting**: collect without direct interaction.
 
-*Social Network Footprinting*: get information about the target
+**Active Footprinting**: collect with direct interaction.
 
-*Website Footprinting*: Information about the target through web pages
+**Social Network Footprinting**: get information about the target.
+
+**Website Footprinting**: Information about the target through web pages.
 	
+## Methods
+
 - Examining the web page's source code
 - Examining cookies
 - Extracting metadata of web sites
@@ -21,19 +25,19 @@
 - IP geolocation
 - DNS footprinting 
 
-Information collected:
+## Information collected
 
 - Organization Information (phone numbers, employee details, etc...)
 - Relations with other companies
 - Network Information (Domains, IPs, etc...)
 - System Information (OSes, passwords)
 
-### Objectives of Footprinting:
+## Objectives of Footprinting:
 
-- *Know Security Posture*: know the security posture of the target organization
-- *Reduce Focus Area*: reduce the attackers focus area to a specific range of IP, network, domain names, etc...
-- *Identify Vulnerabilities*: identify vulnerabilities in the target system
-- *Draw Network Map*: draw a map or outline the target organization's network infrastructure
+- **Know Security Posture**: know the security posture of the target organization
+- **Reduce Focus Area**: reduce the attackers focus area to a specific range of IP, network, domain names, etc...
+- **Identify Vulnerabilities**: identify vulnerabilities in the target system
+- **Draw Network Map**: draw a map or outline the target organization's network infrastructure
 
 ## Advanced Google Hacking Techniques
 

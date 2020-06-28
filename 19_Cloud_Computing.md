@@ -1,15 +1,10 @@
+## Basic
+
 Cloud computing is shared pools of configurable computer system resources and higher-level 
 services that can be rapidly provisioned with minimal management effort, often over the 
-Internet.
+Internet. Third-party clouds enable organizations to focus on their core businesses instead of expending resources on computer infrastructure and maintenance. Advocates note that cloud computing allows companies to avoid or minimize up-front IT infrastructure costs. Proponents also claim that cloud computing allows enterprises to get their applications up and running faster, with improved manageability and less maintenance.
 
-
-Third-party clouds enable organizations to focus on their core businesses instead of expending 
-resources on computer infrastructure and maintenance.[1] Advocates note that cloud computing 
-allows companies to avoid or minimize up-front IT infrastructure costs. Proponents also claim 
-that cloud computing allows enterprises to get their applications up and running faster, with 
-improved manageability and less maintenance.
-
-#### Characteristics of Cloud Computing
+## Characteristics of Cloud Computing
 
 - Increase users flexibility
 - Cost reduction
@@ -21,7 +16,7 @@ improved manageability and less maintenance.
 
 ## Cloud Computing Service Models
 
-#### Infrastructure as a Service (IaaS)
+### Infrastructure as a Service (IaaS)
 
 The capability provided to the consumer is to provision processing, storage, networks, and other 
 fundamental computing resources where the consumer is able to deploy and run arbitrary software, 
@@ -30,7 +25,7 @@ the underlying cloud infrastructure but has control over operating systems, stor
 deployed applications and possibly limited control of select networking components (e.g., host 
 firewalls).
 
-#### Platform as a Service (Paas)
+### Platform as a Service (Paas)
 
 The capability provided to the consumer is to deploy onto the cloud infrastructure 
 consumer-created or acquired applications created using programming languages, libraries, 
@@ -39,7 +34,7 @@ underlying cloud infrastructure including network, servers, operating systems, o
 has control over the deployed applications and possibly configuration settings for the 
 application-hosting environment.
 
-#### Software as a Service (SaaS)
+### Software as a Service (SaaS)
 
 The capability provided to the consumer is to use the provider’s applications running on a cloud 
 infrastructure. The applications are accessible from various client devices through either a 
@@ -50,13 +45,13 @@ possible exception of limited user-specific application configuration settings.
 
 ## Cloud Computing Deployment Module 
 
-#### Private Cloud 
+### Private Cloud 
 
 The cloud infrastructure is provisioned for exclusive use by a single organization comprising 
 multiple consumers (e.g., business units). It may be owned, managed, and operated by the 
 organization, a third party, or some combination of them, and it may exist on or off premises. 
 
-#### Community Cloud
+### Community Cloud
 
 The cloud infrastructure is provisioned for exclusive use by a specific community of consumers 
 from organizations that have shared concerns (e.g., mission, security requirements, policy, and 
@@ -64,13 +59,13 @@ compliance considerations). It may be owned, managed, and operated by one or mor
 organizations in the community, a third party, or some combination of them, and it may exist on 
 or off premises. 
 
-#### Public Cloud
+### Public Cloud
 
 The cloud infrastructure is provisioned for open use by the general public. It may be owned, 
 managed, and operated by a business, academic, or government organization, or some combination 
 of them. It exists on the premises of the cloud provider.
 
-#### Hybrid Cloud
+### Hybrid Cloud
 
 The cloud infrastructure is a composition of two or more distinct cloud infrastructures 
 (private, community, or public) that remain unique entities, but are bound together by 
@@ -85,17 +80,14 @@ reference architecture
 - Intended to facilitate the understanding of the requirements, uses, characteristics and 
 standards of cloud computing
 
-#### Actors 
+## Actors 
 
-- **Cloud Consumer** : A person or organization that maintains a business relationship with, and 
-uses services from cloud providers
+- **Cloud Consumer** : A person or organization that maintains a business relationship with, and uses services from cloud providers.
 - **Cloud Provider** : A company or individual that delivers cloud computing based services and 
 solutions to businesses and/or individuals.
-- **Cloud Auditor** : A party that can conduct an independent assessment of cloud services
-- **Cloud Broker** : An entity that manages the use, performance and delivery of cloud services, 
-negotiates relationships between providers and consumers
-- **Cloud Carrier** : An intermediary that provides connectivity and transport of cloud services 
-from providers to consumers
+- **Cloud Auditor** : A party that can conduct an independent assessment of cloud services.
+- **Cloud Broker** : An entity that manages the use, performance and delivery of cloud services, negotiates relationships between providers and consumers.
+- **Cloud Carrier** : An intermediary that provides connectivity and transport of cloud services from providers to consumers.
 
 ## Cloud Computing Threads
 
@@ -122,7 +114,7 @@ from providers to consumers
 - Cryptanalysis (weak encryption, ...)
 - DoS / DDoS 
 
-#### Side Channel Attacks or Cross-Guest Virtual Machine Breaches
+### Side Channel Attacks or Cross-Guest Virtual Machine Breaches
 
 - Deploy a malicious virtual machine on the same host
 - Take advantage of sharing resources (processor cache, keys, ...)
@@ -130,7 +122,7 @@ from providers to consumers
 
 ## Cloud Security
 
-#### Application Layer
+### Application Layer
 
 - Application firewall (filter and observe traffic)
 - Systems Development Life Cycle (SDLC)
@@ -138,25 +130,25 @@ from providers to consumers
 - Script analysis
 - Transactional security 
 
-#### Network Layer
+### Network Layer
 
 - Next Generation IPS / IDS (NGIPS / NGIDS)
 - Firewalls
 - DNSSec
 - Anti-DDoS
 
-#### Information
+### Information
 
 - Provide confidentiality and integrity 
 - Data Loss Prevention (DLP)
 - Content Management Framework (CMF)
 
-#### Trusted Computing
+### Trusted Computing
 
 - Root of Trust (RoT) is established by validating each component of hardware and software to ensure that only trusted hardware 
 and software can be used
 
-#### Computer and Storage
+### Computer and Storage
 
 - Host-based IPS / IDS  (HIDS/HIPS)
 - Integrity check
@@ -165,14 +157,14 @@ and software can be used
 - Connection analysis
 - Storage encryption
 
-#### Physical Security
+### Physical Security
 
 - Physical protection is priority
 - Protect against theft, unauthorized physical access, environmental impact (rain, earthquake, power failure, ...)
 
 ## Responsibilities in Cloud Security
 
-#### Cloud Service Provider
+### Cloud Service Provider
 
 - Web Application Firewall (WAF)
 - Real Traffic Grabber (RTG)
@@ -187,7 +179,7 @@ and software can be used
 - Trusted Platform Module
 - Netflow
 
-#### Cloud Service Consumer
+### Cloud Service Consumer
 
 - Public Key Infrastructure (PKI)
 - Security Development Life Cycle (SDLC)
@@ -197,7 +189,7 @@ and software can be used
 - Application Security
 - Virtual Private Network (VPN)
 
-## Cloud Computing Countermeasures and Security Considerations
+## Countermeasures and Security Considerations
 
 - Software Configuration Management (SCM)
 - Disaster Recovery Plan

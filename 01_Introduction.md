@@ -1,56 +1,52 @@
 ## Essential Terminology
 
-**Hack Value** : A notion  among hackers that something is worth doing or is interesting.
+**Hack Value**: A notion  among hackers that something is worth doing or is interesting.
 
-**Vulnerability** : Existence of a weakness, design, or implementation error that can lead to an unexpected event compromising the security of the system.
+**Vulnerability**: Existence of a weakness, design, or implementation error that can lead to an unexpected event compromising the security of the system.
 
-**Exploit** : A breach of IT system security through vulnerabilities.
+**Exploit**: A breach of IT system security through vulnerabilities.
 
-**Payload** : Payload is the part of an exploit code that performs the intended malicious action, such as destroying, creating backdoors, and hijacking computer.
+**Payload**: Payload is the part of an exploit code that performs the intended malicious action, such as destroying, creating backdoors, and hijacking computer.
 
-**Zero-Day Attack** : An attack that exploits computer application vulnerabilities before the software developer releases a patch fot the vulnerability.
+**Zero-Day Attack**: An attack that exploits computer application vulnerabilities before the software developer releases a patch fot the vulnerability.
 
-**Daisy Chaining** : It involves gaining access to one network and/or computer and then using the same information to gain access to multiple networks and computers that contain desirable information
+**Daisy Chaining**: It involves gaining access to one network and/or computer and then using the same information to gain access to multiple networks and computers that contain desirable information.
 
-**Doxing** : Publishing personally identifiable information about an individual collected from publicly available databases and social media
+**Doxing**: Publishing personally identifiable information about an individual collected from publicly available databases and social media.
 
-**Bot** : A "bot" is a software application that can be controlled remotely to execute or automate predefined tasks
+**Bot**: A "bot" is a software application that can be controlled remotely to execute or automate predefined tasks.
 
-## Information Security:
+## Information Security
 
-The information security is a state of well-being of information and infrastructure in which the possibility of theft, tampering , and disruption of 
-information and services is kept low or tolerable.
+The information security is a state of well-being of information and infrastructure in which the possibility of theft, tampering , and disruption of information and services is kept low or tolerable.
 
-### Elements of InfoSec:
+### Elements of Information Security
 
-#### Confidentiality
+#### CIA triad
 
-Assurance that the information is accessible only to those authorized to have access
+**Confidentiality**: Assurance that the information is accessible only to those authorized to have access.
 
-#### Integrity
+**Integrity**: The trustworthiness of data or resource in terms of preventing improper and unauthorized changes.
 
-The trustworthiness of data or resource in terms of preventing improper and unauthorized changes
+**Availability**: Assurance that the systems responsible for delivering, storing, and processing information are accessible when required by the authorized users.
 
-#### Availability
-Assurance that the systems responsible for delivering, storing, and processing information are accessible when required by the authorized users
+#### Other
 
-#### Authenticity
+**Authenticity**: Authenticity refers to the characteristic of a communication, document or any data that ensures the quality of being genuine.
 
-Authenticity refers to the characteristic of a communication, document or any data that ensures the quality of being genuine 
-
-#### Non-Repudiation
-
-Guarantee that the sender of a message cannot later deny having sent the message and that the recipient cannot deny having received the message
+**Non-Repudiation**: Guarantee that the sender of a message cannot later deny having sent the message and that the recipient cannot deny having received the message.
 
 ### The Security, Functionality, and Usability triangle
 
-- **Security** : Restrictions imposed on accessing the components of the system (restrictions)
-- **Functionality** : The set of features provided by the system (features)
-- **Usability** : The GUI components used to design the system for ease of use (GUI)
+**Security**: Restrictions imposed on accessing the components of the system (restrictions).
+
+**Functionality**: The set of features provided by the system (features).
+
+**Usability**: The GUI components used to design the system for ease of use (GUI).
 
 ## Information Security Attacks and Attack Vectors
 
-Attacks = Motive (Goal) + Method + Vulnerability
+Attacks = *Motive* (Goal) + *Method* + *Vulnerability*
 
 A motive originates out of the notion that the target system stores or 
 process something valuable and this leads to threat of an attack on the system

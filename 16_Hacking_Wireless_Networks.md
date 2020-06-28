@@ -1,31 +1,22 @@
+## Terms
+
+
 **Wireless network** is a computer network that uses wireless data connection between network 
 nodes.
 
-# Terms
+**Access Point**: Access Point (AP) or Wireless Access Point (WAP) is a hardware device that allows wireless connectivity to the end devices.
 
-#### GSM
+**Service Set Identifier (SSID)**: A 32 bit identification string of the Access Point, the AP's name. SSID inserted into the header of every data packet.
+
+**Basic Service Set Identifier (BSSID)**: MAC address of the Access Point.
+
+**ISM Band**: A frequency band dedicated to the Industrial, Scientific and Medical purpose.
+
+### GSM
 
 - Global System for Mobile Communication
 - Generations: 2G (GSM), 3G (UMTS), 4G (LTE)
 - Frequency: 900 MHz - 1800 MHz
-
-#### Access Point
-
-Access Point (AP) or Wireless Access Point (WAP) is a hardware device that allows wireless 
-connectivity to the end devices.
-
-#### Service Set Identifier (SSID)
-
-- 32 bit identification string of the Access Point, the AP's name
-- SSID inserted into the header of every data packet
-
-#### Basic Service Set Identifier (BSSID)
-
-- MAC address of the Access Point
-
-#### ISM Band
-
-A frequency band dedicated to the Industrial, Scientific and Medical purpose.
 
 #### Wireless Standards
 
@@ -38,16 +29,16 @@ A frequency band dedicated to the Industrial, Scientific and Medical purpose.
 |  802.11ac |    5 Ghz    | MIMO-OFDM  |
 | Bluetooth |   2.4 Ghz   |
 
-# Wi-FI 
+### Wi-FI 
 
 Wi-Fi is a local area networking technology based on the IEEE 802.11 standard.
 
-## Wi-Fi  Authentication
+#### Wi-Fi  Authentication
 
 - Open authentication
 - Shared Key authentication
 
-### Open Authentication
+##### Open Authentication
 
 |               Client               |    |                     WAP              |
 |:----------------------------------:|:--:|:------------------------------------:|
@@ -66,7 +57,7 @@ the sequence number is set to 0x0001
 - The Association Request contains the security parameters (choosen encryption, ...)
 - The Association Response complete the associations process
 
-### Shared Key Authentication
+##### Shared Key Authentication
 
 |               Client               |    |                       WAP                   |
 |:----------------------------------:|:--:|:-------------------------------------------:|
@@ -75,7 +66,7 @@ the sequence number is set to 0x0001
 |  Encrypted Challenge Response      | -> |                                             |
 |                                    | <- |     Successful / Unsuccessful response      |
 
-**Challenge test** :
+###### Challenge test
 
 - The client encrypt the challenge test with his shared key
 - The AP decrypt the encrypted challenge test with his shared key, if the decrypted text 
@@ -83,7 +74,7 @@ matches, the successful authentication response frame is sent to the client
 - This challenge test can be captured by a hacker as a clear text, so the hacker can get the 
 shared key
 
-## IEEE 802.1X
+##### IEEE 802.1X
 
 IEEE 802.1X is an IEEE Standard for port-based Network Access Control (PNAC). It provides an authentication mechanism to devices 
 wishing to attach to a LAN or WLAN.
@@ -93,13 +84,13 @@ connections. For example, in IEEE 802.11 (Wi-Fi) the WPA and WPA2 standards have
 802.1X with one hundred EAP Types as 
 the official authentication mechanisms.
 
-#### Parties
+###### Parties
 
 - **Supplicant** : a client device (such as a laptop) that wishes to attach to the LAN/WLAN
 - **Authenticator** : a network device, such as an Ethernet switch or wireless access point
 - **Authentication server** : typically a host running software supporting the RADIUS and EAP protocols
 
-#### Authentication Progress
+###### Authentication Progress
 
 1. The client may send an EAP-start message.
 2. The access point sends an EAP-request identity message.
@@ -125,14 +116,14 @@ advertise Wi-Fi networks.
 
 ## Types of Wireless Antennas
 
-#### Directional Antenna
+### Directional Antenna
 
 Direction antennas are designed to function in a specific direction to improve efficiency
 
 Some types of directional antenna: [Parabolic antenna](https://en.wikipedia.org/wiki/Parabolic_antenna) , [Yagi-Uda 
 antenna](https://en.wikipedia.org/wiki/Yagi_antenna) , [Horn antenna](https://en.wikipedia.org/wiki/Horn_antenna)
 
-#### Omnidirectional antennas
+### Omnidirectional antennas
 
 Omnidirectional antenna radiates equal radio power in all directions.
 When graphed in three dimensions this radiation pattern is often described as doughnut-shaped.
@@ -213,20 +204,20 @@ of service
 
 ## Hacking Methodology
 
-#### Wi-Fi Discovery
+### Wi-Fi Discovery
 
 - Passive footprinting (sniffing packets)
 - Active footprinting (probing the AP to get information)
 
-#### GPS Mapping
+### GPS Mapping
 
 - Create list of discovered Wi-Fi networks including GPS location
 
-#### Wireless Traffic Analysis
+### Wireless Traffic Analysis
 
 - Capture the packets to reveal any information (SSID, authentication method, ...)
 
-#### Launch Attacks
+### Launch Attacks
 
 - ARP poisoning
 - MAC spoofing
@@ -236,7 +227,7 @@ of service
 
 ## Wireless Security Tools
 
-#### Wireless Intrusion Prevention System (WIPS)
+### Wireless Intrusion Prevention System (WIPS)
 
 - Monitors the wireless network
 - Protect against unauthorized access points
@@ -248,7 +239,7 @@ of service
 - Detect honeypots
 - Mitigate DoS
 
-#### Wi-Fi Security Auditing Tool
+### Wi-Fi Security Auditing Tool
 
 - Wireless network auditing
 - Troubleshooting
@@ -269,14 +260,14 @@ of service
 - Enable firewall
 - Use network management software
 
-# Bluetooth
+## Bluetooth
 
 - Bluetooth is a wireless technology for exchanging data over short distance
 - Range: typically less then 10m
 - Operates on the 2.4 GHz
 - Discovery feature can control the visibility of the device
 
-#### Bluetooth Attacks
+### Bluetooth Attacks
 
 - **BlueSmacking** : flooding echo packages to cause a denial of service
 - **BlueBugging** : exploiting bugs in Bluetooth devices to gain remote access
@@ -284,7 +275,7 @@ of service
 - **BluePrinting** : extract information about the device
 - **BlueSnarfing** : steal data from target device
 
-#### Countermeasures
+### Countermeasures
 
 - Check paired devices
 - Turn off visibility / turn off Bluetooth if not used

@@ -1,5 +1,7 @@
 **NOTE**: This may cross legal boundaries, you must have proper permission to perform these actions.
 
+## Basic
+
 - initiates active connection with the target
 - direct queries are generated
 
@@ -15,15 +17,15 @@
 	- network sharing information
 	- network resources
 
-#### Email
+## Email
 
 - Extract useful information (username, domain, ..)
 
-#### Default password
+## Default password
 
 - sometimes the default credentials didn't changed
 
-#### Active Directory (AD)
+## Active Directory (AD)
 
 - Centralized command and control of domain users, computers, printers
 - Brute force or generating queries to LDAP
@@ -35,7 +37,7 @@
 	- Credentials
 	- Privileges information
 
-#### Lightweight Directory Access Protocol (LDAP)
+## Lightweight Directory Access Protocol (LDAP)
 
 - Accessing and maintaining distributed directory information services in a hierarchical and logical structure
 - Allowing the sharing of information like user, system, network services, etc. throughout the network
@@ -52,7 +54,7 @@
 	- OpenLDAP
 
 
-#### Simple Network Management Protocol (SNMP)
+## Simple Network Management Protocol (SNMP)
 
 - Allow management of devices (routers, servers, ...)
 - Manage network performance
@@ -104,7 +106,7 @@
 			- *AuthNoPriv*: no encrypt, just hashing
 			- *AuthPriv*: encryption + hashing used
 
-#### DNS Zone Transfer
+## DNS Zone Transfer
 	
 - Zone transfer is a process to update DNS server, copy containing database record to another DNS server
 - Ports:
@@ -125,7 +127,7 @@
 host -t axfr zonetransfer.me nsztm1.digi.ninja.
 ```
 
-#### Network Basic Input/Output System (NetBIOS)
+## Network Basic Input/Output System (NetBIOS)
 
 - Allows communication between different application on different system within LAN
 - Uses a 16 ASCII Character string to identify devices
@@ -153,7 +155,7 @@ host -t axfr zonetransfer.me nsztm1.digi.ninja.
 		-Windows: `nbtstat`
 		-Linux: `nbtscan`
 
-#### Network Time Protocol (NTP)
+## Network Time Protocol (NTP)
 
 - Synchronize the clocks across the hosts and network devices
 - A lot of services rely on clock settings (logging, login, ...)
@@ -176,7 +178,7 @@ host -t axfr zonetransfer.me nsztm1.digi.ninja.
 - Tool:
 	- Linux: `ntpdc`, `ntptrace`, `ntpq`, `nmap`, `wireshark`
 
-#### Simple Mail Transfer Protocol (SMTP)
+## Simple Mail Transfer Protocol (SMTP)
 
 - Ensures mail communication between Email servers
 - Application layer protocol
@@ -196,7 +198,7 @@ host -t axfr zonetransfer.me nsztm1.digi.ninja.
 	- `HELP`: show help
 	- `QUIT`: terminate session
 
-### Enumeration Countermeasures
+## Countermeasures
 
 - Advanced security softwares
 - Updated version of protocols

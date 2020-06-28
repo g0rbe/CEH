@@ -1,6 +1,6 @@
-## Definitions
+## Protocols
 
-These definitions is must-know !
+These definitions is **must-know** !
 
 - [TCP](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) (Transmission Control Protocol)
 - [UDP](https://en.wikipedia.org/wiki/User_Datagram_Protocol) (User Datagram Protocol)
@@ -34,40 +34,36 @@ These definitions is must-know !
 
 ## OSI Model
 
-Layer 7: *Application layer* (HTTP, SNMP, ...)
+| Layer |       Name         | Example protocols |
+|:-----:|:------------------:|:-----------------:|
+|   7   | Application layer  |    HTTP, SNMP     |
+|   6   | Presentation layer |    MIME, ASCII    |
+|   5   | Session layer      |    SOCKS, NetBIOS |
+|   4   | Transport layer    |    TCP, UDP       |
+|   3   | Network layer      |    IP, ICMP       |
+|   2   | Data link layer    |    MAC, ARP       |
+|   1   | Physical layer     |  ethernet, Wi-Fi  |
 
-Layer 6: *Presentation layer* (MIME, ...)
+## TCP/IP Model
 
-Layer 5: *Session layer* (SOCKS, NetBIOS, ...)
-
-Layer 4: *Transport layer* (TCP, UDP, ...)
-
-Layer 3: *Network layer* (IP, ICMP, ...)
-
-Layer 2: *Data link layer* (MAC, ARP, ...)
-
-Layer 1: *Physical layer* (ethernet, wifi, ...)
-
-## TCP/IP Model:
-
-Layer 4: *Application layer* (HTTP, SNMP, ...)
-
-Layer 3: *Transport layer* (TCP, UDP, ...)
-
-Layer 2: *Internet layer* (IP, ICMP, ...)
-
-Layer 1: *Link layer* (ARP, MAC, ...)
+| Layer |       Name         | Example protocols |
+|:-----:|:------------------:|:-----------------:|
+|   4   | Application layer  |    HTTP, SNMP     |
+|   3   | Transport layer    |    TCP, UDP       |
+|   2   | Internet layer     |    IP, ICMP       |
+|   1   | Link layer         |    ARP, MAC       |
 
 ## Scanning Techniques
 
-### TCP Connect() / Full Open Scan:
+### TCP Connect() / Full Open Scan
 
 - Three-way handshake
 - Completed connection
 - Logged and detected
 - Don't need ROOT
 - nmap: `-sT`
-- Open port:
+
+Open port:
 
 | Attacker  | Direction | Target    |
 |:---------:|:---------:|:---------:|
@@ -76,14 +72,12 @@ Layer 1: *Link layer* (ARP, MAC, ...)
 |    ACK    |    ->     |           |
 |    RST    |    ->     |           |
 
-
-- Closed port:
+Closed port:
 
 | Attacker  | Direction | Target    |
 |:---------:|:---------:|:---------:|
 |    SYN    |    ->     |           |
 |           |    <-     |    RST    |
-
 
 Example:
 
@@ -91,11 +85,12 @@ Example:
 nmap -sT danielgorbe.com
 ```
 
-### Stealth Scan / Half-Open Scan:
+### Stealth Scan / Half-Open Scan
 
 - Half Three-way Handshake
 - Nmap: `-sS`
-- Open Port:
+
+Open Port:
 
 | Attacker  | Direction | Target    |
 |:---------:|:---------:|:---------:|
@@ -103,13 +98,12 @@ nmap -sT danielgorbe.com
 |           |    <-     |  SYN+ACK  |
 |    RST    |    ->     |           |
 
-- Closed port:
+Closed port:
 
 | Attacker  | Direction | Target    |
 |:---------:|:---------:|:---------:|
 |    SYN    |    ->     |           |
 |           |    <-     |    RST    |
-
 
 Example:
 
@@ -122,25 +116,25 @@ nmap -sS danielgorbe.com
 - Send TCP probe with TCP flags (i.e. FIN, URG, PSH, without flag)
 - Xmas and Null scan
 
-#### Xmas Scan:
+#### Xmas Scan
 
 - PSH+URG+FIN flag or ALL flag
 - Create abnormal situation
 - Nmap: `-sX`
-- Open port:
+
+Open port:
 
 |  Attacker   | Direction | Target      |
 |:-----------:|:---------:|:-----------:|
 | FIN+URG+PSH |    ->     |             |
 |             |    <-     | No response |
 
-- Closed port:
+Closed port:
 
 |  Attacker   | Direction | Target      |
 |:-----------:|:---------:|:-----------:|
 | FIN+URG+PSH |    ->     |             |
 |             |    <-     |    RST      |
-
 
 Example:
 
@@ -148,25 +142,25 @@ Example:
 nmap -sX danielgorbe.com
 ```
 
-#### NULL Scan:
+#### NULL Scan
 
 - No flag
 - Easy to detect
 - Nmap: `-sN`
-- Open port:
+
+Open port:
 
 |  Attacker   | Direction | Target      |
 |:-----------:|:---------:|:-----------:|
 |     NULL    |    ->     |             |
 |             |    <-     | No response |
 
-- Closed port:
+Closed port:
 
 |  Attacker   | Direction | Target      |
 |:-----------:|:---------:|:-----------:|
 |     NULL    |    ->     |             |
 |             |    <-     |    RST      |
-
 
 Example:
 
@@ -174,20 +168,21 @@ Example:
 nmap -sT danielgorbe.com
 ```
 
-### FIN Scan:
+### FIN Scan
 
 - FIN scan work with RFC-793 based TCP/IP (before Win XP)
 - Only FIN flag
 - Probably pass firewalls
 - Nmap: `-sF`
-- Open port:
+
+Open port:
 
 |  Attacker   | Direction | Target      |
 |:-----------:|:---------:|:-----------:|
 |     FIN     |    ->     |             |
 |             |    <-     | No response |
 
-- Closed port:
+Closed port:
 
 |  Attacker   | Direction | Target      |
 |:-----------:|:---------:|:-----------:|
@@ -200,7 +195,7 @@ Example:
 nmap -sF danielgorbe.com
 ```
 
-### ACK Flag probe scanning:
+### ACK Flag probe scanning
 
 - Only ACK flag
 - The response is always an RST
@@ -214,7 +209,7 @@ Example:
 nmap -sA danielgorbe.com
 ```
 
-### IDLE / IPID Header scan:
+### IDLE / IPID Header scan
 
 - Remaining low profile
 - Scanning done by a zombie
@@ -225,18 +220,19 @@ nmap -sA danielgorbe.com
 - Nmap: `-sI <zombie host[:probeport]>`
 - *Explanation* on Nmap's [website](https://nmap.org/book/idlescan.html)
 
-### UDP Scan:
+### UDP Scan
 
 - Connectionless protocol
 - nmap: `-sU`
-- Open port:
+
+Open port:
 
 |      Attacker       | Direction | Target      |
 |:-------------------:|:---------:|:-----------:|
 |    UPD Port probe   |    ->     |             |
 |                     |    <-     | No response |
 
-- Closed port:
+Closed port:
 
 |      Attacker       | Direction |        Target         |
 |:-------------------:|:---------:|:---------------------:|
@@ -249,7 +245,7 @@ Example:
 nmap -sA danielgorbe.com
 ```
 
-### IDS / IPS evasion:
+### IDS / IPS evasion
 
 - Packet fragmentation:
 - Nmap: `-f`
@@ -262,9 +258,9 @@ Example:
 nmap -f danielgorbe.com
 ```
 
-### OS Fingerprinting:
+### OS Fingerprinting
 
-#### Active OS fingerprinting:
+#### Active OS fingerprinting
 
 - Nmap: `-O`
 - Send TCP and UDP packets and observe the response from the host
@@ -275,7 +271,7 @@ Example:
 nmap -O danielgorbe.com
 ```
 
-#### Passive OS fingerprinting:
+#### Passive OS fingerprinting
 
 - Detail assessment of the traffic (TTL, TCP Window Size)
 - Common values:
@@ -289,7 +285,7 @@ nmap -O danielgorbe.com
 
 - More values [here](https://subinsb.com/default-device-ttl-values/)
 
-### Banner Grabbing: 
+### Banner Grabbing
 
 - Determine the service
 - Typically uses Telnet
@@ -299,17 +295,17 @@ Example:
 ``` bash
 nmap -sV danielgorbe.com
 ```
-## Proxy:
+## Proxy
 
 - System between the attacker and the target
 - Hiding source IP address
 - Impersonating
 - Hide identity
 
-### Proxy chaining:
+### Proxy chaining
 
 - Using multiple proxy server
-- Most used proxy chains: TOR
+- Most used proxy chains: Tor
 
 ## Spoofing IP address
 
@@ -328,7 +324,7 @@ This option sends 3 packets with source IP:
 2. 192.168.1.2
 3. Your IP
 
-#### Detect Spoofing
+### Detect Spoofing
 
 - Direct TTL probe (on same subnet)
 - IP Identification Number

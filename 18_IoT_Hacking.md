@@ -1,27 +1,31 @@
-The Internet of things (IoT) is the network of devices, vehicles, and home appliances that contain electronics, software, actuators, 
-and connectivity which allows these things to connect, interact and exchange data.
-IoT involves extending Internet connectivity beyond standard devices, such as desktops, laptops, smartphones and tablets, to any 
-range of traditionally dumb or non-internet-enabled physical devices and everyday objects. Embedded with technology, these devices 
-can communicate and interact over the Internet, and they can be remotely monitored and controlled.
+## Basic
 
-#### Main Components
+The Internet of things (IoT) is the network of devices, vehicles, and home appliances that contain electronics, software, actuators, and connectivity which allows these things to connect, interact and exchange data.
+
+IoT involves extending Internet connectivity beyond standard devices, such as desktops, laptops, smartphones and tablets, to any range of traditionally dumb or non-internet-enabled physical devices and everyday objects.
+
+Embedded with technology, these devices can communicate and interact over the Internet, and they can be remotely monitored and controlled.
+
+## Main Components
 
 1. Sensors
 2. Device
 3. Gateway
 4. Cloud
 
-#### IoT Architecture
+## IoT Architecture
 
 1. **Perception Layer** : sensors that gather information about the environment (heat sensor)
 2. **Transport Layer** : transfer the sensor data through network (Wi-Fi, Bluetooth, ...)
 3. **Processing Layer** : stores, processes, analyses data (cloud computing, big data, ...)
 4. **Application Layer** : delivering application specific services to the user
-5. **Business Layer** : manage the whole IoT system (business and profit modell, user's privacy)
+5. **Business Layer** : manage the whole IoT system (business and profit model, user's privacy)
 
 ## IoT Technologies
 
 - IoT uses IPv6 due to the limited number of IPv4 addresses
+
+### Wireless
 
 #### Short-Range Wireless Communication
 
@@ -42,34 +46,34 @@ can communicate and interact over the Internet, and they can be remotely monitor
 - Very Small Aperture Terminal (VSAT) : satellite communication technology uses small dish antennas
 - Cellular
 
-#### Wired Communication
+### Wired Communication
 
 - Ethernet
 - Power-Line Communication (PLC) : using electrical wiring to carry power and data
 
-#### Operating System
+### Operating System
 
 - Linux on embedded systems
 - Windows IoT
 
 ## IoT Communication Models
 
-#### Device-To-Device Model
+### Device-To-Device Model
 
 - The devices communicating with each other without interfering any other device
 - Using communication medium such as a wireless network
 
-#### Device-To-Cloud Model
+### Device-To-Cloud Model
 
 - The IoT device directly communicating with the application server
 - The application server provide information exchange between these devices
 
-#### Device-To-Gateway Model
+### Device-To-Gateway Model
 
 - Gateway collects the data from the sensors, then send it to the application server
 - Gateway provides security or information and protocol translation
 
-#### Back-End Data-Sharing Model
+### Back-End Data-Sharing Model
 
 - Used a collective partnership between different application providers
 - Access granted to the uploaded data to third-parties
@@ -84,7 +88,7 @@ can communicate and interact over the Internet, and they can be remotely monitor
 - Difficult ot update firmware and OS
 - Interoperability issues
 
-#### OWASP Top Ten IoT (2014)
+## OWASP Top Ten IoT (2014)
 
 1. Insecure web interface
 2. Insufficient authentication / authorization
@@ -97,7 +101,7 @@ can communicate and interact over the Internet, and they can be remotely monitor
 9. Insecure software / hardware
 10. Poor physical security
 
-### Common Attacks
+## Common Attacks
 
 - Device memory containing credentials
 - Access control
@@ -131,7 +135,7 @@ the signal, later it will used to gain unauthorized access (steal car with captu
 
 ## Hacking Methodology
 
-#### Information Gathering
+### Information Gathering
 
 - IP address
 - Running protocols
@@ -140,25 +144,25 @@ the signal, later it will used to gain unauthorized access (steal car with captu
 - Vendor
 - [shodan](https://www.shodan.io/) is a helpful search engine for IoT
 
-#### Vulnerability Scanning
+### Vulnerability Scanning
 
 - Scanning the network and devices to find vulnerabilities
 - Search for weak password
 - Software and firmware vulnerabilities
 - Tools: nmap, hping, ...
 
-#### Attack
+### Attack
 
 - Exploiting vulnerabilities
 - Tools: HackRF
 
-#### Gain Access
+### Gain Access
 
 - Gain unauthorized access 
 - Privilege escalation
 - Install backdoor
 
-#### Maintain Attack
+### Maintain Attack
 
 - Logging out
 - Clearing logs

@@ -1,3 +1,5 @@
+## Basic
+
 Social engineering is an act of stealing information from humans.
 
 - No interaction with target system or network
@@ -11,28 +13,28 @@ Employees are uneducated at organizations, so this is a major vulnerability.
 
 Lack of security policies and privacy are also vulnerable.
 
-### Steps of Social Engineering
+## Steps of Social Engineering
 
-#### Research
+### Research
 
 - Collection of information from the target organization
 - Collected by dumpster diving, scanning, search on the internet, ...
 
-#### Select target
+### Select target
 
 - Select the target among other employees
 - A frustrated target is more preferred
 
-#### Relationship
+### Relationship
 
 - Create relationship with the target
 - Earn the trust
 
-#### Exploit
+### Exploit
 
 - Collecting sensitive information such as usernames, password, etc...
 
-# Social Engineering Techniques
+## Social Engineering Techniques
 
 ##Types of Social Engineering
 
@@ -100,7 +102,7 @@ Social Engineering is not all about a third person gathering information, it may
 Attacker gathers personal information of a target from different sources mostly from social network sites such as full name, date of birth, email address, residential address, etc.
 After gathering the information, the attacker create an account that is exactly the same. Then introduced to friends, group joined by the target to get updates or convince the target's friends to reveal information.
 
-#### Risks of Social Network in a Corporate Networks
+### Risks of Social Network in a Corporate Networks
 
 Social network sites is not secured enough as a corporate network secures the authentication.
 The major risk of social network is its vulnerability in the authentication.
@@ -118,7 +120,7 @@ The employee while communicating on social network may not take care of sensitiv
 - Fake identity proof: get fake IDs (driving licence, ID card, etc...)
 - Fraud: spend money, unauthorized access, use ID for frauds, etc...
 
-# Countermeasures
+## Countermeasures
 
 - Security of sensitive information
 - Physical security
@@ -132,6 +134,6 @@ The employee while communicating on social network may not take care of sensitiv
 - Audit
 - Awareness
 
-**Tool**:
+## Tools
 
 - social engineering toolkit (linux)

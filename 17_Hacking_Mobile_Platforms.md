@@ -1,4 +1,4 @@
-# Mobile Platform Attack Vectors
+## Mobile Platform Attack Vectors
 
 ### OWASP Top 10 Mobile Threats
 
@@ -7,31 +7,29 @@ of the most common mobile security risks.
 
 #### Top Ten (2014)
 
-- **1.** Weak Server Side Controls
-- **2.** Insecure Data Storage
-- **3.** Insufficient Transport Layer Protection
-- **4.** Unintended Data Leakage
-- **5.** Poor Authorization and Authentication
-- **6.** Broken Cryptography
-- **7.** Client Side Injection
-- **8.** Security Decisions via Untrusted Inputs
-- **9.** Improper Session Handling
-- **10.** Lack of Binary Protections
+1. Weak Server Side Controls
+2. Insecure Data Storage
+3. Insufficient Transport Layer Protection
+4. Unintended Data Leakage
+5. Poor Authorization and Authentication
+6. Broken Cryptography
+7. Client Side Injection
+8. Security Decisions via Untrusted Inputs
+9. Improper Session Handling
+10. Lack of Binary Protections
 
 #### Top Ten (2016)
 
-- **1.** Improper Platform Usage: misuse of a platform feature or failure to use a platform security controls
-- **2.** Insecure Data Storage: insecure data storage + unintended data leakage
-- **3.** Insecure Communication: poor handshaking, incorrect SSL, weak negotiation, cleartext communication of sensitive assets, 
-...
-- **4.** Insecure Authentication: captures notions of authenticating the end user or bad session management
-- **5.** Insufficient Cryptography: cryptography was attempted, but it wasn't done correctly
-- **6.** Insecure Authorization: capture any failures in authorization
-- **7.** Client Code Quality: all of the code-level implementation problem in the mobile client
-- **8.** Code Tampering: binary patching, local resource modification, method hooking, dynamic memory modification, ...
-- **9.** Reverse Engineering: analysis of the final core binary to determine the source code, libraries, ...
-- **10.** Extraneous Functionality: internal development security controls that are not intended to be released into a production 
-environment
+1. **Improper Platform Usage**: misuse of a platform feature or failure to use a platform security controls
+2. **Insecure Data Storage**: insecure data storage + unintended data leakage
+3. **Insecure Communication**: poor handshaking, incorrect SSL, weak negotiation, cleartext communication of sensitive assets, ...
+4. **Insecure Authentication**: captures notions of authenticating the end user or bad session management
+5. **Insufficient Cryptography**: cryptography was attempted, but it wasn't done correctly
+6. **Insecure Authorization**: capture any failures in authorization
+7. **Client Code Quality**: all of the code-level implementation problem in the mobile client
+8. **Code Tampering**: binary patching, local resource modification, method hooking, dynamic memory modification, ...
+9. **Reverse Engineering**: analysis of the final core binary to determine the source code, libraries, ...
+10. **Extraneous Functionality**: internal development security controls that are not intended to be released into a production environment
 
 ### Attack Vector
 
@@ -61,22 +59,22 @@ vulnerabilities from spreading
 - Sandbox limits the app's access to files, preferences, network resources, ...
 - Advanced malware designed to bypass it, by fragment code or put sleep timer in the script to bypass the inspection process
 
-# Android
+## Android
 
-#### Device Administration API
+### Device Administration API
 
 - Provides device administration features at the system level
 - This API allows to create security-aware apps that are useful in the enterprise settings, where require rich control over employee 
 devices
 
-#### Rooting
+### Rooting
 
 - A process of allowing user to attain privileged control
 - Needed for modify settings, get full control over the kernel or install custom ROMs
 
-# iOS
+## iOS
 
-## Jailbreaking
+### Jailbreaking
 
 - Rooting the iOS
 - Escalating the privileges on iOS to remove or bypass the factory default restrictions
@@ -87,19 +85,19 @@ devices
 - **iBoot Exploit** : allow user-level and boot-level access
 - **Bootrom Exploit** : allow user-level and boot-level access
 
-### Jailbreaking Techniques
+#### Jailbreaking Techniques
 
-#### Untethered  Jailbreak
+##### Untethered  Jailbreak
 
 - Does not require to reboot with a connection to your computer
 - Exploit bypass the iBoot sequence
 
-#### Tethered Jailbreak
+##### Tethered Jailbreak
 
 - Need a connection to your computer to reboot, without it, the boot stuck with an Apple logo
 - Offers complete jailbreak features
 
-#### Semi-Untethered Jailbreak
+##### Semi-Untethered Jailbreak
 
 - Allows to boot into the iOS device, but with limited functionality
 - The jailbreak functions will be disabled until the launch of a jailbreak app
@@ -110,32 +108,32 @@ devices
 - To get the full functionality, a reboot with a tethered jailbreak required
 - Semi-Tethered Jailbreak: tethered jailbreak + a package to allow reboot with limited functionality
 
-# Windows Phone
+## Windows Phone
 
 - Windows Phone 8 using the Windows NT Kernel
 - Windows Phone 8 include app sandboxing, remote device management, native code support (C++)
 
-# BlackBerry OS
+## BlackBerry OS
 
 - Support for Java Micro Edition MIDP 1.0 and MIDP 2.0
 - OS update with BlackBerry over the air software loading service (OTASL)
 
-### Attack Vectors
+## Attack Vectors
 
-#### Malicious Code Signing
+### Malicious Code Signing
 
 - Obtaining a code-signing ket from the code signing service to create a malicious application 
 
-#### JAD File Exploit
+### JAD File Exploit
 
 - Java Application Description (.jad) contains attributes of Java application
 - Attacker can craft a .jad file with spoofed information
 
-# Mobile Device Management (MDM)
+## Mobile Device Management (MDM)
 
 - Deployment, maintenance and monitoring of mobile devices
 
-#### MDM Functions
+### MDM Functions
 
 - Enforce device to be locked after certain failed login
 - Enforce strong password policy for all BYOD 
@@ -143,11 +141,11 @@ devices
 - Enforce confidentiality by using encryption as per organization's policy
 - Administration and implementation of Data Loss Prevention (DLP)
 
-## MDM Deployment Methods
+### MDM Deployment Methods
 
 Two type: 
 
-### On-Site MDM Deployment
+#### On-Site MDM Deployment
 
 - Install MDM application on local servers
 - Management is done by local staff
@@ -159,7 +157,7 @@ Two type:
 - Less administration needed
 - The deployment and maintenance is the responsibility of the service provider
 
-## Bring Your Own Device (BYOD)
+### Bring Your Own Device (BYOD)
 
 BYOD is a trend of employees using their personal devices for work. It could be a laptop, a phone, etc...
 
@@ -172,7 +170,7 @@ BYOD policies should include:
 - Access: determine which data can be accessed from employee's device
 - Application: which applications allowed, which should be banned
 
-# Mobile Security Guideline
+## Mobile Security Guideline
 
 - Avoid auto-upload of files
 - Perform security assessment of applications
