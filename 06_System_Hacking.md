@@ -46,7 +46,7 @@ Example:
 - Social Engineering
 - Dumpster Diving
 
-#### Active Online Attack
+### Active Online Attack:
 
 Directly interact with the target for cracking password.
 
@@ -68,7 +68,7 @@ Compromising a workstation by exploiting the vulnerability, and extract the log-
 Hashing and other cryptography knowledge require.
 
 
-#### Passive Online Attacks
+### Passive Online Attacks:
 
 Password Attack without probing the target.
 
@@ -92,7 +92,7 @@ MITM Attacks:
 
 Gain access to the system by using the preconfigured password. The default password can be find on the manufacturer site or through online tools.
 
-#### Offline Attack
+### Offline Attack:
 
 ##### Pre-computed hashes and Rainbow table
 
