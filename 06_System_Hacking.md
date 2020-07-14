@@ -34,9 +34,9 @@ A good password contain:
 - Numbers
 - Lengthy password (more than 8 character)
 
-### Types of Password Attacks
+## Types of Password Attacks
 
-#### Non-Electronic Attacks
+### Non-Electronic Attacks:
 
 Don't require any type of technical understanding and knowledge.
 
