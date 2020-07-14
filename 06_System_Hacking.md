@@ -50,19 +50,19 @@ Example:
 
 Directly interact with the target for cracking password.
 
-#### Dictionary Attack
+##### Dictionary Attack
 
 A password cracking application is used along with with a dictionary file. 
 This dictionary file contains entire dictionary or a list of known and common words. 
 This is the most common type of password cracking. 
 Systems are not vulnerable if they use a strong, unique alphanumeric password. 
 
-#### Brute Force Attack
+##### Brute Force Attack
 
 Attempt to recover the password by trying every possible combination of characters until password is accepted.
 Common and basic technique.
 
-#### Hash Injection
+##### Hash Injection
 
 Compromising a workstation by exploiting the vulnerability, and extract the log-on hashes. 
 Hashing and other cryptography knowledge require.
@@ -72,11 +72,11 @@ Hashing and other cryptography knowledge require.
 
 Password Attack without probing the target.
 
-#### Wire Sniffing
+##### Wire Sniffing
 
 Sniffing the packets with a packet sniffing tool within the Local Area Network (LAN), and inspecting the captured packets.
 
-#### Man-in-the-Middle (MITM) Attack
+##### Man-in-the-Middle (MITM) Attack
 
 The attacker involves himself into the communication, insert himself in.
 
