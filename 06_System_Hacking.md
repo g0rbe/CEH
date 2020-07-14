@@ -34,9 +34,9 @@ A good password contain:
 - Numbers
 - Lengthy password (more than 8 character)
 
-## Types of Password Attacks
+### Types of Password Attacks
 
-### Non-Electronic Attacks:
+#### Non-Electronic Attacks
 
 Don't require any type of technical understanding and knowledge.
 
@@ -46,37 +46,37 @@ Example:
 - Social Engineering
 - Dumpster Diving
 
-### Active Online Attack:
+#### Active Online Attack
 
 Directly interact with the target for cracking password.
 
-#### Dictionary Attack
+##### Dictionary Attack
 
 A password cracking application is used along with with a dictionary file. 
 This dictionary file contains entire dictionary or a list of known and common words. 
 This is the most common type of password cracking. 
 Systems are not vulnerable if they use a strong, unique alphanumeric password. 
 
-#### Brute Force Attack
+##### Brute Force Attack
 
 Attempt to recover the password by trying every possible combination of characters until password is accepted.
 Common and basic technique.
 
-#### Hash Injection
+##### Hash Injection
 
 Compromising a workstation by exploiting the vulnerability, and extract the log-on hashes. 
 Hashing and other cryptography knowledge require.
 
 
-### Passive Online Attacks:
+#### Passive Online Attacks
 
 Password Attack without probing the target.
 
-#### Wire Sniffing
+##### Wire Sniffing
 
 Sniffing the packets with a packet sniffing tool within the Local Area Network (LAN), and inspecting the captured packets.
 
-#### Man-in-the-Middle (MITM) Attack
+##### Man-in-the-Middle (MITM) Attack
 
 The attacker involves himself into the communication, insert himself in.
 
@@ -92,7 +92,7 @@ MITM Attacks:
 
 Gain access to the system by using the preconfigured password. The default password can be find on the manufacturer site or through online tools.
 
-### Offline Attack:
+#### Offline Attack
 
 ##### Pre-computed hashes and Rainbow table
 
