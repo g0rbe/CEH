@@ -130,8 +130,8 @@ Microsoft authentication protocols:
 #### Security Account Manager (SAM)
 
 SAM is database that stores credentials and other account parameters such as passwords for the authentication process in Windows.
-While the OS running, this database os locked to be accessed by any other service and process.
-There are several other security algorithms are applied to the database to secure and validate the integrity of data.
+While the OS running, this database is locked to be accessed by any other service and process.
+There are several other security algorithms that are applied to the database to secure and validate the integrity of data.
 Within Microsoft, SAM stores password in LM/NTLM hashing format.
 Windows XP and later versions do not store the value of LM hash, or when LM hash is exceeding 14 characters, it stores blank or dummy value instead.
 
@@ -173,11 +173,11 @@ KDC depend upon two components:
 - Authentication Server (AS)
 - Ticket-Granting Server (TGS)
 
-The client send a request to the AS to grant Tick-granting-ticket.
+The client sends a request to the AS to grant Tick-granting-ticket.
 The AS authenticates the client by comparing the user identity and password from its datbase and reply with Tick-Granting Ticket and a session key.
 The session key is for a session between client and TGS.
-Now, client can communicate with the Ticket-Granting Server (TGS).
-The client send TGT to TGS, ask for communication with another user.
+Now, the client can communicate with the Ticket-Granting Server (TGS).
+The client sends the TGT to TGS, asking for communication with another user.
 TGS reply with a Ticket and session key.
 Ticket and Session key is for communicating with other user within a trusted domain.
 
@@ -185,7 +185,7 @@ Ticket and Session key is for communicating with other user within a trusted dom
 
 Password salting is the process of adding additional character in the password to one-way function.
 This makes the password more difficult to reverse the hash.
-The function os salting is to defeat the Dictionary Attacks and Rainbow Table attacks
+The function of salting is to defeat the Dictionary Attacks and Rainbow Table attacks.
 
 ### Password file by Operating Systems
 
@@ -456,7 +456,7 @@ An attacker may use this to technique to transfer data without being detected.
 
 ##### Whitespace Steganography
 
-hide information in a text file using extra blank space inserted in between words covering file.
+Hide information in a text file using extra blank space inserted in between words covering file.
 Using LZW and Huffman compression method to decrease the size of the message.
 
 ##### Image Steganography
@@ -479,7 +479,7 @@ Tools:
 
 #### Steganalysis
 
-Analysis of suspected information using steganography techniques to discover nad retrieve the hidden information.
+Analysis of suspected information using steganography techniques to discover and retrieve the hidden information.
 
 Methods:
 
@@ -504,7 +504,7 @@ Common techniques:
 
 ### Disable auditing
 
-Preventing another security mechanism to indicate an alert any sort of intrusion, and leaving to track leaving to track on the machine.
+Preventing another security mechanism to indicate an alert of any sort of intrusion, and leaving to track leaving to track on the machine.
 The best practice for leaving no track and prevent detection is by disabling the auditing as you logged in on the system.
 It will not only prevent to log events, but also resist in the detection.
 Auditing in a system is enabled to detect and track events.
