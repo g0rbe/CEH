@@ -1,7 +1,7 @@
 ## Basic
 
 With sniffing, you can monitor all sorts of traffic either protected or unprotected.
-Sniffing is the process pf scanning and monitoring of the captured data like DNS traffic, web traffic and many more by enabling the promiscuous mode on the network interface.
+Sniffing is the process of scanning and monitoring of the captured data like DNS traffic, web traffic and many more by enabling the promiscuous mode on the network interface.
 The attacker can reveal information from it such as usernames and passwords.
 Anyone within the same LAN can sniff the packets.
 
@@ -111,7 +111,7 @@ Internet traffic routing through the US, or data stored on a US server are wiret
 
 **Media Access Control** (MAC) is the physical address of a device.
 MAC address is a 48-bit unique identification number that is assigned to a network device for communication at data-link layer (layer 2).
-First 24 bits are the Object Unique Identifier (QUI), the last 24 bits are the Network Interface Controller (NIC).
+First 24 bits are the Object Unique Identifier (OUI), the last 24 bits are the Network Interface Controller (NIC).
 
 ### MAC Address Table / CAM Table
 
