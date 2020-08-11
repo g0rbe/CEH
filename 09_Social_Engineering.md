@@ -36,7 +36,7 @@ Lack of security policies and privacy are also vulnerable.
 
 ## Social Engineering Techniques
 
-##Types of Social Engineering
+## Types of Social Engineering
 
 ### Human-based Social Engineering
 
