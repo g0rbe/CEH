@@ -2,7 +2,7 @@
 
 ## Basic
 
-- initiates active connection with the target
+- initiates an active connection with the target
 - direct queries are generated
 
 - enumerated information:
@@ -23,7 +23,7 @@
 
 ## Default password
 
-- sometimes the default credentials didn't changed
+- sometimes the default credentials are not changed
 
 ## Active Directory (AD)
 
@@ -43,7 +43,7 @@
 - Allowing the sharing of information like user, system, network services, etc. throughout the network
 - Provides a central place to store usernames and passwords
 - Apps and services connect to LDAP to validate users
-- Client initiates an LDAP session bt sending an  operation request to Directory System Agent (DSA)
+- Client initiates an LDAP session by sending an operation request to Directory System Agent (DSA)
 - Communication between client and server uses Basic Encoding Rules (BER)
 - Port:
 	- **TCP 389**
@@ -65,7 +65,7 @@
 	- **UDP 161**
 	- **UDP 162** (Trap)
 - Three element:
-	-SNMP manager:
+	- SNMP manager:
 		- A software running on the management station
 		- Display collected information
 	- SNMP agent:
@@ -130,8 +130,8 @@ host -t axfr zonetransfer.me nsztm1.digi.ninja.
 ## Network Basic Input/Output System (NetBIOS)
 
 - Allows communication between different application on different system within LAN
-- Uses a 16 ASCII Character string to identify devices
-- The initial 15 chars is identifying the device, the last char identify the service
+- Uses a 16 character long ASCII string to identify devices
+- The initial 15 chars is for identifying the device, the last char is for identify the service
 - Session layer protocol
 - Ports:
 	- **UDP 137** (name services)
@@ -152,8 +152,8 @@ host -t axfr zonetransfer.me nsztm1.digi.ninja.
 	- Internet group
 	- Multihomed
 - Tools:
-		-Windows: `nbtstat`
-		-Linux: `nbtscan`
+	- Windows: `nbtstat`
+	- Linux: `nbtscan`
 
 ## Network Time Protocol (NTP)
 
@@ -167,15 +167,16 @@ host -t axfr zonetransfer.me nsztm1.digi.ninja.
 	- Distance between NTP server and device
 	- Like TTL
 	- Start from 1 and increases by every hop
-- Attacker may change time to mislead forensic team, who investigate the events (change timestamp)
+- Attacker may change time to mislead the forensic team, who investigate the events (change timestamp)
 - Version 3 and above:
 	- Support a cryptographic authentication technique between NTP peers
-	- Without authentication, the client do not authenticate the server as a secure source, if the legitimate server goes down, a fake NTP server can replace the real
+	- Without authentication, the client does not authenticate with the server as a secure source, if the legitimate server goes down, a fake NTP server can replace the real
 - Information from NTP:
 	- Host information
 	- Client information (IP, machine name, OS)
 	- Network information
 - Tool:
+	- Windows: `NetTime`
 	- Linux: `ntpdc`, `ntptrace`, `ntpq`, `nmap`, `wireshark`
 
 ## Simple Mail Transfer Protocol (SMTP)
@@ -200,7 +201,7 @@ host -t axfr zonetransfer.me nsztm1.digi.ninja.
 
 ## Countermeasures
 
-- Advanced security softwares
+- Advanced security software
 - Updated version of protocols
 - Strong security protocols
 - Unique and difficult password
