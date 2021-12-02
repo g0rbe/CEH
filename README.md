@@ -1,6 +1,6 @@
 ## UPDATE
 
-Because of the high traffic, i decided to **reformat** the chapters and upload everything to my blog at [danielgorbe.com/en/tags/ceh/](https://danielgorbe.com/en/tags/ceh/) to be more readable.
+Because of the high traffic, i decided to **reformat** the chapters and upload everything to my wiki at [https://wiki.danielgorbe.com/books/ceh-v10](https://wiki.danielgorbe.com/books/ceh-v10) to be more readable.
 
 **But I need YOUR help!**
 
