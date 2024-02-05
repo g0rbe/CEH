@@ -32,6 +32,15 @@ These definitions is **must-know** !
 |	        |    <-     |  SYN+ACK  |
 |    ACK    |    ->     |           |
 
+- Closing a TCP connection
+
+| Computer1 | Direction | Computer2 |
+|:---------:|:---------:|:---------:|           
+|    FIN    |    ->     |           |
+|	        |    <-     |  ACK+FIN  |
+|    ACK    |    ->     |           |
+
+
 ## OSI Model
 
 | Layer |       Name         | Example protocols |
